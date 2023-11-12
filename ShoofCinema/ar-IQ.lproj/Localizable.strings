@@ -1,0 +1,395 @@
+/* (No Comment) */
+"allTitle" = "الكل";
+
+/* (No Comment) */
+"cancelAlertButton" = "الغاء";
+
+/* (No Comment) */
+"categoryButtonTitle" = "القسم";
+
+/* (No Comment) */
+"clearAlertButton" = "مسح";
+
+/* (No Comment) */
+"okAlertButton" = "موافق";
+
+/* (No Comment) */
+"home" = "الرئيسية";
+
+/* (No Comment) */
+"clearHistoryAlertBody" = "هل أنت متأكد أنك تريد مسح سجل المشاهدة؟";
+
+/* (No Comment) */
+"clearHistoryAlertTitle" = "مسح السجل";
+
+/* (No Comment) */
+"commentPlaceHolder" = "أكتب تعليقك هنا....";
+
+/* (No Comment) */
+"commentPostedAlertBody" = "تم نشر تعليقك.";
+
+/* (No Comment) */
+"deleteAlertButton" = "حذف";
+
+/* (No Comment) */
+"deleteFromDownloadAlertBody" = "هل أنت متأكد أنك تريد حذف هذا العرض؟";
+
+/* (No Comment) */
+"deleteFromDownloadAlertTitle" = "حذف";
+
+/* (No Comment) */
+"dismissAlertButton" = "الغاء";
+
+/* (No Comment) */
+"doneAlertButton" = "الغاء";
+
+/* (No Comment) */
+"downloadResolutionSheetTitle" = "اختر دقة التنزيل التي تريدها:";
+
+/* (No Comment) */
+"episodeName" = "الحلقة";
+
+/* (No Comment) */
+"episodeNameLowerCase" = "الحلقة";
+
+/* (No Comment) */
+"favoriteNavTitle" = "المفضلات";
+
+/* (No Comment) */
+"favoriteNoContentMessage" = "اضغط على الاضافة الى قائمة المشاهدة لاحقاً على اي فلم او مسلسل لإضافته للقائمة";
+
+/* (No Comment) */
+"favoriteNoContentNotLoggedInMessage" = "سجيل الدخول بحسابك لمشاهدة برامجك المفضلة.";
+
+/* (No Comment) */
+"genericErrorMessage" = "حدث خطأ ما، الرجاء المحاولة في وقت لاحق.";
+
+/* / GENERAL MESSAGES */
+"genericErrorTitle" = "عذرًا!";
+
+/* (No Comment) */
+"genreAction" = "أكشن";
+
+/* (No Comment) */
+"genreAdventure" = "مغامرة";
+
+/* (No Comment) */
+"genreAnimation" = "الرسوم المتحركة";
+
+/* (No Comment) */
+"genreBiography" = "سيرة شخصية";
+
+/* (No Comment) */
+"genreButtonTitle" = "الفئة";
+
+/* (No Comment) */
+"genreComedy" = "كوميديا";
+
+/* (No Comment) */
+"genreCrime" = "جريمة";
+
+/* (No Comment) */
+"genreDocumentary" = "وثائقي";
+
+/* (No Comment) */
+"genreDrama" = "دراما";
+
+/* (No Comment) */
+"genreFamily" = "عائلي";
+
+/* (No Comment) */
+"genreFantasy" = "خيالي";
+
+/* (No Comment) */
+"genreFilm-Noir" = "Film-Noir";
+
+/* (No Comment) */
+"genreHistory" = "تاريخي";
+
+/* (No Comment) */
+"genreHorror" = "رعب";
+
+/* (No Comment) */
+"genreMusical" = "موسيقي";
+
+/* (No Comment) */
+"genreMystery" = "غموض";
+
+/* (No Comment) */
+"genreN/A" = "N/A";
+
+/* (No Comment) */
+"genreNews" = "أخبار";
+
+/* (No Comment) */
+"genreReality-TV" = "تلفزيون الواقع";
+
+/* (No Comment) */
+"genreRomance" = "رومانسي";
+
+/* (No Comment) */
+"genreSci-Fi" = "خيال علمي";
+
+/* (No Comment) */
+"genreShort" = "قصيرة";
+
+/* (No Comment) */
+"genreSport" = "رياضة";
+
+/* (No Comment) */
+"genreTalk-Show" = "برنامج حوارية";
+
+/* (No Comment) */
+"genreThriller" = "إثارة";
+
+/* (No Comment) */
+"genreWar" = "حروب";
+
+/* (No Comment) */
+"genreWestern" = "الغربي";
+
+/* (No Comment) */
+"historyNoDataViewBody" = "سيظهر سجل المشاهدة هنا.";
+
+/* (No Comment) */
+"historyNoDataViewTitle" = "لا يوجد سجل مشاهدة";
+
+/* (No Comment) */
+"loginAlertTitle" = "تسجيل الدخول";
+
+/* (No Comment) */
+"loginButtonTitle" = "تسجيل الدخول";
+
+/* (No Comment) */
+"loginFirstAlertBody" = "لإضافة إلى المفضلة ، يجب عليك تسجيل الدخول أولاً.\nهل تريد الدخول ؟";
+
+/* (No Comment) */
+"loginFirstAlertTitle" = "سجل الدخول أولا";
+
+/* (No Comment) */
+"loginMessage" = "لديك حساب بالفعل؟";
+
+/* (No Comment) */
+"loginTitle" = "تسجيل الدخول";
+
+"signInWithGoogleTitle" = "تسجيل الدخول بواسطة Google";
+
+/* (No Comment) */
+"loginToContinueAlertBody" = "الرجاء تسجيل الدخول بحسابك أو التسجيل للمتابعة.";
+
+/* (No Comment) */
+"loginToContinueAlertTitle" = "تسجيل الدخول للمتابعة";
+
+/* (No Comment) */
+"logoutAlertMessage" = "هل أنت متأكد أنك تريد تسجيل الخروج؟";
+
+/* (No Comment) */
+"logoutAlertTitle" = "تسجيل خروج";
+
+/* No comment provided by engineer. */
+"More" = "المزيد";
+
+/* (No Comment) */
+"moviesNavTitle" = "احدث الافلام";
+
+/* (No Comment) */
+"na" = "N/A";
+
+/* (No Comment) */
+"noContent" = "لا يوجد محتوى";
+
+/* (No Comment) */
+"noContentMessage" = "المحتوى غير متوفر حاليا";
+
+/* (No Comment) */
+"downloadErrorMessage" = "الخطأ التحميل";
+
+"noDownloadsMessage" = "عند تنزيل البرامج ، ستظهر هنا.";
+
+/* (No Comment) */
+"noDownloadsTitle" = "لا يوجد تنزيلات";
+
+/* (No Comment) */
+"noGenre" = "الفئة غير متوفر";
+
+/* (No Comment) */
+"noMatchesMessage" = "لاتوجد اي نتائج";
+
+/* (No Comment) */
+"registerMessage" = "ليس لديك حساب؟";
+
+/* (No Comment) */
+"registerTitle" = "انشاء حساب";
+
+/* (No Comment) */
+"registrationSuccessMessage" = "مرحبا بكم في شوف سينما";
+
+/* (No Comment) */
+"reloadButtonTitle" = "إعادة تحميل";
+
+/* (No Comment) */
+"removeAlertButton" = "حذف";
+
+/* (No Comment) */
+"removeShowAlertBody" = " إزالته من سجل المشاهدة؟";
+
+/* (No Comment) */
+"removeShowAlertTitle" = "حذف";
+
+/* (No Comment) */
+"seasonName" = "الموسم";
+
+/* (No Comment) */
+"seasonNameLowerCase" = "الموسم";
+
+/* (No Comment) */
+"sortButtonTitle" = "الترتيب";
+
+/* (No Comment) */
+"rateAscending" = "التقييم تصاعدي";
+
+/* (No Comment) */
+"rateDescending" = "التقييم تنازلي";
+
+/* (No Comment) */
+"viewsAscending" = "المشاهدات تصاعدي";
+
+"uploadDateAscending" = "تأريخ الرفع تصاعدي";
+
+"uploadDateDescending" = "تأريخ الرفع تنازلي";
+
+/* (No Comment) */
+"viewsDescending" = "المشاهدات تنازلي";
+
+/* (No Comment) */
+"yearAscending" = "السنة تصاعدي";
+
+/* (No Comment) */
+"yearDescending" = "السنة تنازلي";
+
+/* OTHER MESSAGES */
+"successAlertTitle" = "تمت بنجاح";
+
+/* / BUTTONS */
+"tryAgainButtonTitle" = "حاول ثانية";
+
+/* (No Comment) */
+"TVNavTitle" = "احدث المسلسلات";
+
+/* (No Comment) */
+"unableToPlayShowAlertBody" = "لا يمكن التشغيل لعدم توفر الملف او لأن مزود خدمة الإنترنت لديك غير مدعوم.";
+
+/* PLAYER MESSAGES */
+"unableToPlayShowAlertTitle" = "غير قادر على التشغيل";
+
+/* (No Comment) */
+"unknown" = "غير معروف";
+
+/* (No Comment) */
+"watchTrailerTitle" = "مشاهدة اعلان";
+
+/* (No Comment) */
+"yearButtonTitle" = "السنة";
+
+"favoriteNoContentTitle" = "لاتوجد عناصر";
+
+"loadingNotification" = "يرجى الإنتظار";
+"notificationShowButton" = "عرض";
+
+"qualityText" = "الدقة: ";
+
+"unknownStatus" =   "غير معروف";
+"failureStatus" =   "فشـل";
+"pausedStatus" =     "متوقف";
+"downloadedStatus" =  "تم التحميل";
+"waitingStatus" = "في الإنتظار";
+"loadingStatus" =     "يرجى الإنتظار";
+"downloadingStatus" =    "جار التحميل";
+"downloadingTranslationStatus" =  "جار تحميل الترجمة";
+"version" = "الاصدار";
+
+"downloadLabelDownload" = "جار التحميل";
+"downloadLabelIssue" = "مشكلة";
+
+"appQuitAlertButton" = "الخروج من التطبيق";
+
+"changeLanguageAlertTitle" = "اعادة تشغيل التطبيق";
+"changeLanguageAlertBody" = "هذا يتطلب إعادة تشغيل التطبيق. هل أنت متأكد أنك تريد إغلاق التطبيق الآن؟";
+
+
+"changeModeAlertTitle" = "وضع رمضان";
+"ramadanModeActiveBody" = "هل أنت متأكد أنك تريد تفعيل وضع رمضان؟";
+"ramadanModeDeactiveBody" = "هل أنت متأكد أنك تريد إلغاء تفعيل وضع رمضان؟";
+
+
+"en" = "اللغة الإنكليزية";
+"ar" = "اللغة العربية";
+"Language was changed, please re-open the app" = "تم تغيير اللغة ، يرجى إعادة فتح التطبيق";
+"Pull to refresh" = "اسحب للتحديث";
+"Release to refresh" = "اترك للتحديث";
+"Loading..." = "جاري التحميل";
+
+// LoginViewController
+"emailAddress" = "البريد الإلكتروني";
+"password" = "كلمة المرور";
+"username" = "اسم المستخدم";
+"or" = "أو";
+
+// FilterViewController
+"sortingBy" = "فرز حسب";
+//"rateAscending" = "↑ التقييم";
+//"rateDescending" = "↓ التقييم";
+//"yearAscending" = "↑ السنة";
+//"yearDescending" = "↓ السنة";
+
+"type" = "النوع";
+"series" = "المسلسلات";
+"movies" = "الأفلام";
+"all" = "الكل";
+
+"filter" = "الفلترة";
+"reset" = "إعادة تعيين";
+"showResults" = "إظهار النتائج";
+"explore" = "تصفح";
+
+"share" = "مشاركة";
+"trailer" = "الإعلان";
+"favorite" = "المفضلة";
+"subscribe" = "الإشتراك";
+"familyMode" = "الوضع العائلي";
+
+"noEpisodesAlertTitle" = "عذرًا!";
+"noEpisodesAlertMessage" = "لا يوجد حالياً أية حلقات للعرض. الرجاء المحاولة لاحقاً.";
+"noMovieAlertMessage" = "روابط التشغيل غير متوفرة، الخلل من المصدر.";
+
+"skip" = "تخطي";
+
+"notificaitons.noContentAvailable" = "ليس لديك اشعارات حالياً";
+
+"deleteAccount" = "حذف الحساب";
+"deleteAccountMessage" = "هل أنت متأكد من رغبتك في حذف حسابك على شبكة شوف؟";
+"WatchHistory"  = "سجل المشاهدة";
+"updatePasswordTitle" = "تحديث كلمة المرور";
+"forgetPasswordMessage" = "ادخل بريدك الإلكتروني المرتبط بهذا الحساب";
+"updatePasswordMessage" = "ادخل رمز التحقق الذي تم ارساله الى بريدك الإلكتروني";
+"code" = "الرمز";
+"submit" = "ارسال";
+"sendCode" = "ارسل الرمز";
+"forgetPasswordTitle" = "نسيت كلمة المرور";
+"passwordUpdatedTitle" = "تم تحديث كلمة السر!";
+"passwordUpdatedMessage" = "تم تغيير كلمة المرور الخاصة بك بنجاح ، استخدم كلمة المرور الجديدة لتسجيل الدخول";
+
+"phone" = "رقم الهاتف";
+"update" = "تحديث";
+"updateProfile" = "تحديث الملف الشخصي";
+"selectAvatar" = "اختار الصورة الرمزية";
+
+"writeComment" = "إكتب تعليقا";
+"more" = "المزيد";
+"comments" = "التعليقات";
+"watch" = "مشاهدة";
+"download" = "تحميل";
+"watchlist" = "المشاهدة لاحقا";
+"noComments" = "لاتوجد تعليقات";
+"seasons" = "المواسم";
+

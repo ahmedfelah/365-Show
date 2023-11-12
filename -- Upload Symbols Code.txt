@@ -1,0 +1,6 @@
+Upload symbols command
+
+#1 Download Dsyms from App Store Connect to this directory
+
+#2 Run this
+Pods/FirebaseCrashlytics/upload-symbols -gsp SuperCell/GoogleService-Info.plist -p ios appDsyms

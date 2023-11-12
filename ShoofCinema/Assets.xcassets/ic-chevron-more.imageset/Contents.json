@@ -1,0 +1,44 @@
+{
+  "images" : [
+    {
+      "filename" : "ic-chevron-more.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "ic-chevron-more@2x.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "ic-chevron-more@3x.png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    },
+    {
+      "filename" : "ic-chevron-more-ar.png",
+      "idiom" : "universal",
+      "locale" : "ar-IQ",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "ic-chevron-more-ar@2x.png",
+      "idiom" : "universal",
+      "locale" : "ar-IQ",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "ic-chevron-more-ar@3x.png",
+      "idiom" : "universal",
+      "locale" : "ar-IQ",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  },
+  "properties" : {
+    "localizable" : true
+  }
+}

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIdentifier</key>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>$(PRODUCT_NAME)</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>$(MARKETING_VERSION)</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb212405821062946</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.googleusercontent.apps.141498298880-0cbg7j0lla354h7nrb8cl4ao8mt2ib5b</string>
+			</array>
+		</dict>
+	</array>
+	<key>CFBundleVersion</key>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
+	<key>ChiefsPlayerChromecastAppID</key>
+	<string>E4AAD7D9</string>
+	<key>FacebookAppID</key>
+	<string>212405821062946</string>
+	<key>FacebookClientToken</key>
+	<string>CLIENT-TOKEN</string>
+	<key>FacebookDisplayName</key>
+	<string>ShoofCinema</string>
+	<key>FirebaseAppDelegateProxyEnabled</key>
+	<true/>
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>supercell</string>
+		<string>fb</string>
+		<string>pin</string>
+		<string>tel</string>
+		<string>instagram</string>
+		<string>facebook</string>
+		<string>youtube</string>
+	</array>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
+	<key>NSBluetoothAlwaysUsageDescription</key>
+	<string>This app may use bluetooth to connect with chromecast devices for video player</string>
+	<key>NSBluetoothPeripheralUsageDescription</key>
+	<string>This app may use bluetooth to connect with chromecast devices for video player</string>
+	<key>NSBonjourServices</key>
+	<array>
+		<string>_googlecast._tcp</string>
+		<string>_E4AAD7D9._googlecast._tcp</string>
+	</array>
+	<key>NSLocalNetworkUsageDescription</key>
+	<string>${PRODUCT_NAME} uses the local network to discover Cast-enabled devices on your WiFi
+    network.</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>This app uses your location to help you discover nearest service providers</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>This app uses your location to help you discover nearest service providers</string>
+	<key>NSLocationUsageDescription</key>
+	<string>This app uses your location to help you discover nearest service providers</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>This app uses your location to help you discover nearest service providers</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Chromecast uses ultrasonic sounds to connect with other nearby devices</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>The app doesn't access photos</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>The app doesn't access photos</string>
+	<key>NSUserActivityTypes</key>
+	<array>
+		<string>com.AppChief.Shoof.Browse</string>
+	</array>
+	<key>Shake</key>
+	<dict>
+		<key>APIClientID</key>
+		<string>FjsIAL9mcA8LcMlitr28oWn9HIuszeUI4XVSPyUN</string>
+		<key>APIClientSecret</key>
+		<string>zrVMmCSnIfFCh3zB6Ru7iOpuowSZBvg0bw7w2wShLVvZ2yGJ242jVab</string>
+	</dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>myriadpro-bold.otf</string>
+		<string>Almarai-Bold.ttf</string>
+		<string>Almarai-ExtraBold.ttf</string>
+		<string>Almarai-Light.ttf</string>
+		<string>Almarai-Regular.ttf</string>
+	</array>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>fetch</string>
+		<string>remote-notification</string>
+	</array>
+	<key>UILaunchStoryboardName</key>
+	<string>LaunchScreen.storyboard</string>
+	<key>UIMainStoryboardFile</key>
+	<string>HomeSB</string>
+	<key>UIRequiredDeviceCapabilities</key>
+	<array>
+		<string>armv7</string>
+	</array>
+	<key>UIRequiresFullScreen</key>
+	<true/>
+	<key>UIStatusBarStyle</key>
+	<string>UIStatusBarStyleDarkContent</string>
+	<key>UIStatusBarTintParameters</key>
+	<dict>
+		<key>UINavigationBar</key>
+		<dict>
+			<key>Style</key>
+			<string>UIBarStyleDefault</string>
+			<key>Translucent</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
+	</array>
+	<key>UIUserInterfaceStyle</key>
+	<string>Light</string>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<true/>
+</dict>
+</plist>

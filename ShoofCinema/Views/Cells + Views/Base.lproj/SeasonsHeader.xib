@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="AXB-2S-Nh7" customClass="SeasonTableHeaderView" customModule="Shoof" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="175"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="4KG-ZA-da1">
+                    <rect key="frame" x="16" y="0.0" width="382" height="175"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="8z3-CV-Mmz">
+                            <rect key="frame" x="0.0" y="0.0" width="382" height="175"/>
+                            <subviews>
+                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="boi-CM-H8n">
+                                    <rect key="frame" x="0.0" y="0.0" width="382" height="175"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="74" id="szT-he-sPi"/>
+                                    </constraints>
+                                    <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Ro6-ZA-N76">
+                                        <size key="itemSize" width="54" height="55"/>
+                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    </collectionViewFlowLayout>
+                                    <cells/>
+                                </collectionView>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="4KG-ZA-da1" secondAttribute="bottom" id="8Sd-bM-UFZ"/>
+                <constraint firstAttribute="trailing" secondItem="4KG-ZA-da1" secondAttribute="trailing" constant="16" id="Cmu-Pp-NoH"/>
+                <constraint firstItem="4KG-ZA-da1" firstAttribute="leading" secondItem="AXB-2S-Nh7" secondAttribute="leading" constant="16" id="it1-lr-Lyl"/>
+                <constraint firstItem="4KG-ZA-da1" firstAttribute="top" secondItem="AXB-2S-Nh7" secondAttribute="top" id="wJT-pP-KZ8"/>
+            </constraints>
+            <connections>
+                <outlet property="seasonCollection" destination="boi-CM-H8n" id="0bK-Ys-dlh"/>
+                <outlet property="stackview" destination="4KG-ZA-da1" id="6nd-LL-zl8"/>
+            </connections>
+            <point key="canvasLocation" x="-594.20289855072474" y="6.3616071428571423"/>
+        </collectionReusableView>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

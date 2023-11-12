@@ -1,0 +1,249 @@
+
+
+/* Class = "UINavigationItem"; title = "WATCH HISTORY"; ObjectID = "1I3-bP-wVZ"; */
+"1I3-bP-wVZ.title" = "سجل المشاهدة";
+
+/* Class = "UILabel"; text = "FAVORITE SHOWS"; ObjectID = "bkq-uq-JaH"; */
+"bkq-uq-JaH.text" = "المفضلة";
+
+/* Class = "UILabel"; text = "COMMENTS"; ObjectID = "1sq-Lk-xrW"; */
+"1sq-Lk-xrW.text" = "التعليقات";
+
+/* Class = "UILabel"; text = "*AppChief is not resposible for the content shared within this app or server status."; ObjectID = "2Wq-x1-vQH"; */
+"2Wq-x1-vQH.text" = "المطور غير مسؤول عن محتوى التطبيق أو حالة الخادم";
+
+/* Class = "UITextField"; placeholder = "User Name"; ObjectID = "3hV-S7-PWk"; */
+"3hV-S7-PWk.placeholder" = "اسم المستخدم";
+
+/* Class = "UILabel"; text = "Designed and developed by"; ObjectID = "3zA-zh-g7t"; */
+"3zA-zh-g7t.text" = "من تطوير:";
+
+/* Class = "UILabel"; text = "SOCIAL"; ObjectID = "5fC-lL-m3f"; */
+"5fC-lL-m3f.text" = "تواصل معنا";
+
+/* Class = "UIImageView"; accessibilityHint = "You can send us email from the button below"; ObjectID = "5SY-Kl-Hnf"; */
+"5SY-Kl-Hnf.accessibilityHint" = "-----------";
+
+/* Class = "UIImageView"; accessibilityLabel = "Developed by Husam aamer from App Chief Team"; ObjectID = "5SY-Kl-Hnf"; */
+"5SY-Kl-Hnf.accessibilityLabel" = "—————";
+
+/* Class = "UILabel"; text = "DOWNLOADS"; ObjectID = "5xV-GD-44D"; */
+"5xV-GD-44D.text" = "التنزيلات";
+
+/* Class = "UISegmentedControl"; 6i5-2K-1eE.segmentTitles[0] = "All Requests"; ObjectID = "6i5-2K-1eE"; */
+"6i5-2K-1eE.segmentTitles[0]" = "كل الطلبات";
+
+/* Class = "UISegmentedControl"; 6i5-2K-1eE.segmentTitles[1] = "My Requests"; ObjectID = "6i5-2K-1eE"; */
+"6i5-2K-1eE.segmentTitles[1]" = "طلباتي";
+
+/* Class = "UINavigationItem"; title = "FAVORITE SHOWS"; ObjectID = "6mA-Iz-j5j"; */
+"6mA-Iz-j5j.title" = "المفضلة";
+
+/* Class = "UILabel"; text = "Shoof Cinema"; ObjectID = "6Ns-FN-n2W"; */
+"6Ns-FN-n2W.text" = "شوف سينما";
+
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "7Sc-Ov-2Lf"; */
+"7Sc-Ov-2Lf.placeholder" = "البريد الالكتروني";
+
+/* Class = "UILabel"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do "; ObjectID = "8Ir-G6-oFj"; */
+"8Ir-G6-oFj.text" = "—————————";
+
+/* Class = "UINavigationItem"; title = "REQUESTS"; ObjectID = "9bI-xB-igz"; */
+"9bI-xB-igz.title" = "الطلبات";
+
+/* Class = "UILabel"; text = "WEBSITE"; ObjectID = "26I-Dx-zN5"; */
+"26I-Dx-zN5.text" = "الموقع الكتروني";
+
+/* Class = "UILabel"; text = "SHOOF CINEMA"; ObjectID = "aL4-B5-YNX"; */
+"aL4-B5-YNX.text" = "شوف سينما";
+
+/* Class = "UIButton"; normalTitle = "LOGIN"; ObjectID = "ALa-4K-WQP"; */
+"ALa-4K-WQP.normalTitle" = "تسجيل الدخول";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "awi-RJ-5FW"; */
+"awi-RJ-5FW.placeholder" = "كلمة المرور";
+
+/* Class = "UILabel"; text = "------"; ObjectID = "b6y-3w-5Q0"; */
+"b6y-3w-5Q0.text" = "———";
+
+/* Class = "UINavigationItem"; title = "TV CHANNELS"; ObjectID = "b7s-nb-wtH"; */
+"b7s-nb-wtH.title" = "القنوات";
+
+/* Class = "UINavigationItem"; title = "NOTIFICATION"; ObjectID = "c0o-cI-f6b"; */
+"c0o-cI-f6b.title" = "الاشعارات";
+
+/* Class = "UIButton"; normalTitle = "MORE"; ObjectID = "CB4-0Z-WWz"; */
+"CB4-0Z-WWz.normalTitle" = "المزيد";
+
+/* Class = "UILabel"; text = "SHARE"; ObjectID = "CdM-Yb-chV"; */
+"CdM-Yb-chV.text" = "مشاركة";
+
+/* Class = "UILabel"; text = "CAST & CREW"; ObjectID = "EHq-FF-NRx"; */
+"EHq-FF-NRx.text" = "فريق العمل";
+
+/* Class = "UILabel"; text = "------"; ObjectID = "emh-pI-V0K"; */
+"emh-pI-V0K.text" = "---";
+
+/* Class = "UILabel"; text = "-------"; ObjectID = "eOR-Rt-302"; */
+"eOR-Rt-302.text" = "—";
+
+/* Class = "UILabel"; text = "/10"; ObjectID = "EV6-vx-FTK"; */
+"EV6-vx-FTK.text" = "/10";
+
+/* Class = "UILabel"; text = "GROUP"; ObjectID = "og2-fB-Q3M"; */
+"og2-fB-Q3M.text" = "المجموعة";
+
+/* Class = "UILabel"; text = "DEVELOPERS"; ObjectID = "f2V-2Q-s1g"; */
+"f2V-2Q-s1g.text" = "المطورون";
+
+/* Class = "UILabel"; text = "-------"; ObjectID = "FhH-3a-zsL"; */
+"FhH-3a-zsL.text" = "(20)";
+
+/* Class = "UILabel"; text = "STORYLINE"; ObjectID = "Fmh-t1-jfy"; */
+"Fmh-t1-jfy.text" = "القصة";
+
+/* Class = "UILabel"; text = "-----"; ObjectID = "G2y-qU-yh6"; */
+"G2y-qU-yh6.text" = "date";
+
+/* Class = "UIButton"; normalTitle = "WRITE COMMENT"; ObjectID = "g9o-WD-6Va"; */
+"g9o-WD-6Va.normalTitle" = "إكتب تعليقا";
+
+/* Class = "UIButton"; normalTitle = "LOGOUT"; ObjectID = "Gas-B1-whf"; */
+"Gas-B1-whf.normalTitle" = "تسجيل الخروج";
+
+/* Class = "UIBarButtonItem"; title = " "; ObjectID = "gZO-xQ-yCX"; */
+"gZO-xQ-yCX.title" = " ";
+
+/* Class = "UINavigationItem"; title = "DWONLOADS"; ObjectID = "hgg-Pv-yRG"; */
+"hgg-Pv-yRG.title" = "التنزيلات";
+
+/* Class = "UILabel"; text = "FAVORITE"; ObjectID = "idk-Hu-Jbf"; */
+"idk-Hu-Jbf.text" = "المفضلة";
+
+/* Class = "UILabel"; text = "No Comments"; ObjectID = "Ihl-fH-7Tg"; */
+"Ihl-fH-7Tg.text" = "لا توجد تعليقات";
+
+/* Class = "UILabel"; text = "------------"; ObjectID = "ItN-EC-ZdG"; */
+"ItN-EC-ZdG.text" = "";
+
+/* Class = "UINavigationItem"; title = "ALL COMMENTS"; ObjectID = "j8h-t4-4l8"; */
+"j8h-t4-4l8.title" = "كل التعليقات";
+
+/* Class = "UILabel"; text = "------"; ObjectID = "J76-Bq-qw8"; */
+"J76-Bq-qw8.text" = "date";
+
+/* Class = "UILabel"; text = "NOTIFICATION"; ObjectID = "jqF-sO-gCK"; */
+"jqF-sO-gCK.text" = "الاشعارات";
+
+/* Class = "UILabel"; text = "A"; ObjectID = "k5N-dc-sbQ"; */
+"k5N-dc-sbQ.text" = "A";
+
+/* Class = "UITextField"; placeholder = "Search for Anything … "; ObjectID = "kdf-fj-uyV"; */
+"kdf-fj-uyV.placeholder" = "إبحث عن أي شيء ...";
+
+/* Class = "UILabel"; text = "TRAILER"; ObjectID = "MUV-qu-Xe5"; */
+"MUV-qu-Xe5.text" = "الاعلان";
+
+/* Class = "UILabel"; text = "---------"; ObjectID = "Nak-9d-rmG"; */
+"Nak-9d-rmG.text" = "";
+
+/* Class = "UILabel"; text = "----"; ObjectID = "nSH-TS-eHU"; */
+"nSH-TS-eHU.text" = "";
+
+/* Class = "UILabel"; text = "----"; ObjectID = "Opv-59-UhB"; */
+"Opv-59-UhB.text" = "";
+
+/* Class = "UIBarButtonItem"; title = " "; ObjectID = "orn-7c-oDp"; */
+"orn-7c-oDp.title" = " ";
+
+/* Class = "UILabel"; text = "WATCH HISTORY"; ObjectID = "Ozu-eX-wSF"; */
+"Ozu-eX-wSF.text" = "سجل المشاهدة";
+
+/* Class = "UILabel"; text = "Actors"; ObjectID = "PRE-40-hPX"; */
+"PRE-40-hPX.text" = "تمثيل";
+
+
+
+/* Class = "UIBarButtonItem"; title = " "; ObjectID = "qaU-Iu-d1G"; */
+"qaU-Iu-d1G.title" = " ";
+
+/* Class = "UILabel"; text = "Writers:"; ObjectID = "RH4-Tl-QLZ"; */
+"RH4-Tl-QLZ.text" = "كتابة";
+
+/* Class = "UILabel"; text = "-----------------------"; ObjectID = "rhI-qD-uRu"; */
+"rhI-qD-uRu.text" = "-----------------------";
+
+/* Class = "UIButton"; normalTitle = "Login"; ObjectID = "RmQ-Xe-cl4"; */
+"RmQ-Xe-cl4.normalTitle" = "تسجل الدخول";
+
+/* Class = "UILabel"; text = "SUGGESTED FOR YOU"; ObjectID = "RN4-HK-Goa"; */
+"RN4-HK-Goa.text" = "المزيد";
+
+/* Class = "UILabel"; text = "-------"; ObjectID = "Rtf-7s-HBD"; */
+"Rtf-7s-HBD.text" = "";
+
+/* Class = "UILabel"; text = "REQUESTS"; ObjectID = "rXy-xN-ER1"; */
+"rXy-xN-ER1.text" = "الطلبات";
+
+/* Class = "UINavigationItem"; title = "SHOWS"; ObjectID = "Sc7-oc-vGq"; */
+"Sc7-oc-vGq.title" = "";
+
+/* Class = "UILabel"; text = "A"; ObjectID = "sD5-qy-9w3"; */
+"sD5-qy-9w3.text" = "";
+
+/* Class = "UILabel"; text = "---"; ObjectID = "sdp-z7-PiK"; */
+"sdp-z7-PiK.text" = "";
+
+/* Class = "UIBarButtonItem"; title = " "; ObjectID = "SJy-0H-lCa"; */
+"SJy-0H-lCa.title" = " ";
+
+/* Class = "UIBarButtonItem"; title = " "; ObjectID = "thP-ND-0xV"; */
+"thP-ND-0xV.title" = " ";
+
+/* Class = "UILabel"; text = "--------"; ObjectID = "uob-mq-RSK"; */
+"uob-mq-RSK.text" = "";
+
+/* Class = "UILabel"; text = "Register"; ObjectID = "uPf-YR-z4e"; */
+"uPf-YR-z4e.text" = "تسجيل الدخول";
+
+/* Class = "UILabel"; text = "Directors:"; ObjectID = "VlI-Vu-Mos"; */
+"VlI-Vu-Mos.text" = "إخراج";
+
+/* Class = "UILabel"; text = "-----------"; ObjectID = "vSV-bC-TAd"; */
+"vSV-bC-TAd.text" = "";
+
+/* Class = "UIBarButtonItem"; title = " "; ObjectID = "wKl-Va-GpQ"; */
+"wKl-Va-GpQ.title" = " ";
+
+/* Class = "UILabel"; text = "----------------"; ObjectID = "WPR-4D-VRk"; */
+"WPR-4D-VRk.text" = "----------------";
+
+/* Class = "UILabel"; text = "--------"; ObjectID = "WWW-xS-WLA"; */
+"WWW-xS-WLA.text" = "";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "X6L-OO-luj"; */
+"X6L-OO-luj.title" = "";
+
+/* Class = "UIBarButtonItem"; title = " "; ObjectID = "y3E-mc-pBu"; */
+"y3E-mc-pBu.title" = " ";
+
+/* Class = "UILabel"; text = "Write your comment below:"; ObjectID = "yT5-QC-X4L"; */
+"yT5-QC-X4L.text" = "اكتب تعليقك أدناه:";
+
+/* Class = "UILabel"; text = "---------"; ObjectID = "ZFH-vj-eXN"; */
+"ZFH-vj-eXN.text" = "";
+
+/* Class = "UIBarButtonItem"; title = " "; ObjectID = "zlf-N0-G1B"; */
+"zlf-N0-G1B.title" = " ";
+
+/* Class = "UILabel"; text = "Already Have Account ? "; ObjectID = "zN9-Ru-CBg"; */
+"zN9-Ru-CBg.text" = "لديك حساب بالفعل؟";
+
+"dKt-lA-tbf.title" = "التنزيلات";
+
+"Yj7-J6-Pjc.text" = "اطلب فيلم أو مسلسل";
+
+"JHh-aZ-6j4.text" = "تغيير اللغة";
+
+"OTy-gb-Vfn.title" = "تغيير اللغة";

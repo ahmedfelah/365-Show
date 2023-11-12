@@ -1,0 +1,36 @@
+/* (No Comment) */
+"CFBundleDisplayName" = "شوف";
+
+/* Bundle name */
+"CFBundleName" = "شوف";
+
+/* Privacy - Bluetooth Always Usage Description */
+"NSBluetoothAlwaysUsageDescription" = "قد يستخدم هذا التطبيق Bluetooth للاتصال بأجهزة Chromecast لمشغل الفيديو";
+
+/* Privacy - Bluetooth Peripheral Usage Description */
+"NSBluetoothPeripheralUsageDescription" = "قد يستخدم هذا التطبيق Bluetooth للاتصال بأجهزة Chromecast لمشغل الفيديو";
+
+/* Privacy - Local Network Usage Description */
+"NSLocalNetworkUsageDescription" = "يستخدم Shoof الشبكة المحلية لاكتشاف الأجهزة التي تدعم Cast على شبكة WiFi الخاصة بك.";
+
+/* Privacy - Location Always and When In Use Usage Description */
+"NSLocationAlwaysAndWhenInUseUsageDescription" = "يستخدم هذا التطبيق موقعك لمساعدتك في اكتشاف أقرب مزودي الخدمة";
+
+/* Privacy - Location Always Usage Description */
+"NSLocationAlwaysUsageDescription" = "يستخدم هذا التطبيق موقعك لمساعدتك في اكتشاف أقرب مزودي الخدمة";
+
+/* Privacy - Location Usage Description */
+"NSLocationUsageDescription" = "يستخدم هذا التطبيق موقعك لمساعدتك في اكتشاف أقرب مزودي الخدمة";
+
+/* Privacy - Location When In Use Usage Description */
+"NSLocationWhenInUseUsageDescription" = "يستخدم هذا التطبيق موقعك لمساعدتك في اكتشاف أقرب مزودي الخدمة";
+
+/* Privacy - Microphone Usage Description */
+"NSMicrophoneUsageDescription" = "يستخدم هذا التطبيق موقعك لمساعدتك في اكتشاف أقرب مزودي الخدمة";
+
+/* Privacy - Photo Library Additions Usage Description */
+"NSPhotoLibraryAddUsageDescription" = "التطبيق لا يصل إلى الصور";
+
+/* Privacy - Photo Library Usage Description */
+"NSPhotoLibraryUsageDescription" = "التطبيق لا يصل إلى الصور";
+

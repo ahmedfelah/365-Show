@@ -1,0 +1,239 @@
+/*
+  Localizable.strings
+  ShoofCinema
+
+  Created by Abdulla Jafar on 2/20/21.
+  Copyright © 2021 AppChief. All rights reserved.
+*/
+
+
+/// GENERAL MESSAGES
+"genericErrorTitle" = "Whoops!";
+"genericErrorMessage" = "Something went wrong, please try again later.";
+"noContentMessage" = "Sorry, The content is currently not available.";
+"noMatchesMessage" = "Sorry we couldn't find any matches";
+
+"loadingNotification" = "Please wait...";
+"notificationShowButton" = "Show";
+
+"unknown" = "Unknown";
+"noContent" = "No Content";
+"na" = "N/A";
+"noGenre" = "Genre Not Available";
+
+
+
+/// BUTTONS
+"tryAgainButtonTitle" = "Try Again";
+"cancelAlertButton" = "Cancel";
+"doneAlertButton" = "Cancel";
+"dismissAlertButton" = "Dismiss";
+"clearAlertButton" = "Clear";
+"removeAlertButton" = "Remove";
+"deleteAlertButton" = "Delete";
+"okAlertButton" = "OK";
+
+"home" = "HOME";
+
+"logoutAlertTitle" = "LOGOUT";
+"loginAlertTitle" = "LOGIN";
+"logoutAlertMessage" = "Are sure you want to logout?";
+
+// PLAYER MESSAGES
+"unableToPlayShowAlertTitle" = "Unable to Play";
+"unableToPlayShowAlertBody" = "Track is not available or your internet proveider is not supported";
+
+// OTHER MESSAGES
+"successAlertTitle" = "Success";
+"registrationSuccessMessage" = "Welcome to Shoof Cinema";
+
+"loginToContinueAlertTitle" = "Login To Continue ";
+"loginToContinueAlertBody" = "Please login with your account or register to continue.";
+
+
+"commentPostedAlertBody" = "Your comment has been posted.";
+"commentPlaceHolder" = "Write your Comment here....";
+"writeComment" = "Write Comment";
+"more" = "More";
+"commnets" = "Comments";
+
+"episodeName" = "EPISODE";
+"seasonName" = "SEASON";
+"seasons" = "SEASONS";
+
+"episodeNameLowerCase" = "Episode";
+"seasonNameLowerCase" = "Season";
+
+"watchTrailerTitle" = "Watch Trailer";
+
+"noDownloadsTitle" = "No Downloads";
+"noDownloadsMessage" = "When you download shows, they will show up here.";
+"downloadErrorMessage" = "Download Error";
+
+"loginTitle" = "LOGIN";
+"loginMessage" = "Already Have Account?";
+"registerTitle" = "REGISTER";
+"registerMessage" = "Don't Have an Account?";
+"signInWithGoogleTitle" = "Sign in with Google";
+
+"loginFirstAlertTitle" = "Login First";
+"loginFirstAlertBody" = "Login to add your favorite shows to the withlist";
+
+"genreButtonTitle" = "Genre";
+"yearButtonTitle" = "Year";
+"sortButtonTitle" = "Sort";
+"categoryButtonTitle" = "Category";
+"allTitle" = "All";
+
+
+"favoriteNavTitle" = "FAVORITE SHOWS";
+"favoriteNoContentTitle" = "No watchlist yet";
+"favoriteNoContentMessage" = "Tab to Add watchlist on any movie to add to watchlist.";
+"favoriteNoContentNotLoggedInMessage" = "Login with your account to see your favorite shows.";
+"reloadButtonTitle" = "Reload";
+"loginButtonTitle" = "Login";
+"passwordUpdatedTitle" = "Password Updated!";
+"passwordUpdatedMessage" = "Your password has been changed successfully use your new password to log in";
+
+
+
+"clearHistoryAlertTitle" = "Clear History";
+"WatchHistory"  = "Watch History";
+"clearHistoryAlertBody" = "Are you sure you want to clear your watch history?";
+
+"removeShowAlertTitle" = "Remove Show";
+"removeShowAlertBody" = "Remove from watch history?";
+
+"historyNoDataViewTitle" = "No History";
+"historyNoDataViewBody" = "Your history will show up here.";
+
+"rateDescending" = "Rating ";
+"rateAscending" = "Rating ";
+"viewsDescending" = "Views";
+"viewsAscending" = "Views";
+"yearDescending" = "Year";
+"yearAscending" = "Year ";
+"uploadDateDescending" = "Upload";
+"uploadDateAscending" = "Upload ";
+
+"appQuitAlertButton" = "Quit Shoof";
+"changeLanguageAlertTitle" = "Restart Required";
+"changeLanguageAlertBody" = "This requires restarting the application. Are you sure you want to close the app now?";
+
+"changeModeAlertTitle" = "Ramadan Mode";
+"ramadanModeActiveBody" = "Are you sure to active Ramadan mode";
+"ramadanModeDeactiveBody" = "Are you sure to deactive Ramadan mode";
+
+"en" = "English";
+"ar" = "Arabic";
+
+"downloadResolutionSheetTitle" = "Choose the download quality you want: ";
+
+
+"deleteFromDownloadAlertTitle" = "Delete Show";
+"deleteFromDownloadAlertBody" = "Are sure you want to delete this show?";
+
+"moviesNavTitle" = "RECENT MOVIES";
+"TVNavTitle" = "RECENT TV SERIES";
+
+
+"genreComedy"       = "Comedy";
+"genreCrime"        = "Crime";
+"genreThriller"     = "Thriller";
+"genreBiography"    = "Biography";
+"genreWar"          = "War";
+"genreAdventure"    = "Adventure";
+"genreFamily"       = "Family";
+"genreFantasy"      = "Fantasy";
+"genreMystery"      = "Mystery";
+"genreSport"        = "Sport";
+"genreAction"       = "Action";
+"genreHorror"       = "Horror";
+"genreRomance"      = "Romance";
+"genreDrama"        = "Drama";
+"genreHistory"      = "History";
+"genreFilm-Noir"    = "Film-Noir";
+"genreMusical"      = "Musical";
+"genreSci-Fi"       = "Sci-Fi";
+"genreDocumentary"  = "Documentary";
+"genreAnimation"    = "Animation";
+"genreN/A"          = "N/A";
+"genreWestern"      = "Western";
+"genreShort"        = "Short";
+"genreReality-TV"   = "Reality-TV";
+"genreNews"         = "News";
+"genreTalk-Show"    = "Talk-Show";
+
+
+"qualityText" = "Quality: ";
+
+"unknownStatus" = "Unknown";
+"failureStatus" = "Failure";
+"pausedStatus" = "Paused";
+"downloadedStatus" = "Uploaded";
+"waitingStatus" = "Please Wait";
+"loadingStatus" = "Loading";
+"downloadingStatus" = "Downloading";
+"downloadingTranslationStatus" = "Downloading Translation";
+"version" = "Version";
+
+
+"downloadLabelDownload" = "Downloading..";
+"downloadLabelIssue" = "Issue";
+
+// LoginViewController
+"emailAddress" = "Email Address";
+"password" = "Password";
+"username" = "Username";
+"or" = "OR";
+"updatePasswordTitle" = "Update Password";
+"forgetPasswordMessage" = "Enter your email associated with your account";
+"updatePasswordMessage" = "Enter the verification code that was send to your email";
+"code" = "Code";
+"submit" = "Submit";
+"sendCode" = "Send Code";
+"forgetPasswordTitle" = "Forget Password";
+
+
+// FilterViewController
+"sortingBy" = "SORTING BY";
+//"rateAscending" = "Rate ↑";
+//"rateDescending" = "Rate ↓";
+//"yearAscending" = "Year ↑";
+//"yearDescending" = "Year ↓";
+
+"type" = "TYPE";
+"series" = "SERIES";
+"movies" = "MOVIES";
+ "all" = "ALL"; // allTitle already exists
+
+"filter" = "FILTER";
+"reset" = "RESET";
+"showResults" = "SHOW RESULTS";
+"explore" = "EXPLORE";
+
+"share" = "SHARE";
+"trailer" = "TRAILER";
+"favorite" = "FAVORITE";
+"subscribe" = "SUBSCRIBE";
+"familyMode" = "FAMILY MODE";
+
+"noEpisodesAlertTitle" = "Whoops!";
+"noEpisodesAlertMessage" = "There are no episodes yet to play. Please check again later.";
+"noMovieAlertMessage" = "No files available right now from the source";
+
+"skip" = "Skip";
+
+"notificaitons.noContentAvailable" = "You don't have any notifications right now";
+
+"deleteAccount" = "DELETE ACCOUNT";
+"deleteAccountMessage" = "Are you sure you want to delete your Shoof account?";
+
+"phone" = "Phone";
+"update" = "Update";
+"updateProfile" = "Update Profile";
+"selectAvatar" = "Select Avatar";
+"watch" = "Watch";
+"download" = "Download";
+"watchlist" = "Watchlist";
+"noComments" = "No Comments";

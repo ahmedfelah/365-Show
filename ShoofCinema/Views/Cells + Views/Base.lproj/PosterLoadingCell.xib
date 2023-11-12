@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="gTV-IL-0wX" customClass="PosterLoadingCell" customModule="Shoof" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="152" height="168"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="152" height="168"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eDq-GN-s3J" customClass="FBShimmeringView2" customModule="Shoof" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="152" height="168"/>
+                        <subviews>
+                            <view alpha="0.20000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tq9-L8-0uu">
+                                <rect key="frame" x="0.0" y="0.0" width="152" height="168"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Tq9-L8-0uu" secondAttribute="trailing" id="5qU-lY-I4Q"/>
+                            <constraint firstAttribute="bottom" secondItem="Tq9-L8-0uu" secondAttribute="bottom" id="KhF-42-2cF"/>
+                            <constraint firstItem="Tq9-L8-0uu" firstAttribute="top" secondItem="eDq-GN-s3J" secondAttribute="top" id="Ogt-0K-hZH"/>
+                            <constraint firstItem="Tq9-L8-0uu" firstAttribute="leading" secondItem="eDq-GN-s3J" secondAttribute="leading" id="uaE-IJ-aW4"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="startShimmering" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" red="0.12941176469999999" green="0.15686274510000001" blue="0.23921568630000001" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="eDq-GN-s3J" secondAttribute="bottom" id="5Ny-x7-hfR"/>
+                <constraint firstItem="eDq-GN-s3J" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="JGu-RH-Gjq"/>
+                <constraint firstItem="eDq-GN-s3J" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="f1Z-Vt-5qg"/>
+                <constraint firstAttribute="trailing" secondItem="eDq-GN-s3J" secondAttribute="trailing" id="z5m-lu-EqU"/>
+            </constraints>
+            <size key="customSize" width="183" height="169"/>
+            <connections>
+                <outlet property="shimmeringView" destination="eDq-GN-s3J" id="Ego-RV-pVj"/>
+            </connections>
+            <point key="canvasLocation" x="72" y="122.33883058470765"/>
+        </collectionViewCell>
+    </objects>
+</document>

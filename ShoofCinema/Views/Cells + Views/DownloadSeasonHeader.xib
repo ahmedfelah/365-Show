@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="L2x-ht-Fld" customClass="DownloadSeasonHeaderView" customModule="Shoof" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="392" height="45"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DRk-vx-F41">
+                    <rect key="frame" x="0.0" y="0.0" width="392" height="45"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SEASON 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mLG-M9-8pc">
+                            <rect key="frame" x="27" y="12" width="83" height="21"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="mLG-M9-8pc" firstAttribute="leading" secondItem="DRk-vx-F41" secondAttribute="leading" constant="27" id="DSp-sx-GuE"/>
+                        <constraint firstItem="mLG-M9-8pc" firstAttribute="centerY" secondItem="DRk-vx-F41" secondAttribute="centerY" id="gSB-T3-oy5"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="TAK-6l-KGC"/>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="DRk-vx-F41" firstAttribute="top" secondItem="L2x-ht-Fld" secondAttribute="top" id="Vpu-5I-jQl"/>
+                <constraint firstItem="DRk-vx-F41" firstAttribute="leading" secondItem="L2x-ht-Fld" secondAttribute="leading" id="cF4-rd-AZN"/>
+                <constraint firstItem="DRk-vx-F41" firstAttribute="bottom" secondItem="TAK-6l-KGC" secondAttribute="bottom" id="cmo-Yc-Iq6"/>
+                <constraint firstAttribute="trailing" secondItem="DRk-vx-F41" secondAttribute="trailing" id="le2-HR-qe8"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="seasonLabel" destination="mLG-M9-8pc" id="suz-NX-jPi"/>
+            </connections>
+            <point key="canvasLocation" x="178.2608695652174" y="-41.852678571428569"/>
+        </view>
+    </objects>
+</document>

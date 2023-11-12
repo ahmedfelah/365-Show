@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="203" id="GX8-28-Oie" customClass="DownloadCell" customModule="Shoof" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GX8-28-Oie" id="4s8-o0-XNv">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2vw-om-yrB" customClass="LightRoundedView" customModule="Shoof" customModuleProvider="target">
+                        <rect key="frame" x="8" y="8" width="359" height="184"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="mjg-W8-ITE">
+                                <rect key="frame" x="16" y="16" width="327" height="153"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="F3b-2a-ZRb">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="150"/>
+                                        <color key="backgroundColor" red="0.078431372550000003" green="0.078431372550000003" blue="0.078431372550000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="39n-MI-x7X"/>
+                                            <constraint firstAttribute="height" constant="150" id="Qwj-mn-h3f"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="kBF-f6-EAG">
+                                        <rect key="frame" x="120" y="0.0" width="207" height="153"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="LY0-W7-JJT">
+                                                <rect key="frame" x="0.0" y="0.0" width="145" height="75"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="hNi-fq-uQm">
+                                                        <rect key="frame" x="0.0" y="0.0" width="145" height="49.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="----------------" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XgE-8o-aFO" customClass="MainLabel" customModule="Shoof" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="145" height="24"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OuD-I3-bsq">
+                                                                <rect key="frame" x="0.0" y="29" width="116" height="20.5"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quality: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="90G-gS-db8" customClass="MainLabel" customModule="Shoof" customModuleProvider="target">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="62.5" height="20.5"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-------" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d7Y-t3-3EV" customClass="MainLabel" customModule="Shoof" customModuleProvider="target">
+                                                                        <rect key="frame" x="62.5" y="0.0" width="53.5" height="20.5"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="------------" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fox-E9-wHn" customClass="MainLabel" customModule="Shoof" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="54.5" width="91.5" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" red="0.83921568999999996" green="0.015686269999999999" blue="0.015686269999999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="eTk-ij-6Rj">
+                                                <rect key="frame" x="0.0" y="90" width="172" height="63"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="j5j-lo-RYM">
+                                                        <rect key="frame" x="0.0" y="10" width="101" height="43"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wdl-nJ-7qa" customClass="MainButton" customModule="Shoof" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="43" height="43"/>
+                                                                <color key="backgroundColor" systemColor="systemFillColor"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="43" id="9lb-vp-oUB"/>
+                                                                    <constraint firstAttribute="width" constant="43" id="Ztm-zk-1Iq"/>
+                                                                </constraints>
+                                                                <state key="normal" image="ic-download-delete-button"/>
+                                                                <connections>
+                                                                    <action selector="deleteButtonTapped" destination="GX8-28-Oie" eventType="touchUpInside" id="FaN-4z-UNR"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zHc-tQ-weQ" customClass="MainButton" customModule="Shoof" customModuleProvider="target">
+                                                                <rect key="frame" x="58" y="0.0" width="43" height="43"/>
+                                                                <color key="backgroundColor" systemColor="systemFillColor"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="43" id="9MZ-yR-kNl"/>
+                                                                    <constraint firstAttribute="height" constant="43" id="LEa-nQ-TdE"/>
+                                                                </constraints>
+                                                                <state key="normal" image="ic-download-play"/>
+                                                                <connections>
+                                                                    <action selector="playButtonTapped" destination="GX8-28-Oie" eventType="touchUpInside" id="ddl-hI-rYV"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9e9-7M-2if" customClass="NFDownloadButton" customModule="NFDownloadButton">
+                                                        <rect key="frame" x="109" y="0.0" width="63" height="63"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="63" id="8Wg-uC-wu5"/>
+                                                            <constraint firstAttribute="height" constant="63" id="eLJ-5m-EMy"/>
+                                                        </constraints>
+                                                        <connections>
+                                                            <action selector="downloadButtonTapped" destination="GX8-28-Oie" eventType="touchUpInside" id="TIR-RA-485"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="mjg-W8-ITE" firstAttribute="leading" secondItem="2vw-om-yrB" secondAttribute="leading" constant="16" id="IKh-al-Rpl"/>
+                            <constraint firstItem="mjg-W8-ITE" firstAttribute="top" secondItem="2vw-om-yrB" secondAttribute="top" constant="16" id="drf-5k-NQ6"/>
+                            <constraint firstAttribute="trailing" secondItem="mjg-W8-ITE" secondAttribute="trailing" constant="16" id="mme-in-ud8"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="2vw-om-yrB" secondAttribute="bottom" constant="8" id="8eq-g6-Ki1"/>
+                    <constraint firstItem="2vw-om-yrB" firstAttribute="leading" secondItem="4s8-o0-XNv" secondAttribute="leading" constant="8" id="aaZ-gs-XnB"/>
+                    <constraint firstItem="2vw-om-yrB" firstAttribute="top" secondItem="4s8-o0-XNv" secondAttribute="top" constant="8" id="etf-zQ-ixn"/>
+                    <constraint firstAttribute="trailing" secondItem="2vw-om-yrB" secondAttribute="trailing" constant="8" id="pGy-4h-7Qf"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="deleteButton" destination="Wdl-nJ-7qa" id="bGt-89-eNM"/>
+                <outlet property="downloadButton" destination="9e9-7M-2if" id="aoQ-FT-us3"/>
+                <outlet property="episodsLabel" destination="fox-E9-wHn" id="dMX-vk-9af"/>
+                <outlet property="playButton" destination="zHc-tQ-weQ" id="3dA-ZV-zGN"/>
+                <outlet property="posterImageView" destination="F3b-2a-ZRb" id="5FF-jl-7FM"/>
+                <outlet property="qualityLabel" destination="d7Y-t3-3EV" id="2HD-oY-U12"/>
+                <outlet property="titleLabel" destination="XgE-8o-aFO" id="aeI-aA-J7D"/>
+            </connections>
+            <point key="canvasLocation" x="397.82608695652175" y="-146.65178571428569"/>
+        </tableViewCell>
+    </objects>
+    <designables>
+        <designable name="9e9-7M-2if">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="ic-download-delete-button" width="15" height="15"/>
+        <image name="ic-download-play" width="12.5" height="14"/>
+        <systemColor name="systemFillColor">
+            <color red="0.47058823529411764" green="0.47058823529411764" blue="0.50196078431372548" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

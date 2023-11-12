@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WTVC" customModule="Shoof" customModuleProvider="target">
+            <connections>
+                <outlet property="actionBtn" destination="Z0P-aM-8NP" id="OUl-fO-QXV"/>
+                <outlet property="bodyLabel" destination="mQ8-E9-pBG" id="uiU-6N-yFm"/>
+                <outlet property="imageView" destination="Ldt-dA-NDa" id="Xpq-zH-ir8"/>
+                <outlet property="titleLabel" destination="HCy-Od-EMd" id="lwu-yM-HTm"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Discover" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HCy-Od-EMd">
+                    <rect key="frame" x="20" y="492.5" width="374" height="30"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="25"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Discover new developers arround you" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mQ8-E9-pBG">
+                    <rect key="frame" x="18" y="540.5" width="378" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z0P-aM-8NP" customClass="MasosaButton" customModule="Shoof" customModuleProvider="target">
+                    <rect key="frame" x="24" y="604" width="366" height="45"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="YyF-M5-CSn"/>
+                    </constraints>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="24" maxY="0.0"/>
+                    <state key="normal" title="Next">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="actionBtnAction:" destination="-1" eventType="touchUpInside" id="fsD-qb-lRm"/>
+                    </connections>
+                </button>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wt-1" translatesAutoresizingMaskIntoConstraints="NO" id="Ldt-dA-NDa" customClass="RoundedImageView" customModule="Shoof" customModuleProvider="target">
+                    <rect key="frame" x="35" y="84" width="344" height="358.5"/>
+                </imageView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="HCy-Od-EMd" firstAttribute="top" secondItem="Ldt-dA-NDa" secondAttribute="bottom" constant="50" id="4Dw-34-1NR"/>
+                <constraint firstItem="Ldt-dA-NDa" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.4" id="4PB-TK-AXV"/>
+                <constraint firstItem="HCy-Od-EMd" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="7xg-RI-vCy"/>
+                <constraint firstItem="Z0P-aM-8NP" firstAttribute="top" secondItem="mQ8-E9-pBG" secondAttribute="bottom" constant="43" id="8So-56-foR"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Z0P-aM-8NP" secondAttribute="trailing" constant="24" id="Hqa-l1-oPr"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Ldt-dA-NDa" secondAttribute="trailing" constant="35" id="N6O-Qm-Dxo"/>
+                <constraint firstItem="Ldt-dA-NDa" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="35" id="Q7Y-ax-S4e"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="HCy-Od-EMd" secondAttribute="trailing" constant="20" id="bMN-gV-ljT"/>
+                <constraint firstItem="mQ8-E9-pBG" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="18" id="byX-Fx-7LF"/>
+                <constraint firstItem="Ldt-dA-NDa" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="40" id="f0i-F8-7MJ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="mQ8-E9-pBG" secondAttribute="trailing" constant="18" id="h3d-yn-5qK"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="mQ8-E9-pBG" secondAttribute="bottom" constant="18" id="hQ9-wu-9nR"/>
+                <constraint firstItem="mQ8-E9-pBG" firstAttribute="top" secondItem="HCy-Od-EMd" secondAttribute="bottom" constant="18" id="qKG-VB-ezF"/>
+                <constraint firstItem="Z0P-aM-8NP" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="xbW-dL-f7N"/>
+                <constraint firstItem="HCy-Od-EMd" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="xrK-9d-Awb"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="121.875"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="Z0P-aM-8NP">
+            <size key="intrinsicContentSize" width="38" height="34"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="wt-1" width="960" height="847"/>
+    </resources>
+</document>

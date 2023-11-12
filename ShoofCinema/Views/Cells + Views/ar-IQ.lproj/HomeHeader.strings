@@ -1,0 +1,21 @@
+/* Class = "UILabel"; text = "----------------------------------------------------------------------------------------------------"; ObjectID = "MgV-KU-9Zm"; */
+"MgV-KU-9Zm.text" = "----------------------------------------------------------------------------------------------------";
+
+/* Class = "UILabel"; text = "-----------------------------"; ObjectID = "OdO-My-A4v"; */
+"OdO-My-A4v.text" = "-----------------------------";
+
+
+"S5t-Xs-vd3.normalTitle" = "الرئيسية";
+
+/* Class = "UIButton"; normalTitle = "TV SHOW"; ObjectID = "s6G-Xv-sRl"; */
+"s6G-Xv-sRl.normalTitle" = "المسلسلات";
+
+/* Class = "UIButton"; normalTitle = "MOVIES"; ObjectID = "s8h-r4-PHj"; */
+"s8h-r4-PHj.normalTitle" = "الافلام";
+
+/* Class = "UIButton"; normalTitle = "Ramadan mode"; ObjectID = "SGB-t1-JKG"; */
+"SGB-t1-JKG.normalTitle" = "مود رمضان";
+
+/* Class = "UILabel"; text = "-----"; ObjectID = "Z1N-en-mdL"; */
+"Z1N-en-mdL.text" = "-----";
+

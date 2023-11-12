@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="90" id="X1e-t7-9wU" customClass="DownloadEpisodeCell" customModule="Shoof" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="X1e-t7-9wU" id="2Hy-wf-sO1">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rNf-Ll-mbK" customClass="VeryLightRoundedView" customModule="Shoof" customModuleProvider="target">
+                        <rect key="frame" x="16" y="8" width="382" height="74"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="102" translatesAutoresizingMaskIntoConstraints="NO" id="5d7-eQ-222">
+                                <rect key="frame" x="16" y="14.5" width="350" height="45"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-------" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bek-OC-O1e">
+                                        <rect key="frame" x="0.0" y="0.0" width="93" height="45"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="H1X-ow-BRs">
+                                        <rect key="frame" x="195" y="0.0" width="155" height="45"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pgn-rc-vrj" customClass="NFDownloadButton" customModule="NFDownloadButton">
+                                                <rect key="frame" x="0.0" y="0.0" width="45" height="45"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="XYX-DA-1Cd"/>
+                                                    <constraint firstAttribute="width" constant="45" id="tE9-4x-Y4L"/>
+                                                </constraints>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="85D-BA-hgk" customClass="MainButton" customModule="Shoof" customModuleProvider="target">
+                                                <rect key="frame" x="55" y="0.0" width="45" height="45"/>
+                                                <color key="backgroundColor" systemColor="systemFillColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="5Rk-Lm-uLp"/>
+                                                    <constraint firstAttribute="width" constant="45" id="zlU-Ur-NG8"/>
+                                                </constraints>
+                                                <color key="tintColor" systemColor="tertiaryLabelColor"/>
+                                                <state key="normal" image="ic-download-delete-button"/>
+                                                <connections>
+                                                    <action selector="deleteTapped" destination="X1e-t7-9wU" eventType="touchUpInside" id="zk7-PC-lSc"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nra-MA-P35" customClass="MainButton" customModule="Shoof" customModuleProvider="target">
+                                                <rect key="frame" x="110" y="0.0" width="45" height="45"/>
+                                                <color key="backgroundColor" systemColor="systemFillColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="PJx-lb-Oo1"/>
+                                                    <constraint firstAttribute="width" constant="45" id="uLD-Sv-8bb"/>
+                                                </constraints>
+                                                <color key="tintColor" systemColor="tertiaryLabelColor"/>
+                                                <state key="normal" image="play-1"/>
+                                                <connections>
+                                                    <action selector="playTapped" destination="X1e-t7-9wU" eventType="touchUpInside" id="TKJ-et-a1B"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.078431372550000003" green="0.078431372550000003" blue="0.078431372550000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="5d7-eQ-222" firstAttribute="centerY" secondItem="rNf-Ll-mbK" secondAttribute="centerY" id="F9s-6U-2If"/>
+                            <constraint firstItem="5d7-eQ-222" firstAttribute="leading" secondItem="rNf-Ll-mbK" secondAttribute="leading" constant="16" id="gg8-zj-PCf"/>
+                            <constraint firstAttribute="trailing" secondItem="5d7-eQ-222" secondAttribute="trailing" constant="16" id="hnX-sB-y6a"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="rNf-Ll-mbK" secondAttribute="bottom" constant="8" id="0iN-Il-gf9"/>
+                    <constraint firstAttribute="trailing" secondItem="rNf-Ll-mbK" secondAttribute="trailing" constant="16" id="58O-1G-QOU"/>
+                    <constraint firstItem="rNf-Ll-mbK" firstAttribute="top" secondItem="2Hy-wf-sO1" secondAttribute="top" constant="8" id="R9L-OM-XuY"/>
+                    <constraint firstItem="rNf-Ll-mbK" firstAttribute="leading" secondItem="2Hy-wf-sO1" secondAttribute="leading" constant="16" id="kzn-Kh-kGq"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="deleteButton" destination="85D-BA-hgk" id="ghP-Rg-ZXA"/>
+                <outlet property="downloadButton" destination="Pgn-rc-vrj" id="O9t-Lh-37r"/>
+                <outlet property="episodeLabel" destination="Bek-OC-O1e" id="iQu-I6-3kt"/>
+                <outlet property="playButton" destination="nra-MA-P35" id="fZU-Tp-LmK"/>
+            </connections>
+            <point key="canvasLocation" x="927.536231884058" y="147.99107142857142"/>
+        </tableViewCell>
+    </objects>
+    <designables>
+        <designable name="Pgn-rc-vrj">
+            <size key="intrinsicContentSize" width="30" height="34"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="ic-download-delete-button" width="15" height="15"/>
+        <image name="play-1" width="16" height="19"/>
+        <systemColor name="systemFillColor">
+            <color red="0.47058823529411764" green="0.47058823529411764" blue="0.50196078431372548" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tertiaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
