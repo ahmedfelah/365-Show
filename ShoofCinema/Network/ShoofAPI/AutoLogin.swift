@@ -9,39 +9,12 @@
 import Foundation
 
 
+struct Reseller: Codable {
+    let status: Int
+    let message: String?
+    let token: String?
+}
 extension ShoofAPI {
-    struct Reseller {
-        let host: String
-        let path: String
-        
-        static var urls: [Self] = {
-            [
-                .init(
-                    host: "reselller1.supercellnetwork.com",
-                    path: "/user/api/index.php/api/auth/autoLogin"
-                ),
-                .init(
-                    host: "http://reselller2.supercellnetwork.com/",
-                    path: "user/api/index.php/api/auth/autoLogin"
-                ),
-                .init(
-                    host: "http://reselller3.supercellnetwork.com/",
-                    path: "user/api/index.php/api/auth/autoLogin"
-                ),
-                .init(
-                    host: "http://reselller4.supercellnetwork.com/",
-                    path: "user/api/index.php/api/auth/autoLogin"
-                ),
-                .init(
-                    host: "http://reseller.scn-ftth.com/user/api/index.php/api/auth/autoLogin",
-                    path: "user/api/index.php/api/auth/autoLogin"
-                )
-                
-            ]
-            
-        }()
-    }
-    
     struct AutoLogin : Codable {
         let token: String?
         

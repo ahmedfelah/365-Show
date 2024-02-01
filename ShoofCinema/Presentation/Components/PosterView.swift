@@ -24,7 +24,7 @@ struct PosterView: View {
                         .aspectRatio(contentMode: .fill)
                     
                 } placeholder: {
-                    Color.gray
+                    Color.black
                 }
                 
                 

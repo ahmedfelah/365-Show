@@ -15,18 +15,22 @@ class SignUpViewModel: ObservableObject {
     @Published var isLogged: Bool = false
     @Published var email = ""
     @Published var name = ""
+    @Published var username = ""
     @Published var password = ""
+    @Published var errors = ""
     
     func signUp() {
-        self.isLoading = true
+        
         guard !email.isEmpty, !password.isEmpty , !name.isEmpty else{
             HapticFeedback.error()
             return
         }
         
-        ShoofAPI.shared.register(withEmail: email, userName: name, name: name, password: password) { [weak self] result in
+        self.isLoading = true
+        
+        ShoofAPI.shared.register(withEmail: email, userName: username, name: name, password: password) { [weak self] result in
             DispatchQueue.main.async {
-                self?.isLoading = true
+                self?.isLoading = false
             }
             self?.handleAuthentication(result: result)
         }
@@ -50,8 +54,11 @@ class SignUpViewModel: ObservableObject {
             
         } catch ShoofAPI.Error.authenticationCancelled {
             print("Cancelled")
-        } catch {
-            print("Errors")
+        } catch(let errors) {
+            DispatchQueue.main.async {
+                self.errors = errors.localizedDescription
+            }
+            print("Errors", errors)
         }
     }
 }

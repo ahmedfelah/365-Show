@@ -28,7 +28,8 @@ class ShoofAPI {
     private(set) var isInNetwork: Bool = false
     
     private(set) var apiUrl: String = "cinema5-api.shoofnetwork.net"
-    private var apiUrlInNetwork: String = "365ar.show"
+    private var apiUrlInNetwork: String = "cinema5-api.shoofnetwork.net"
+    //365ar.show
     
     func loadNetworkStatus(completionHandler: @escaping (Result<ShoofAPI.OldAPIEndpoint<ShoofAPI.NetworkStatusResponse>.Response, Swift.Error>) -> Void) {
         session.load(.networkStatus) { [weak self] result in
@@ -46,6 +47,10 @@ class ShoofAPI {
             
             completionHandler(result)
         }
+    }
+    
+    func loadReels(pageNumber: Int,  completionHandler: @escaping (Result<ShoofAPI.Endpoint<[ShoofAPI.Reel]>.Response, Swift.Error>) -> Void) {
+        session.load(.reels(pageNumber: pageNumber), completionHandler: completionHandler)
     }
     
     func loadSections(withTarget target: ShoofAPI.Endpoint<[ShoofAPI.Section]>.Target, pageNumber: Int, completionHandler: @escaping (Result<ShoofAPI.Endpoint<[ShoofAPI.Section]>.Response, Swift.Error>) -> Void) {
@@ -179,18 +184,27 @@ class ShoofAPI {
         GIDSignIn.sharedInstance.configuration = config
         
         GIDSignIn.sharedInstance.signIn(withPresenting: viewController) { [unowned self] result, error in
-            if let user = result?.user, let idToken = user.idToken?.tokenString {
-                let credential = GoogleAuthProvider.credential(withIDToken: idToken, accessToken: user.accessToken.tokenString)
-               
+            if let user = result?.user, let UseridToken = user.idToken?.tokenString {
+                let credential = GoogleAuthProvider.credential(withIDToken: UseridToken, accessToken: user.accessToken.tokenString)
+                
                 self.fireAuth.signIn(with: credential) { result, error in
-                    if let result = result {
-                        self.signInWithShoof(userUID: result.user.uid, completionHandler: completionHandler)
-                    } else if let error = error {
+                    self.fireAuth.currentUser?.getIDTokenForcingRefresh(true) { idToken, error in
+                        if let error = error {
+                            completionHandler(.failure(error))
+                            return;
+                        }
+                        
+                        if let idToken = idToken {
+                            self.signInWithShoof(userUID: idToken, completionHandler: completionHandler)
+                        }
+                        
+                    }
+                    
+                    if let error = error {
                         completionHandler(.failure(error))
-                    } else {
-                        completionHandler(.failure(Error.unknown))
                     }
                 }
+                
             } else if let error = error {
                 if let error = error as? GIDSignInError, error.code == .canceled {
                     completionHandler(.failure(Error.authenticationCancelled))
@@ -235,7 +249,15 @@ class ShoofAPI {
         }
     }
     
-    func updateUser(name: String? = nil,  username: String? = nil, email: String? = nil, password: String? = nil, phone: String? = nil, image: String? = nil, completionHandler: @escaping (Result<ShoofAPI.AccountEndpoint<User>.Response, Swift.Error>) -> Void) {
+    func updateUser(
+        name: String? = ShoofAPI.User.current?.name,
+        username: String? = ShoofAPI.User.current?.userName,
+        email: String? = ShoofAPI.User.current?.email,
+        password: String? = nil,
+        phone: String? = ShoofAPI.User.current?.phone,
+        image: String? = nil,
+        completionHandler: @escaping (Result<ShoofAPI.AccountEndpoint<User>.Response, Swift.Error>) -> Void
+    ) {
         session.load(.updateUser(name: name, username: username, email: email, password: password, phone: phone, image: image)) { result in
             completionHandler(result)
         }
@@ -248,11 +270,12 @@ class ShoofAPI {
         }
     }
     
-    func autoLogin(token: String?, deviceType: Int, baseUrl: String ,completionHandler: @escaping (Result<ShoofAPI.AccountEndpoint<Bool>.Response, Swift.Error>) -> Void) {
+    func autoLogin(token: String?, deviceType: Int, baseUrl: String ,completionHandler: @escaping (Result<ShoofAPI.ResellerEndpoint<Bool>.Response, Swift.Error>) -> Void) {
         session.load(.autoLogin(token: token, deviceType: deviceType, baseUrl: baseUrl)) { result in
             completionHandler(result)
         }
     }
+
     
     func checkReseller(host: String, path: String ,completionHandler: @escaping (Result<ShoofAPI.AccountEndpoint<ShoofAPI.AutoLogin>.Response, Swift.Error>) -> Void) {
         session.load(.checkReseller(host: host, path: path)) { result in

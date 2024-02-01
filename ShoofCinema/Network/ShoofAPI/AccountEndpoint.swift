@@ -15,9 +15,10 @@ extension ShoofAPI {
         let path: String
         let method: TBKNetworking.HTTPMethod
         let token: String?
+        let queryItems: [URLQueryItem]
         
         var scheme: Scheme {
-            .http
+            .https
         }
         
         struct Error : LocalizedError {
@@ -44,11 +45,18 @@ extension ShoofAPI {
             }
         }
             
-        init(host: String = "account-api.shoofnetwork.net", path: String, method: TBKNetworking.HTTPMethod, token: String? = nil) {
+        init(
+            host: String = "user.365ar.show",
+            path: String,
+            method: TBKNetworking.HTTPMethod,
+            token: String? = nil,
+            @ArrayBuilder queryItems: () -> [URLQueryItem] = { [] }
+        ) {
             self.host = host
             self.path = path
             self.method = method
             self.token = token
+            self.queryItems = queryItems()
         }
         
         func prepare(request: inout URLRequest) {
@@ -72,10 +80,22 @@ extension ShoofAPI {
             return try decoder.decode(Response.self, from: data)
         }
         
-        init<Form : Encodable>(path: String, form: Form, type: MethodType = .post, token: String? = nil) {
+        init<Form : Encodable>(
+            path: String,
+            form: Form,
+            type: MethodType = .post,
+            token: String? = nil,
+            @ArrayBuilder queryItems: () -> [URLQueryItem] = { [] }
+        ) {
             let encoder = JSONEncoder()
             let data = try! encoder.encode(form)
-            self.init(path: path, method: type == .post ? .post(data: data) : .put(data: data), token: token)
+            
+            self.init(
+                path: path,
+                method: type == .post ? .post(data: data) : .put(data: data),
+                token: token,
+                queryItems: queryItems
+            )
         }
     }
 }
@@ -147,6 +167,7 @@ extension ShoofAPI.AccountEndpoint {
         let deviceType: Int
         let baseUrl: String
     }
+
     
     struct GoogleSignIn : Codable {
         let userUID: String
@@ -165,6 +186,7 @@ extension ShoofAPI.AccountEndpoint {
             case userID = "userId"
         }
     }
+    
 }
 
 extension Endpoint where Self == ShoofAPI.AccountEndpoint<ShoofAPI.User> {
@@ -185,7 +207,9 @@ extension Endpoint where Self == ShoofAPI.AccountEndpoint<ShoofAPI.User> {
     
     static func updateUser(name: String?, username: String?, email: String?, password: String?, phone: String?, image: String?) -> Self {
         let form = Self.Update(name: name, username: username, email: email, password: password, phone: phone, image: image)
-        return Self(path: "/api/User/Current", form: form, type: .put)
+        return Self(path: "/api/User/Current", form: form, type: .put) {
+            URLQueryItem(name: "id", value: ShoofAPI.User.current?.id)
+        }
     }
     
     static func currentUser() -> Self {
@@ -215,10 +239,10 @@ extension Endpoint where Self == ShoofAPI.AccountEndpoint<Bool> {
     }
 }
 
-extension Endpoint where Self == ShoofAPI.AccountEndpoint<Bool> {
+extension Endpoint where Self == ShoofAPI.ResellerEndpoint<Bool> {
     static func autoLogin(token: String?, deviceType: Int, baseUrl: String) -> Self {
         let form = self.SasUserInfo(token: token, deviceType: deviceType, baseUrl: baseUrl)
-        return Self(path: "/api/MobileV3/SasUserInformation/SaveInfo", form: form)
+        return  ShoofAPI.ResellerEndpoint(form: form, path: "/api/MobileV3/SasUserInformation/SaveInfo")
     }
 }
 

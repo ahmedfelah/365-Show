@@ -35,7 +35,7 @@ class HomeVC: MasterVC {
     }
     
     lazy var historySection: ShoofAPI.Section = {
-        return ShoofAPI.Section(title: NSLocalizedString("WatchHistory", comment: ""), style: .history, id: "History-Section", shows: recentShows?.map { $0.asShoofShow() } ?? [], actions: nil)
+        return ShoofAPI.Section(id: "History-Section", title: NSLocalizedString("WatchHistory", comment: ""), style: .history, shows: recentShows?.map { $0.asShoofShow() } ?? [], actions: nil)
     }()
     
     // MARK: - VARS

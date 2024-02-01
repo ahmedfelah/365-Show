@@ -37,10 +37,19 @@ struct MainView: View {
     
     var body: some View {
         TabView {
-            HomeView()
-                .tabItem {
-                    Label("", systemImage: "house.fill")
-                }
+            if isOutsideDomain {
+                NowInCinemaView()
+                    .tabItem {
+                        Label("", systemImage: "house.fill")
+                    }
+            }
+            
+            else {
+                HomeView()
+                    .tabItem {
+                        Label("", systemImage: "house.fill")
+                    }
+            }
             
             ExploreView()
                 .tabItem {
@@ -58,6 +67,48 @@ struct MainView: View {
                 }
         }.accentColor(.secondaryBrand)
             .toolbarBackground(Color.primaryBrand, for: .bottomBar)
+            .task {
+                checkReseller()
+            }
+    }
+    
+    
+    private func checkReseller() {
+    
+        guard !isOutsideDomain && !ShoofAPI.AutoLogin.current else {return}
+        
+        for resellerUrl in ResellersUrl {
+            guard let url = URL(string: resellerUrl) else {return}
+            
+            guard let baseUrl = baseUrl(url: resellerUrl) else {return}
+            
+            ResellerAPI.shared.getToken(url: url) { response in
+                switch response {
+                case .success(let reseller):
+                    if reseller.status == 200 && reseller.token != nil {
+                        self.autoLogin(token: reseller.token, baseUrl: baseUrl.absoluteString)
+                        break
+                    }
+                case .failure(let errors):
+                    print(errors)
+                }
+            }
+        }
+    }
+    
+    private func autoLogin(token: String?, baseUrl: String) {
+        ShoofAPI.shared.autoLogin(token: token, deviceType: 2, baseUrl: baseUrl) { result in
+            do {
+                let response = try result.get()
+                
+                if response.body {
+                    ShoofAPI.AutoLogin.current = true
+                }
+            }
+            catch(let error) {
+                print("auto login error", error)
+            }
+        }
     }
     
 }

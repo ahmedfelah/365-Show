@@ -35,6 +35,30 @@ extension Int {
 }
 
 
+let ResellersUrl = {
+    [
+        "http://reselller1.supercellnetwork.com/user/api/index.php/api/auth/autoLogin",
+        "http://reseller1.supercellnetwork.com/user/api/index.php/api/auth/autoLogin",
+        "http://reseller.scn-ftth.com/user/api/index.php/api/auth/autoLogin",
+        "http://reseeller1.supercellnetwork.com/user/api/index.php/api/auth/autoLogin",
+        "http://reseller2.supercellnetwork.com/user/api/index.php/api/auth/autoLogin",
+        "http://reseller3.supercellnetwork.com/user/api/index.php/api/auth/autoLogin",
+        "http://reseller4.supercellnetwork.com/user/api/index.php/api/auth/autoLogin"
+        
+    ]
+    
+}()
+
+func baseUrl(url: String) -> URL? {
+    guard let url = URL(string: url) else { return nil}
+    
+    var components = URLComponents()
+    components.scheme = url.scheme
+    components.host = url.host
+    
+    return components.url
+}
+
 
 
 var isOutsideDomain: Bool {

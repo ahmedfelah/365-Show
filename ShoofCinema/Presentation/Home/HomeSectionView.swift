@@ -31,10 +31,10 @@ struct HomeSectionView: View {
                     )
                 }, label: {
                     Text("More")
-                        .font(.title3)
+                        
                 })
             }.padding(5)
-                .font(.title2)
+                .font(Font(Fonts.almarai()))
             
             ScrollViewReader { proxy in
                 ScrollView(.horizontal, showsIndicators: false) {

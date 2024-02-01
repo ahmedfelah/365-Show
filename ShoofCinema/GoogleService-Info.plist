@@ -3,21 +3,23 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>141498298880-0cbg7j0lla354h7nrb8cl4ao8mt2ib5b.apps.googleusercontent.com</string>
+	<string>406257965863-869ilvu3cvbs28k51ittddba8se865eh.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.141498298880-0cbg7j0lla354h7nrb8cl4ao8mt2ib5b</string>
+	<string>com.googleusercontent.apps.406257965863-869ilvu3cvbs28k51ittddba8se865eh</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>406257965863-27jo0u1bujohm5b6qulncd21eejacnjk.apps.googleusercontent.com</string>
 	<key>API_KEY</key>
-	<string>AIzaSyCk2eSy7reQ4Nq6nA5o7Z5l2kifevhQJzs</string>
+	<string>AIzaSyCSj4cw1y0mxcPR5jjB37Z5LqBycL0qssc</string>
 	<key>GCM_SENDER_ID</key>
-	<string>141498298880</string>
+	<string>406257965863</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.AppChief.ShoofCinema</string>
+	<string>com.365show.365Show</string>
 	<key>PROJECT_ID</key>
-	<string>shoof-ee72a</string>
+	<string>show-bda3a</string>
 	<key>STORAGE_BUCKET</key>
-	<string>shoof-ee72a.appspot.com</string>
+	<string>show-bda3a.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,6 +31,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:141498298880:ios:0d16325ddcbceae6101ee5</string>
+	<string>1:406257965863:ios:2cf517b4f760bf37a22702</string>
 </dict>
 </plist>

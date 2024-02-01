@@ -10,7 +10,7 @@ import UIKit
 import SwiftyJSON
 
 
-struct Actor : Codable {
+struct Artist : Codable {
     let name : String
     let image : URL?
     

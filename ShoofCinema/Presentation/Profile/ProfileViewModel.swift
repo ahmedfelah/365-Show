@@ -57,6 +57,17 @@ class ProfileViewModel: ObservableObject {
         }
     }
     
+    func deleteAccount() {
+        if let currentUser = ShoofAPI.User.current {
+            fakeDeletedAccounts.insert(currentUser)
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2)) {
+            ShoofAPI.shared.signOut()
+            self.user = ShoofAPI.User.current
+        }
+    }
+    
     private func checkString(string: String) -> String? {
         return string.isEmpty ? nil : string
     }
@@ -70,7 +81,9 @@ class ProfileViewModel: ObservableObject {
                 self?.handleCurrentUser(result: result)
             }
             
-        } catch {}
+        } catch(let error) {
+            print("avatar", error)
+        }
 
     }
     
@@ -97,5 +110,6 @@ class ProfileViewModel: ObservableObject {
             }
         }
     }
+    
     
 }

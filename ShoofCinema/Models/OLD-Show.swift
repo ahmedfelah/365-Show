@@ -34,7 +34,7 @@ struct Show : Codable {
     var year:Int?
     var rating:Float?
     var seasons:[Season]? = nil
-    var actors : [Actor]?
+    var actors : [Artist]?
     
     
     public var getTitle : String {
@@ -187,7 +187,7 @@ struct Show : Codable {
         }
         
         if let cast = json["movie_cast"].array {
-            self.actors = cast.compactMap { Actor(json: $0) }
+            self.actors = cast.compactMap { Artist(json: $0) }
         }
         
         if let srtStr = json["movie_subtitle"].string?.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)

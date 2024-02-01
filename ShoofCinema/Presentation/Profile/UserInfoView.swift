@@ -41,13 +41,13 @@ struct UserInfoView: View {
                         .cornerRadius(10)
                 }.frame(maxWidth: .infinity)
                 
-                NavigationLink(destination: UpdateUserInfoView(viewModel: viewModel), label: {
-                    Text("Edit")
-                        .padding(.horizontal, 25)
-                        .padding(.vertical, 10)
-                        .background(Color.primaryBrand)
-                        .font(.title3)
-                })
+//                NavigationLink(destination: UpdateUserInfoView(viewModel: viewModel), label: {
+//                    Text("Edit")
+//                        .padding(.horizontal, 25)
+//                        .padding(.vertical, 10)
+//                        .background(Color.primaryBrand)
+//                        .font(.title3)
+//                })
             }.padding()
                 .font(.title2)
                 .bold()

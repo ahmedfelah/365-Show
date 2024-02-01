@@ -24,7 +24,7 @@ class CustomTabmanVC: TabmanViewController {
         super.viewDidLoad()
         
         dataSource = self
-        delegate = self
+        //delegate = self
         customizeTabman()
         addBar(bar, dataSource: self, at: .top)
         setupHUD()

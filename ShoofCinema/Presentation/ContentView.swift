@@ -18,14 +18,15 @@ struct ContentView: View {
     @AppStorage("colorScheme") var colorScheme: ColorScheme = .dark
     @AppStorage("language") var language: String = "en"
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
-   
+
+    
     
     var body: some View {
-            MainView()
+        MainView()
             .environment(\.colorScheme, colorScheme == .dark ? .dark : .light)
             .environment(\.layoutDirection, language == "en" ? .leftToRight : .rightToLeft)
             .environment(\.locale, Locale(identifier: language))
-            
+        
     }
 }
 

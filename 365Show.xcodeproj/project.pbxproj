@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 53;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,7 +16,6 @@
 		043C28CD29AF80520038F985 /* AutocompleteTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043C28CC29AF80520038F985 /* AutocompleteTableView.swift */; };
 		043C28D029AF94A20038F985 /* AutocompleteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043C28CE29AF94A20038F985 /* AutocompleteCell.swift */; };
 		043C28D129AF94A20038F985 /* AutocompleteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 043C28CF29AF94A20038F985 /* AutocompleteCell.xib */; };
-		0440EEBC29ABF46B00198905 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0440EEBB29ABF46B00198905 /* GoogleService-Info.plist */; };
 		04414CA929A6961F00D63C43 /* SeasonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04414CA829A6961F00D63C43 /* SeasonsViewController.swift */; };
 		0442717F2A14F079009B5E45 /* ShimmerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0442717E2A14F079009B5E45 /* ShimmerView.swift */; };
 		04441F2C2A86897D001DE173 /* UserListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04441F2B2A86897D001DE173 /* UserListView.swift */; };
@@ -64,7 +63,6 @@
 		046D7ED12AA1BF8B00A17751 /* DwonloadViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046D7ED02AA1BF8B00A17751 /* DwonloadViewModel.swift */; };
 		0473C93829FB3DCD00EDB249 /* KingFisherImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0473C93729FB3DCD00EDB249 /* KingFisherImageView.swift */; };
 		047828742A913EED00EB5984 /* VideoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047828732A913EED00EB5984 /* VideoPlayerViewController.swift */; };
-		047A00B12A1302F900D08B96 /* Pods_ShoofCinema.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB0BDD2777A64DC5903DA67 /* Pods_ShoofCinema.framework */; };
 		047E981E29C4B9120044AAD8 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047E981D29C4B9120044AAD8 /* CustomTableViewCell.swift */; };
 		0483DB48299538040018D869 /* RateHomeHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0483DB47299538040018D869 /* RateHomeHeader.swift */; };
 		048D3A6629FBCC3300358E93 /* DetailsSwiftUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048D3A6529FBCC3300358E93 /* DetailsSwiftUIViewController.swift */; };
@@ -94,8 +92,6 @@
 		04CB72102A572ACA009BD732 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CB720F2A572ACA009BD732 /* HomeViewModel.swift */; };
 		04CB72122A572B7C009BD732 /* ResponseStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CB72112A572B7C009BD732 /* ResponseStatus.swift */; };
 		04CC22F129FE89FB000BBDAF /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CC22F029FE89FB000BBDAF /* ActivityIndicatorView.swift */; };
-		04D0ADF329C7CCE100E9F487 /* default-mode.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 04D0ADF129C7CCE100E9F487 /* default-mode.mp4 */; };
-		04D0ADF429C7CCE100E9F487 /* ramadan-mode.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 04D0ADF229C7CCE100E9F487 /* ramadan-mode.mp4 */; };
 		04DED85C2A79A02C004EB131 /* ActorsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DED85B2A79A02C004EB131 /* ActorsView.swift */; };
 		04DED85E2A79AEF1004EB131 /* SeasonsTVShowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DED85D2A79AEF1004EB131 /* SeasonsTVShowView.swift */; };
 		04DED8602A79AFA9004EB131 /* EpisodeTVShowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DED85F2A79AFA9004EB131 /* EpisodeTVShowView.swift */; };
@@ -218,7 +214,7 @@
 		18A2EEEA28FFFBA000D42173 /* UPBResolutionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A2EEE728FFFBA000D42173 /* UPBResolutionButton.swift */; };
 		18A2EEEB28FFFBA000D42173 /* CVideoControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A2EEE828FFFBA000D42173 /* CVideoControlsView.swift */; };
 		18A2EEEE28FFFBBC00D42173 /* ACVFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A2EEED28FFFBBC00D42173 /* ACVFunctions.swift */; };
-		18A2EEF228FFFC2100D42173 /* PlayerAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18A2EEF128FFFC2100D42173 /* PlayerAssets.xcassets */; };
+		4A44BFBA5C5CD1513A5A87E7 /* Pods_365Show.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4A36F634932CC1E03D2A18D /* Pods_365Show.framework */; };
 		5D27A4A52538F35A00CFB27E /* KeyboardLayoutGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D27A4A02538F15800CFB27E /* KeyboardLayoutGuide.swift */; };
 		5D2836B82307131500AF2828 /* SCRefreshControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D2836B72307131500AF2828 /* SCRefreshControl.swift */; };
 		5D2E41B6224FC80D00AA9248 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D2E41B5224FC80D00AA9248 /* AppDelegate.swift */; };
@@ -265,7 +261,6 @@
 		5D6DE490261CFF4A00BE23C6 /* RoundedTabBar-NotificationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6DE48F261CFF4A00BE23C6 /* RoundedTabBar-NotificationHandler.swift */; };
 		5D7493372682281E00065933 /* RRecentShow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7493362682281E00065933 /* RRecentShow.swift */; };
 		5D8219BE23C8986E001919C4 /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8219BD23C8986E001919C4 /* DownloadManager.swift */; };
-		5D93BC8C22B3258E009B1089 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D93BC8B22B3258E009B1089 /* Assets.xcassets */; };
 		5D93BC9822B7CFA3009B1089 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D93BC9722B7CFA3009B1089 /* Account.swift */; };
 		5DC587FA26BBC83200A22BFD /* UIWatchProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC587F926BBC83200A22BFD /* UIWatchProgress.swift */; };
 		5DC587FC26BBD3D600A22BFD /* MasterTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC587FB26BBD3D600A22BFD /* MasterTVC.swift */; };
@@ -331,8 +326,18 @@
 		96E2D09227C78ECE00675601 /* SelectionMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E2D09127C78ECE00675601 /* SelectionMenu.swift */; };
 		96EA074B2733294500369476 /* ShoofAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EA074A2733294500369476 /* ShoofAPI.swift */; };
 		BD01F1882AC7223300669949 /* CControlsSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD01F1872AC7223300669949 /* CControlsSheetView.swift */; };
+		BD2A06672B0A8D9800F94905 /* ReelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2A06662B0A8D9800F94905 /* ReelView.swift */; };
+		BD31927A2B6A3025008C5FB3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD3192792B6A2DCD008C5FB3 /* GoogleService-Info.plist */; };
+		BD31927B2B6A3043008C5FB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD3192772B6A2B26008C5FB3 /* Assets.xcassets */; };
+		BD31927D2B6A314E008C5FB3 /* PlayerAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD31927C2B6A314E008C5FB3 /* PlayerAssets.xcassets */; };
 		BD34F5092AD5EB9000E14E9D /* AutoLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD34F5082AD5EB9000E14E9D /* AutoLogin.swift */; };
+		BD3E33322B493A9800C43E28 /* ResellerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3E33312B493A9800C43E28 /* ResellerAPI.swift */; };
+		BD6553932B24CF6300B41231 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6553922B24CF6300B41231 /* News.swift */; };
+		BD88462F2B19C6E00035FF53 /* NowInCinemaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD88462E2B19C6E00035FF53 /* NowInCinemaView.swift */; };
 		BD994FFF2AD3452A000A0601 /* DotsIndexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD994FFE2AD3452A000A0601 /* DotsIndexView.swift */; };
+		BDFDCE232B094311007CE1A2 /* Reel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFDCE222B094311007CE1A2 /* Reel.swift */; };
+		BDFDCE262B0953CA007CE1A2 /* ReelsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFDCE252B0953CA007CE1A2 /* ReelsView.swift */; };
+		BDFDCE282B0953E8007CE1A2 /* ReelsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFDCE272B0953E7007CE1A2 /* ReelsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -358,7 +363,6 @@
 		043C28CC29AF80520038F985 /* AutocompleteTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutocompleteTableView.swift; sourceTree = "<group>"; };
 		043C28CE29AF94A20038F985 /* AutocompleteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutocompleteCell.swift; sourceTree = "<group>"; };
 		043C28CF29AF94A20038F985 /* AutocompleteCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AutocompleteCell.xib; sourceTree = "<group>"; };
-		0440EEBB29ABF46B00198905 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		04414CA829A6961F00D63C43 /* SeasonsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonsViewController.swift; sourceTree = "<group>"; };
 		0442717E2A14F079009B5E45 /* ShimmerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShimmerView.swift; sourceTree = "<group>"; };
 		04441F2B2A86897D001DE173 /* UserListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListView.swift; sourceTree = "<group>"; };
@@ -437,8 +441,6 @@
 		04CB720F2A572ACA009BD732 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		04CB72112A572B7C009BD732 /* ResponseStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseStatus.swift; sourceTree = "<group>"; };
 		04CC22F029FE89FB000BBDAF /* ActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorView.swift; sourceTree = "<group>"; };
-		04D0ADF129C7CCE100E9F487 /* default-mode.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = "default-mode.mp4"; path = "../../Downloads/Shoof Outro (converted)_AME/default-mode.mp4"; sourceTree = "<group>"; };
-		04D0ADF229C7CCE100E9F487 /* ramadan-mode.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ramadan-mode.mp4"; path = "../../Downloads/Shoof Outro (converted)_AME/ramadan-mode.mp4"; sourceTree = "<group>"; };
 		04DED85B2A79A02C004EB131 /* ActorsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActorsView.swift; sourceTree = "<group>"; };
 		04DED85D2A79AEF1004EB131 /* SeasonsTVShowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonsTVShowView.swift; sourceTree = "<group>"; };
 		04DED85F2A79AFA9004EB131 /* EpisodeTVShowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeTVShowView.swift; sourceTree = "<group>"; };
@@ -478,6 +480,7 @@
 		10630C412608C50700DC1F01 /* Almarai-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Almarai-Light.ttf"; sourceTree = "<group>"; };
 		10675F00260802E1009A2C4A /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		1068721126277DC400C369D9 /* VerticalPosterCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VerticalPosterCell.xib; sourceTree = "<group>"; };
+		10756B6FD8D389DEBC47499D /* Pods-365Show.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-365Show.debug.xcconfig"; path = "Pods/Target Support Files/Pods-365Show/Pods-365Show.debug.xcconfig"; sourceTree = "<group>"; };
 		1077B26526061EA6001E21F5 /* MainLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainLabel.swift; sourceTree = "<group>"; };
 		107C725325FE2086002D98EF /* WriteCommentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteCommentVC.swift; sourceTree = "<group>"; };
 		107E3E752656C16500EC8A6C /* PaddingUILabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaddingUILabel.swift; sourceTree = "<group>"; };
@@ -582,7 +585,7 @@
 		18A2EEE728FFFBA000D42173 /* UPBResolutionButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UPBResolutionButton.swift; sourceTree = "<group>"; };
 		18A2EEE828FFFBA000D42173 /* CVideoControlsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CVideoControlsView.swift; sourceTree = "<group>"; };
 		18A2EEED28FFFBBC00D42173 /* ACVFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACVFunctions.swift; sourceTree = "<group>"; };
-		18A2EEF128FFFC2100D42173 /* PlayerAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = PlayerAssets.xcassets; sourceTree = "<group>"; };
+		19B6E6131AB437EC96A6C705 /* Pods-365Show.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-365Show.release.xcconfig"; path = "Pods/Target Support Files/Pods-365Show/Pods-365Show.release.xcconfig"; sourceTree = "<group>"; };
 		5D27A4A02538F15800CFB27E /* KeyboardLayoutGuide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardLayoutGuide.swift; sourceTree = "<group>"; };
 		5D2836B72307131500AF2828 /* SCRefreshControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCRefreshControl.swift; sourceTree = "<group>"; };
 		5D2E41B2224FC80C00AA9248 /* Shoof.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shoof.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -632,7 +635,6 @@
 		5D7493362682281E00065933 /* RRecentShow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RRecentShow.swift; sourceTree = "<group>"; };
 		5D7C8F1B22CFD06500440E15 /* BridgingHeader-ShoofCinema.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BridgingHeader-ShoofCinema.h"; sourceTree = "<group>"; };
 		5D8219BD23C8986E001919C4 /* DownloadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadManager.swift; sourceTree = "<group>"; };
-		5D93BC8B22B3258E009B1089 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5D93BC9722B7CFA3009B1089 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		5DC587F926BBC83200A22BFD /* UIWatchProgress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIWatchProgress.swift; sourceTree = "<group>"; };
 		5DC587FB26BBD3D600A22BFD /* MasterTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterTVC.swift; sourceTree = "<group>"; };
@@ -699,10 +701,20 @@
 		96E2D09127C78ECE00675601 /* SelectionMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionMenu.swift; sourceTree = "<group>"; };
 		96EA074A2733294500369476 /* ShoofAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoofAPI.swift; sourceTree = "<group>"; };
 		BD01F1872AC7223300669949 /* CControlsSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CControlsSheetView.swift; sourceTree = "<group>"; };
+		BD2A06662B0A8D9800F94905 /* ReelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReelView.swift; sourceTree = "<group>"; };
+		BD3192772B6A2B26008C5FB3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BD3192792B6A2DCD008C5FB3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BD31927C2B6A314E008C5FB3 /* PlayerAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = PlayerAssets.xcassets; sourceTree = "<group>"; };
 		BD34F5082AD5EB9000E14E9D /* AutoLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLogin.swift; sourceTree = "<group>"; };
+		BD3E33312B493A9800C43E28 /* ResellerAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResellerAPI.swift; sourceTree = "<group>"; };
+		BD6553922B24CF6300B41231 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
+		BD88462E2B19C6E00035FF53 /* NowInCinemaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowInCinemaView.swift; sourceTree = "<group>"; };
 		BD994FFE2AD3452A000A0601 /* DotsIndexView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotsIndexView.swift; sourceTree = "<group>"; };
-		CBB0BDD2777A64DC5903DA67 /* Pods_ShoofCinema.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShoofCinema.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDFDCE222B094311007CE1A2 /* Reel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reel.swift; sourceTree = "<group>"; };
+		BDFDCE252B0953CA007CE1A2 /* ReelsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReelsView.swift; sourceTree = "<group>"; };
+		BDFDCE272B0953E7007CE1A2 /* ReelsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReelsViewModel.swift; sourceTree = "<group>"; };
 		DDF74452842714F001C8346E /* Pods-ShoofCinema.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShoofCinema.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShoofCinema/Pods-ShoofCinema.release.xcconfig"; sourceTree = "<group>"; };
+		E4A36F634932CC1E03D2A18D /* Pods_365Show.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_365Show.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -710,7 +722,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				047A00B12A1302F900D08B96 /* Pods_ShoofCinema.framework in Frameworks */,
+				4A44BFBA5C5CD1513A5A87E7 /* Pods_365Show.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -914,6 +926,8 @@
 		049837F02A50333600FF5CEB /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				BD88462D2B19C6540035FF53 /* NowInCinema */,
+				BDFDCE242B0953B2007CE1A2 /* Reels */,
 				046B928B2AB2E9910087BB67 /* MainView.swift */,
 				044EE86E2A59333800FA862D /* ContentView.swift */,
 				049837F12A50335C00FF5CEB /* Components */,
@@ -1026,6 +1040,7 @@
 				5D3A9C32225257BC0040C62F /* Requests */,
 				10573BFE25E53D6A004CBE39 /* NetworkManager.swift */,
 				10C9E84425F78B29007A9E37 /* NetworkMessage.swift */,
+				BD3E33312B493A9800C43E28 /* ResellerAPI.swift */,
 				966B6C8D2763E83D003B5D6B /* ShoofAPI */,
 			);
 			path = Network;
@@ -1292,7 +1307,7 @@
 				18A2EEC128FFFB5500D42173 /* Subtitles-Customizing.swift */,
 				18A2EEB628FFFB5400D42173 /* Subtitles.swift */,
 				18A2EEBD28FFFB5400D42173 /* UIRoundedButton.swift */,
-				18A2EEF128FFFC2100D42173 /* PlayerAssets.xcassets */,
+				BD31927C2B6A314E008C5FB3 /* PlayerAssets.xcassets */,
 			);
 			path = Player;
 			sourceTree = "<group>";
@@ -1339,7 +1354,7 @@
 		2B4D564CDF15ABD7ABF129FF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				CBB0BDD2777A64DC5903DA67 /* Pods_ShoofCinema.framework */,
+				E4A36F634932CC1E03D2A18D /* Pods_365Show.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1347,8 +1362,6 @@
 		5D2E41A9224FC80C00AA9248 = {
 			isa = PBXGroup;
 			children = (
-				04D0ADF129C7CCE100E9F487 /* default-mode.mp4 */,
-				04D0ADF229C7CCE100E9F487 /* ramadan-mode.mp4 */,
 				5DF9E2D328DDF135000504F2 /* ci_scripts */,
 				5D2E41B4224FC80C00AA9248 /* ShoofCinema */,
 				04AEC2A4299AEB110083272F /* Shoof Cinema */,
@@ -1377,12 +1390,12 @@
 				10C4DCA625E04C3F006A14B3 /* Controllers */,
 				10C4DCA525E04C38006A14B3 /* Views */,
 				5D3A9C722252671E0040C62F /* Models */,
+				BD3192792B6A2DCD008C5FB3 /* GoogleService-Info.plist */,
+				BD3192772B6A2B26008C5FB3 /* Assets.xcassets */,
 				5D67712A22D9381500DAA7D3 /* ShoofCinema.entitlements */,
 				5DF331BE2309E8F30098D3B5 /* InfoPlist.strings */,
 				5D7C8F1B22CFD06500440E15 /* BridgingHeader-ShoofCinema.h */,
-				5D93BC8B22B3258E009B1089 /* Assets.xcassets */,
 				5D61A760259A39CF00A16C0E /* Info.plist */,
-				0440EEBB29ABF46B00198905 /* GoogleService-Info.plist */,
 				108A646C25E10ACE00DF8434 /* Localizable.strings */,
 			);
 			path = ShoofCinema;
@@ -1563,6 +1576,8 @@
 				043C28C829AF67240038F985 /* Autocomplete.swift */,
 				0415B18429B3BD4900C035DA /* SuggestShow.swift */,
 				BD34F5082AD5EB9000E14E9D /* AutoLogin.swift */,
+				BDFDCE222B094311007CE1A2 /* Reel.swift */,
+				BD6553922B24CF6300B41231 /* News.swift */,
 			);
 			path = ShoofAPI;
 			sourceTree = "<group>";
@@ -1577,11 +1592,31 @@
 			path = Explore;
 			sourceTree = "<group>";
 		};
+		BD88462D2B19C6540035FF53 /* NowInCinema */ = {
+			isa = PBXGroup;
+			children = (
+				BD88462E2B19C6E00035FF53 /* NowInCinemaView.swift */,
+			);
+			path = NowInCinema;
+			sourceTree = "<group>";
+		};
+		BDFDCE242B0953B2007CE1A2 /* Reels */ = {
+			isa = PBXGroup;
+			children = (
+				BDFDCE252B0953CA007CE1A2 /* ReelsView.swift */,
+				BDFDCE272B0953E7007CE1A2 /* ReelsViewModel.swift */,
+				BD2A06662B0A8D9800F94905 /* ReelView.swift */,
+			);
+			path = Reels;
+			sourceTree = "<group>";
+		};
 		F3B09605CF8BCCF98E92A43F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				87F6BA6B2F4800847FFAF523 /* Pods-ShoofCinema.debug.xcconfig */,
 				DDF74452842714F001C8346E /* Pods-ShoofCinema.release.xcconfig */,
+				10756B6FD8D389DEBC47499D /* Pods-365Show.debug.xcconfig */,
+				19B6E6131AB437EC96A6C705 /* Pods-365Show.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -1665,8 +1700,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04D0ADF329C7CCE100E9F487 /* default-mode.mp4 in Resources */,
-				04D0ADF429C7CCE100E9F487 /* ramadan-mode.mp4 in Resources */,
+				BD31927B2B6A3043008C5FB3 /* Assets.xcassets in Resources */,
+				BD31927A2B6A3025008C5FB3 /* GoogleService-Info.plist in Resources */,
 				5D2E41C2224FC80E00AA9248 /* LaunchScreen.storyboard in Resources */,
 				10F9DA21260A18BB00A1990F /* ChannelCell.xib in Resources */,
 				10F9DA0E260A186700A1990F /* HomePosterCell.xib in Resources */,
@@ -1677,7 +1712,6 @@
 				10630C442608C50F00DC1F01 /* Almarai-ExtraBold.ttf in Resources */,
 				10F9DA27260A18C900A1990F /* FilterHeaderView.xib in Resources */,
 				10F9DA6D260A1A4F00A1990F /* HomeSB.storyboard in Resources */,
-				18A2EEF228FFFC2100D42173 /* PlayerAssets.xcassets in Resources */,
 				10F9DA45260A197300A1990F /* SeasonsHeader.xib in Resources */,
 				10F9DA52260A198A00A1990F /* ActorCell.xib in Resources */,
 				10F9DA58260A199900A1990F /* HistoryCell.xib in Resources */,
@@ -1694,16 +1728,15 @@
 				5DF331BC2309E8F30098D3B5 /* InfoPlist.strings in Resources */,
 				5DF4BD282530D677003EAE38 /* WTVC.xib in Resources */,
 				10630C432608C50F00DC1F01 /* Almarai-Bold.ttf in Resources */,
+				BD31927D2B6A314E008C5FB3 /* PlayerAssets.xcassets in Resources */,
 				10F9DA4C260A197E00A1990F /* SeasonCell.xib in Resources */,
 				10CC08FC2607ABAE00DCFEBB /* DownloadSeasonHeader.xib in Resources */,
 				108A646A25E10ACE00DF8434 /* Localizable.strings in Resources */,
 				043C28D129AF94A20038F985 /* AutocompleteCell.xib in Resources */,
-				0440EEBC29ABF46B00198905 /* GoogleService-Info.plist in Resources */,
 				5DF9E2D528DDF137000504F2 /* ci_post_clone.sh in Resources */,
 				1068721226277DC400C369D9 /* VerticalPosterCell.xib in Resources */,
 				10F9DA38260A192E00A1990F /* DownloadCell.xib in Resources */,
 				10F9DA5F260A19BF00A1990F /* PeekShowVC.xib in Resources */,
-				5D93BC8C22B3258E009B1089 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1716,15 +1749,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ShoofCinema/Pods-ShoofCinema-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-365Show/Pods-365Show-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ShoofCinema/Pods-ShoofCinema-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-365Show/Pods-365Show-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ShoofCinema/Pods-ShoofCinema-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-365Show/Pods-365Show-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		5D1133B622DD3E8C009C90D1 /* Run Script */ = {
@@ -1753,15 +1786,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ShoofCinema/Pods-ShoofCinema-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-365Show/Pods-365Show-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ShoofCinema/Pods-ShoofCinema-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-365Show/Pods-365Show-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ShoofCinema/Pods-ShoofCinema-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-365Show/Pods-365Show-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		84A0EC3089097A0410C8BC91 /* [CP] Check Pods Manifest.lock */ = {
@@ -1779,7 +1812,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ShoofCinema-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-365Show-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1884,6 +1917,7 @@
 				044EE8862A59384900FA862D /* TextFieldView.swift in Sources */,
 				10D2B3E82603DD9200C51DA4 /* RemoteHistoryVC.swift in Sources */,
 				04900BC62A6596C4007DB7AC /* ShowsView.swift in Sources */,
+				BDFDCE282B0953E8007CE1A2 /* ReelsViewModel.swift in Sources */,
 				BD994FFF2AD3452A000A0601 /* DotsIndexView.swift in Sources */,
 				044E1E5F29BE1A66006466A0 /* DarkTheme.swift in Sources */,
 				18A2EED428FFFB5500D42173 /* CVideoView Progress Bar Delegate.swift in Sources */,
@@ -1913,6 +1947,7 @@
 				044EE8842A5937B800FA862D /* ForgotPasswordView.swift in Sources */,
 				18A2EECA28FFFB5500D42173 /* Subtitles.swift in Sources */,
 				04CB72122A572B7C009BD732 /* ResponseStatus.swift in Sources */,
+				BD88462F2B19C6E00035FF53 /* NowInCinemaView.swift in Sources */,
 				5DEE34E722BAA3A600349DE0 /* AboutVC.swift in Sources */,
 				043C28D029AF94A20038F985 /* AutocompleteCell.swift in Sources */,
 				969A5B7027CA43D600BA6A5A /* WatchLaterShow.swift in Sources */,
@@ -1953,6 +1988,7 @@
 				96B82B4E27C0DD59002D6C97 /* AccountEndpoint.swift in Sources */,
 				5D3A9C44225259470040C62F /* ChannelCell.swift in Sources */,
 				969A5B6627CA424A00BA6A5A /* Show.swift in Sources */,
+				BDFDCE262B0953CA007CE1A2 /* ReelsView.swift in Sources */,
 				5D3A9C7B2252671E0040C62F /* Channel.swift in Sources */,
 				5D332E1522AEAEF200802DA1 /* EpisodeCell.swift in Sources */,
 				045337202A7C158A00BF35F9 /* ProfileViewModel.swift in Sources */,
@@ -1962,6 +1998,7 @@
 				18A2EECC28FFFB5500D42173 /* CControlsManager.swift in Sources */,
 				10057F7B261DF9B2001776B1 /* SCButton.swift in Sources */,
 				10EE6C9425E2884B00F31F83 /* HapticFeedback.swift in Sources */,
+				BDFDCE232B094311007CE1A2 /* Reel.swift in Sources */,
 				10C9E84525F78B29007A9E37 /* NetworkMessage.swift in Sources */,
 				042FE8242A032E1300B75D99 /* EpisodeViewModel.swift in Sources */,
 				101F20B825EC1623009E629B /* UILabelExtension.swift in Sources */,
@@ -1982,6 +2019,7 @@
 				10EE6C9C25E2F5D100F31F83 /* RoundedTabBar.swift in Sources */,
 				046B1B1B2A56038F00895F90 /* SmallPoster.swift in Sources */,
 				967356CA27FC76430097F65E /* OldAPIEndpoint.swift in Sources */,
+				BD2A06672B0A8D9800F94905 /* ReelView.swift in Sources */,
 				04441F2F2A8689D1001DE173 /* WatchLaterView.swift in Sources */,
 				5D3A9C46225259470040C62F /* ChannelsCollectionView.swift in Sources */,
 				18A2EED528FFFB5500D42173 /* Subtitles-Customizing.swift in Sources */,
@@ -2047,6 +2085,7 @@
 				10523C6125FF93C3003EED3F /* SearchVC.swift in Sources */,
 				0473C93829FB3DCD00EDB249 /* KingFisherImageView.swift in Sources */,
 				0415B18529B3BD4900C035DA /* SuggestShow.swift in Sources */,
+				BD3E33322B493A9800C43E28 /* ResellerAPI.swift in Sources */,
 				969A5B6C27CA434900BA6A5A /* Explore.swift in Sources */,
 				10C32EE125F0D94A005044EF /* FilterHeaderView.swift in Sources */,
 				1011D86025E94FCE0048034D /* CustomNavigationController.swift in Sources */,
@@ -2062,6 +2101,7 @@
 				18A2EED028FFFB5500D42173 /* CStreamingView.swift in Sources */,
 				042FE8222A032BFD00B75D99 /* EpisodeView.swift in Sources */,
 				043C28CD29AF80520038F985 /* AutocompleteTableView.swift in Sources */,
+				BD6553932B24CF6300B41231 /* News.swift in Sources */,
 				046B35AB29FAF3D900C56C0F /* SeasonsView.swift in Sources */,
 				18A2EEEB28FFFBA000D42173 /* CVideoControlsView.swift in Sources */,
 				10EB6D6125E430CC006D2647 /* CustomViews.swift in Sources */,
@@ -2381,23 +2421,24 @@
 		};
 		5D2E41C7224FC80E00AA9248 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 87F6BA6B2F4800847FFAF523 /* Pods-ShoofCinema.debug.xcconfig */;
+			baseConfigurationReference = 10756B6FD8D389DEBC47499D /* Pods-365Show.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = ShoofCinema/ShoofCinema.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 14;
 				DEVELOPMENT_TEAM = VS7BUZBC8W;
 				INFOPLIST_FILE = ShoofCinema/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "365 Show";
-				IPHONEOS_DEPLOYMENT_TARGET = 16;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.Show365.Show365;
+				MARKETING_VERSION = 1.4;
+				PRODUCT_BUNDLE_IDENTIFIER = com.365show.365Show;
 				PRODUCT_NAME = Shoof;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -2411,23 +2452,24 @@
 		};
 		5D2E41C8224FC80E00AA9248 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DDF74452842714F001C8346E /* Pods-ShoofCinema.release.xcconfig */;
+			baseConfigurationReference = 19B6E6131AB437EC96A6C705 /* Pods-365Show.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = ShoofCinema/ShoofCinema.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 14;
 				DEVELOPMENT_TEAM = VS7BUZBC8W;
 				INFOPLIST_FILE = ShoofCinema/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "365 Show";
-				IPHONEOS_DEPLOYMENT_TARGET = 16;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.Show365.Show365;
+				MARKETING_VERSION = 1.4;
+				PRODUCT_BUNDLE_IDENTIFIER = com.365show.365Show;
 				PRODUCT_NAME = Shoof;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";

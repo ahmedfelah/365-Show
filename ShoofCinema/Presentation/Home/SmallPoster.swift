@@ -19,13 +19,52 @@ struct SmallPosterView: View {
     var body: some View {
         VStack(alignment: .leading) {
             ZStack(alignment: .center) {
-                KFImage.url(show.posterURL)
+                KFImage.url(show.coverURL)
+                    .placeholder {
+                        Color.black
+                        
+                        ZStack {
+                            Image("360-show")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 100)
+                                .padding()
+                                .opacity(0.2)
+                            
+                           
+                        }
+                    }
                     .resizable()
-                    .fade(duration: 0.4)
-                    .frame(width: 120, height: 180)
-                    .scaledToFill()
-                    .clipped()
+                    .aspectRatio(contentMode: .fill)
+            }.frame(width: 120, height: 170)
+                .clipped()
+                .cornerRadius(2)
+            
+            HStack {
+                Text("IMDB")
+                    .font(.system(size: 8))
+                    .padding(3)
+                    .background(Color("imdb"))
+                    .cornerRadius(5)
+                    .foregroundColor(.black)
+                    .padding(3)
+                
+                
+                Text("\(show.imdbID ?? "")")
+                    .padding(3)
+                    .font(.caption2)
             }
+            
+            Text("\(show.title)")
+                .lineLimit(1)
+                .padding([.leading, .trailing], 3)
+                .font(.caption)
+            
+            Text("Darama, Action, Romance")
+                .lineLimit(1)
+                .padding([.leading, .trailing, .bottom], 3)
+                .foregroundColor(.gray)
+                .font(.caption)
                 
         }.foregroundColor(.white)
             .frame(width: 120)

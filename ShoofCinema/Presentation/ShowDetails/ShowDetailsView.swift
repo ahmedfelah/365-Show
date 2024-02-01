@@ -15,6 +15,8 @@ struct ShowDetailsView: View {
     
     @State var isPresented = false
     @State private var showingResolutions = false
+    
+    @Environment(\.openURL) var openURL
    
     var body: some View {
         ScrollView(showsIndicators: false) {
@@ -26,8 +28,6 @@ struct ShowDetailsView: View {
             }
             
             descriptionView
-            
-            //reactionView
             
             castAndCrew
             
@@ -78,6 +78,8 @@ struct ShowDetailsView: View {
                         viewModel.download(source: source)
                     }
                 }
+            }.fullScreenCover(isPresented: $viewModel.showingLogin) {
+                SignInView(dismiss: $viewModel.showingLogin)
             }
     }
     
@@ -119,8 +121,15 @@ struct ShowDetailsView: View {
     
     @ViewBuilder private var watchButtonView: some View {
         Button(action: {
-            isPresented.toggle()
-            viewModel.videoPlayerViewController.play(show: viewModel.show)
+            if !isOutsideDomain {
+                isPresented.toggle()
+                viewModel.videoPlayerViewController.play(show: viewModel.show)
+            }
+            else {
+                if let url = viewModel.show.trailerURL {
+                    openURL(url)
+                }
+            }
         }) {
             HStack {
                 Image(systemName: "play.fill")
@@ -146,39 +155,33 @@ struct ShowDetailsView: View {
     
     @ViewBuilder private var watchLaterButtonView: some View {
         Button(action: {viewModel.toggleWatchLater()}) {
-            VStack {
-                Image(systemName: viewModel.show.isInWatchLater ? "checkmark" : "plus")
-                    .imageScale(.large)
-                    
-                
-                Text("Watch Later")
-                    
-            }.foregroundColor(viewModel.show.isInWatchLater ? .red : .white)
+            Image(systemName: viewModel.show.isInWatchLater ? "checkmark" : "plus")
+                .imageScale(.large)
+                .padding(10)
+                .foregroundColor(viewModel.show.isInWatchLater ? .secondaryBrand : .white)
                 .animation(Animation.linear(duration: 1.5), value: viewModel.show.isInWatchLater)
-        }.padding()
+        }.background(Color.tertiaryBrand)
+            .clipShape(Circle())
     }
     
     @ViewBuilder private var actionView: some View {
-        if !isOutsideDomain {
-            HStack(alignment: .center) {
-                watchButtonView
-                
-                downloadButtonView
-                
-                Button(action: {}, label: {
-                    Image(systemName: "arrow.down.to.line")
-                        .imageScale(.large)
-                        .padding(10)
-                        .foregroundColor(.white)
-                }).background(Color.tertiaryBrand)
-                .clipShape(Circle())
-                
-                
-                
-            }.padding(.horizontal)
-                .padding(.trailing)
-                .fontWeight(.semibold)
-        }
+        HStack(alignment: .center) {
+            watchButtonView
+            
+            downloadButtonView
+            
+            watchLaterButtonView
+                .alert("Please login ", isPresented: $viewModel.showingLoginAlert) {
+                    Button("Ok", role: .none) {
+                        viewModel.showingLogin.toggle()
+                    }
+                    
+                    Button("Cancel", role: .cancel) {}
+                }
+            
+        }.padding(.horizontal)
+            .padding(.trailing)
+            .fontWeight(.semibold)
     }
     
     @ViewBuilder private var downloadButtonView: some View {

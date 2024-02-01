@@ -66,20 +66,22 @@ struct SeasonsTVShowView: View {
     @ViewBuilder private var episodesView: some View {
         LazyVStack {
             ForEach(viewModel.episodes.indices, id: \.self) { index in
-                EpisodeTVShowView(
-                    episode: viewModel.episodes[index],
-                    imageUrl: viewModel.show.coverURL,
-                    rating: viewModel.show.rating ?? "_",
-                    progress: 0.0,
-                    status: .unknown,
-                    isSelected: viewModel.episodeIndexSelected == index,
-                    viewModel: viewModel,
-                    downloadAction: {}
-                ).onTapGesture {
-                    viewModel.playEpisode(index: index)
-                    isPresented.toggle()
-                    
+                if index > (viewModel.episodeIndexSelected - 4) && index < (viewModel.episodeIndexSelected + 4){
+                    EpisodeTVShowView(
+                        episode: viewModel.episodes[index],
+                        imageUrl: viewModel.show.coverURL,
+                        rating: viewModel.show.rating ?? "_",
+                        progress: 0.0,
+                        status: .unknown,
+                        isSelected: viewModel.episodeIndexSelected == index,
+                        viewModel: viewModel,
+                        downloadAction: {showResolutionsDialog(index: index)}
+                    ).onTapGesture {
+                        viewModel.playEpisode(index: index)
+                        isPresented.toggle()
+                    }
                 }
+                
             }.redacted(reason: viewModel.isLoading ? .placeholder : [])
             
             NavigationLink(destination: AllEpisodesTVShowView(viewModel: viewModel), label: {

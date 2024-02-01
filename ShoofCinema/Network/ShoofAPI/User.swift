@@ -17,7 +17,7 @@ extension ShoofAPI {
         let id: String
         let token: String?
         let image: URL?
-        let topics: [String]
+        let topics: [String]?
         
         static var current: Self? {
             get {

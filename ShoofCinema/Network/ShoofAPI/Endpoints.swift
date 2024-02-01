@@ -35,6 +35,15 @@ extension Endpoint where Self == ShoofAPI.Endpoint<[ShoofAPI.Section]> {
     }
 }
 
+// MARK: - Load Reels
+extension Endpoint where Self == ShoofAPI.Endpoint<[ShoofAPI.Reel]> {
+    static func reels(pageNumber: Int) -> Self {
+        ShoofAPI.Endpoint(path: "/api/MobileV3/Clips/GetClips") {
+            URLQueryItem(name: "pageNumber", value: "\(pageNumber)")
+        }
+    }
+}
+
 // MARK: - Load More Shows
 extension Endpoint where Self == ShoofAPI.Endpoint<[ShoofAPI.Show]> {
     static func shows(forSectionWithID sectionID: String, pageNumber: Int) -> Self {
@@ -211,6 +220,21 @@ extension ShoofAPI.Endpoint {
         self.init(method: .post(data: data), path: path)
     }
 }
+
+extension ShoofAPI.ResellerEndpoint {
+    struct SasUserInfo: Codable {
+        let token: String?
+        let deviceType: Int
+        let baseUrl: String
+    }
+    
+    init<Form : Encodable>(form: Form, path: String) {
+        let encoder = JSONEncoder()
+        let data = try! encoder.encode(form)
+        self.init(method: .post(data: data), path: path)
+    }
+}
+
 
 
 extension Endpoint where Self == ShoofAPI.Endpoint<ShoofAPI.Comment> {

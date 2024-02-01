@@ -142,4 +142,57 @@ extension ShoofAPI {
             self.queryItems = queryItems()
         }
     }
+    
+    struct ResellerEndpoint<ResponseBody : Decodable> : TBKNetworking.Endpoint {
+        let scheme: Scheme = .https
+        let host: String = ShoofAPI.shared.apiUrl
+        let path: String
+        let queryItems: [URLQueryItem]
+        let method: TBKNetworking.HTTPMethod
+        let headers: [HTTPHeader] = [Header(field: "Mode", value: ShoofAPI.User.ramadanTheme ? "2" : "0")]
+        
+        struct Response : Decodable {
+            let body : ResponseBody
+    
+            private enum CodingKeys: String, CodingKey {
+                case error, message // API Error
+                case data
+            }
+            
+            init(from decoder: Decoder) throws {
+                let container = try decoder.container(keyedBy: CodingKeys.self)
+                                
+                self.body = try container.decode(ResponseBody.self, forKey: .data)
+            }
+        }
+        
+        init(method: TBKNetworking.HTTPMethod = .get, path: String, @ArrayBuilder queryItems: () -> [URLQueryItem] = { [] }) {
+            self.method = method
+            self.path = path
+            self.queryItems = queryItems()
+        }
+        
+        
+        func parse(_ data: Data) throws -> Response {
+            let decoder = JSONDecoder()
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+            dateFormatter.locale = Locale(identifier: "en_US_POSIX")
+            decoder.dateDecodingStrategy = .formatted(dateFormatter)
+            return try decoder.decode(Response.self, from: data)
+        }
+        
+        func prepare(request: inout URLRequest) {
+            request.addValue("application/json", forHTTPHeaderField: "Accept")
+            request.addValue(User.language, forHTTPHeaderField: "Content-Language")
+            
+            if case .post = method {
+                request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+            }
+            
+            if let token = User.current?.token {
+                request.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+            }
+        }
+    }
 }

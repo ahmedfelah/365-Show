@@ -11,7 +11,5 @@ import Foundation
 
 
 struct NetworkMessage  {
-    
-    
     static let outsideNetworkMessageEN = "Your network might not be provided by SuperCell internet provider\n"
 }

@@ -14,6 +14,8 @@ class ShowDetailsViewModel: ObservableObject {
     @Published var show: ShoofAPI.Show
     @Published var status: ResponseStatus = .none
     @Published var downloadStatus: DownloadStatus = .unknown
+    @Published var showingLoginAlert = false
+    @Published var showingLogin = false
     
     
     let shoofAPI = ShoofAPI.shared
@@ -72,6 +74,7 @@ class ShowDetailsViewModel: ObservableObject {
     
     func toggleWatchLater () {
         guard ShoofAPI.User.current != nil else {
+            self.showingLoginAlert.toggle()
             return
         }
         

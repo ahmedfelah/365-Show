@@ -16,6 +16,7 @@ class SignInViewModel: ObservableObject {
     
     @Published var isLoading: Bool = false
     @Published var isLogged: Bool = false
+    @Published var errors: String = ""
     
     func submit(email: String, password: String) {
         
@@ -24,7 +25,14 @@ class SignInViewModel: ObservableObject {
             return
         }
         
+        self.isLoading = true
+        
         ShoofAPI.shared.login(withEmail: email, password: password) { [weak self] result in
+            
+            DispatchQueue.main.async {
+                self?.isLoading = false
+            }
+            
             self?.handleAuthentication(result: result)
         }
         
@@ -38,6 +46,7 @@ class SignInViewModel: ObservableObject {
             
             guard !fakeDeletedAccounts.contains(user) else {
                 ShoofAPI.shared.signOut()
+                self.errors = "User is not existed"
                 return
             }
             
@@ -47,8 +56,11 @@ class SignInViewModel: ObservableObject {
             
         } catch ShoofAPI.Error.authenticationCancelled {
             print("Cancelled")
-        } catch {
-            print("Errors")
+        } catch(let errors) {
+            DispatchQueue.main.async {
+                self.errors = "User is not existed"
+            }
+            print("Errors", errors)
         }
     }
     

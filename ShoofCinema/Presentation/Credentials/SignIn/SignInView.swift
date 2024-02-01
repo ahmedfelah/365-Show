@@ -10,7 +10,7 @@ import SwiftUI
 
 struct SignInView: View {
     
-    @Environment(\.dismiss) var dismiss
+    @Binding var dismiss: Bool
     
     @StateObject var viewModel = SignInViewModel()
     
@@ -30,21 +30,25 @@ struct SignInView: View {
                         .padding(.bottom)
                     
                     
+                    Text("\(viewModel.errors)")
+                        .font(.caption)
+                        .foregroundColor(.red)
+                    
                     TextFieldView(text: $email, placeholder: "Username")
                         .padding()
                     
                     SecureTextFieldView(text: $password, isSecured: .constant(true))
                         .padding(.horizontal)
                     
-                    NavigationLink(destination: {
-                        ForgotPasswordView()
-                            
-                    }, label: {
-                        Text("Forgot password?")
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                            .foregroundColor(.white)
-                            .padding()
-                    })
+//                    NavigationLink(destination: {
+//                        ForgotPasswordView()
+//                            
+//                    }, label: {
+//                        Text("Forgot password?")
+//                            .frame(maxWidth: .infinity, alignment: .leading)
+//                            .foregroundColor(.white)
+//                            .padding()
+//                    })
                     
                     Button(action: {
                         viewModel.submit(email: email, password: password)
@@ -55,7 +59,7 @@ struct SignInView: View {
                         
                     }.onReceive(viewModel.$isLogged) { isLogged in
                         if isLogged {
-                            dismiss()
+                            dismiss.toggle()
                         }
                     }
                     .background(.black)
@@ -71,7 +75,7 @@ struct SignInView: View {
                     
                     signInWithGoogleView
                     
-                    NavigationLink(destination: SignUpView()) {
+                    NavigationLink(destination: SignUpView(dismiss: $dismiss)) {
                         Text("Don't have an account? Join")
                             .foregroundColor(.white)
                     }
@@ -84,11 +88,11 @@ struct SignInView: View {
                     .fontWeight(.bold)
                     .toolbar {
                         ToolbarItem(placement: .navigationBarTrailing) {
-                            Button(action: {dismiss()}) {
+                            Button(action: {dismiss.toggle()}) {
                                 Image(systemName: "xmark")
                             }
                         }
-                    }.buttonStyle(.plain)
+                    }
                 
             }
         }.overlay {

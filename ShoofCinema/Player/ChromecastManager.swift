@@ -88,7 +88,7 @@ class ChromecastManager: NSObject {
                 if sub.source.absoluteString.hasPrefix("file://") {
                     continue
                 }
-                let track = GCKMediaTrack(
+                guard let track = GCKMediaTrack(
                     identifier: index + 1,
                     contentIdentifier: sub.source.absoluteString,
                     contentType: "text/vtt",
@@ -96,7 +96,9 @@ class ChromecastManager: NSObject {
                     textSubtype: .captions,
                     name: sub.title,
                     languageCode: "ar",
-                    customData: nil)
+                    customData: nil) 
+                else { return  }
+                
                 subtitleTracks?.append(track)
             }
         }

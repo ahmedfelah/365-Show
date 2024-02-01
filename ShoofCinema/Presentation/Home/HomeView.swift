@@ -41,6 +41,7 @@ struct HomeView: View {
             }.edgesIgnoringSafeArea(.top)
                 .statusBar(hidden: true)
                 .background(Color.primaryBrand)
+                .font(Font(Fonts.almarai()))
                 .task {
                     viewModel.loadSections()
                 }

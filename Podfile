@@ -9,9 +9,10 @@ platform :ios, '12.0'
     end
   end
 
-source 'https://github.com/CocoaPods/Specs.git'
 
-target 'ShoofCinema' do
+source 'https://cdn.cocoapods.org/'
+
+target '365Show' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
   inhibit_all_warnings!
@@ -47,7 +48,6 @@ target 'ShoofCinema' do
   pod 'FacebookLogin'
   pod 'GoogleSignIn'
   pod 'google-cast-sdk'
-  pod 'PagerTabStripView', '~> 4.0'
 
 #  pre_install do |installer|
 #  Pod::Installer::Xcode::TargetValidator.send(:define_method, :verify_no_static_framework_transitive_dependencies) {}

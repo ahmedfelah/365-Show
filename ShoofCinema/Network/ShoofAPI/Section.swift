@@ -10,9 +10,9 @@ import Foundation
 
 extension ShoofAPI {
     struct Section {
+        let id: String
         let title: String
         let style: Style?
-        let id: String
         var shows: [Show]
         let actions: Action?
         
