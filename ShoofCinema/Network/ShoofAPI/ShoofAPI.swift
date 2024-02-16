@@ -27,9 +27,8 @@ class ShoofAPI {
     
     private(set) var isInNetwork: Bool = false
     
-    private(set) var apiUrl: String = "cinema5-api.shoofnetwork.net"
-    private var apiUrlInNetwork: String = "cinema5-api.shoofnetwork.net"
-    //365ar.show
+    private(set) var apiUrl: String = "365ar.show"
+    private var apiUrlInNetwork: String = "365ar.show"
     
     func loadNetworkStatus(completionHandler: @escaping (Result<ShoofAPI.OldAPIEndpoint<ShoofAPI.NetworkStatusResponse>.Response, Swift.Error>) -> Void) {
         session.load(.networkStatus) { [weak self] result in

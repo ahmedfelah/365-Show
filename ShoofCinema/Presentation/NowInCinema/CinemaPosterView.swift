@@ -1,46 +1,53 @@
 //
-//  NowInCinemaView.swift
+//  CinemaPosterView.swift
 //  365Show
 //
-//  Created by ممم on 30/11/2023.
-//  Copyright © 2023 AppChief. All rights reserved.
+//  Created by ممم on 09/02/2024.
+//  Copyright © 2024 AppChief. All rights reserved.
 //
 
 import SwiftUI
 import Kingfisher
 
-struct NowInCinemaView: View {
-    
-    @State var index = 0
+struct CinemaPosterView: View {
+    let show: ShoofAPI.Show
     
     let cinemas = [
         "Al-Zawra'a Cinema", "Retro Cinema", "Holly Cimema", "Empire Cinema"
     ]
     
-    
-    @StateObject var viewModel = HomeViewModel()
     var body: some View {
         VStack {
-            if !viewModel.sections.isEmpty {
-                TabView(selection: $index.animation()) {
-                    ForEach(viewModel.sections[1].shows.indices, id:\.self) { index in
-                        CinemaPosterView(show: viewModel.sections[1].shows[index])
+            ZStack(alignment: .bottom) {
+                KFImage.url(show.posterURL)
+                    .placeholder {
+                        Color.black
                     }
-                }.tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
-                    .frame(height: UIScreen.main.bounds.height)
+                    .resizable()
+                    .fade(duration: 0.25)
+                    .aspectRatio(contentMode: .fill)
+                    .frame(
+                        height: UIScreen.main.bounds.height * 0.8
+                    ).clipped()
+                
+                Rectangle().fill(LinearGradient(colors: [.clear, .primaryBrand], startPoint: .top, endPoint: .bottom))
+                    .frame(height: UIScreen.main.bounds.height * 0.3)
+                
+                
             }
-        }
-        .task {
-            viewModel.loadSections()
-        }
-        .overlay {
-            if viewModel.status == .loading {
-                VStack {
-                    LoadingView()
-                }.frame(maxWidth: .infinity, maxHeight: .infinity)
-                    .background(.black.opacity(0.2))
+            
+            ScrollView(.horizontal, showsIndicators: false) {
+                LazyHStack {
+                    ForEach(cinemas, id: \.self) {cinema in
+                        daysView(name: cinema)
+                            .padding(.leading, 20)
+                            .padding(.bottom, 20)
+                    }
+                }
             }
-        }
+            
+            
+        }.frame(maxWidth: .infinity)
     }
     
     @ViewBuilder private func daysView(name: String) -> some View {
@@ -82,10 +89,8 @@ struct NowInCinemaView: View {
     private func convertStringDateToArray(string: String) -> [String] {
         return string.components(separatedBy: "-")
     }
-    
-    
 }
 
-#Preview {
-    NowInCinemaView()
-}
+//#Preview {
+//    CinemaPosterView()
+//}

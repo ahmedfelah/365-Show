@@ -19,18 +19,19 @@ struct HomeView: View {
     var body: some View {
         NavigationStack {
             ScrollView(showsIndicators: false) {
+                VStack {
+                    Image("360-show")
+                       .resizable()
+                       .scaledToFit()
+                       .frame(width: 150, alignment: .leading)
+                       .padding([.bottom, .leading, .trailing])
+                }.frame(maxWidth: .infinity, alignment: .leading)
+                
                 ForEach(viewModel.sections.indices, id: \.self) { index in
                     if viewModel.sections[index].style == .featured {
-                        ZStack(alignment: .topLeading) {
-                            HomeCarouselView(shows: viewModel.sections[index].shows)
-                                .frame(height: UIScreen.main.bounds.height * 0.7, alignment: .top)
-                            
-                             Image("360-show")
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 100)
-                                .padding()
-                        }
+                        HomeCarouselView(shows: viewModel.sections[index].shows)
+                            .frame(height: UIScreen.main.bounds.height * 0.35)
+                            .environment(\.layoutDirection, .leftToRight)
                     }
                     
                     HomeSectionView(section: viewModel.sections[index])
@@ -38,7 +39,7 @@ struct HomeView: View {
                     
                 }
                 
-            }.edgesIgnoringSafeArea(.top)
+            }
                 .statusBar(hidden: true)
                 .background(Color.primaryBrand)
                 .font(Font(Fonts.almarai()))

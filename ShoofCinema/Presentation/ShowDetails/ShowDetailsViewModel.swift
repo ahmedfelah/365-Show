@@ -14,6 +14,7 @@ class ShowDetailsViewModel: ObservableObject {
     @Published var show: ShoofAPI.Show
     @Published var status: ResponseStatus = .none
     @Published var downloadStatus: DownloadStatus = .unknown
+    @Published var downloadingProgress: Float = 0.0
     @Published var showingLoginAlert = false
     @Published var showingLogin = false
     
@@ -34,6 +35,13 @@ class ShowDetailsViewModel: ObservableObject {
     
     init(show: ShoofAPI.Show) {
         self.show = show
+        
+        if !isOutsideDomain {
+            DownloadManager.shared.observeAllDownloads(observer: self)
+            let rmDownload = realm.objects(RDownload.self).first(where: {$0.show_id == show.id})
+            self.downloadingProgress = rmDownload?.progress ?? 0
+            self.downloadStatus = rmDownload?.statusEnum ?? .unknown
+        }
     }
     
     func loadDetails() {
@@ -146,25 +154,33 @@ extension ShowDetailsViewModel: DownloadManagerDelegate {
     func downloadRequestDidUpdateProgress(_ downloadModel: MZDownloadModel, index: Int, for item: RDownload) {
         if !item.isInvalidated {
             if item.show_id == show.id {
-                //self.downloadButton.downloadPercent = CGFloat(downloadModel.progress)
+                self.downloadingProgress = downloadModel.progress
             }
         }
         
     }
     
-    func downloadRequestDidChangedStatus(for item: RDownload, downloadModel: MZDownloadModel, index: Int) {
-        if !item.isInvalidated {
-            if item.show_id == show.id {
-                self.downloadStatus = item.statusEnum
-            }
+    func downloadRequestCanceled(_ downloadModel: MZDownloadModel, index: Int, for item: RDownload) {
+        if item.show_id == show.id {
+            self.downloadStatus = .unknown
+        }
+    }
+    
+    func downloadRequestWillDelete(rmDownloadShow item: RDownload) {
+        if item.show_id == show.id {
+            downloadStatus = .unknown
         }
     }
     
     func downloadRequestDidDeleteRmDownloadShow(with primaryKey: Any?) {
-        if let key = primaryKey as? String {
-            if key.contains("\(show.id)") {
-                self.downloadStatus = .unknown
-            }
+        /// Update cell and refresh `downloadingIndexes` order
+        
+    }
+    
+    func downloadRequestDidChangedStatus(for item: RDownload, downloadModel: MZDownloadModel, index: Int) {
+        if item.show_id == show.id {
+            downloadStatus = item.statusEnum
         }
+        
     }
 }

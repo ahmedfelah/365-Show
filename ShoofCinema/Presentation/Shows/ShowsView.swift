@@ -30,8 +30,6 @@ struct ShowsView: View {
             }.padding()
         }.background(Color.primaryBrand)
             .navigationBarTitleDisplayMode(.inline)
-            .navigationTitle("Categories")
-            .fontWeight(.bold)
             .overlay {
                 if viewModel.status == .loading {
                     VStack {

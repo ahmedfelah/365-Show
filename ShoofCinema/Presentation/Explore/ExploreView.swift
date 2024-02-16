@@ -50,7 +50,7 @@ struct ExploreView: View {
                 .padding()
             }.background(Color.primaryBrand)
                 .navigationBarTitleDisplayMode(.inline)
-                .navigationTitle("Categories")
+                .navigationTitle("categories")
                 .fontWeight(.bold)
                 .overlay {
                     if viewModel.status == .loading {

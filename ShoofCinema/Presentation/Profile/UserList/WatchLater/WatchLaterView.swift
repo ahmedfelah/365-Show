@@ -16,7 +16,7 @@ struct WatchLaterView: View {
             LazyVStack(alignment: .leading) {
                 ForEach(viewModel.shows.indices , id: \.self) { index in
                     NavigationLink(destination: {
-                        Text("Text")
+                        ShowDetailsView(viewModel: ShowDetailsViewModel(show: viewModel.shows[index]))
                     }, label: {
                         HorizontalPosterView(show: viewModel.shows[index])
                     }).padding(.bottom)
@@ -24,8 +24,7 @@ struct WatchLaterView: View {
             }.padding()
         }.background(Color.primaryBrand)
             .navigationBarTitleDisplayMode(.inline)
-            .navigationTitle("Watch Later")
-            .fontWeight(.bold)
+            .navigationTitle("watch later")
             .overlay {
                 if viewModel.status == .loading {
                     VStack {

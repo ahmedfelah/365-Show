@@ -15,6 +15,8 @@ enum ColorScheme: String {
 
 struct ContentView: View {
     
+    let languageHelper = LanguageHelper()
+    
     @AppStorage("colorScheme") var colorScheme: ColorScheme = .dark
     @AppStorage("language") var language: String = "en"
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
@@ -24,8 +26,8 @@ struct ContentView: View {
     var body: some View {
         MainView()
             .environment(\.colorScheme, colorScheme == .dark ? .dark : .light)
-            .environment(\.layoutDirection, language == "en" ? .leftToRight : .rightToLeft)
-            .environment(\.locale, Locale(identifier: language))
+            .environment(\.layoutDirection, languageHelper.getSelectedLanguageCode() == "en" ? .leftToRight : .rightToLeft)
+            .environment(\.locale, Locale(identifier: languageHelper.getSelectedLanguageCode()))
         
     }
 }

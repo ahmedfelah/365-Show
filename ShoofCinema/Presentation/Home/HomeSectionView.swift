@@ -33,12 +33,13 @@ struct HomeSectionView: View {
                     Text("More")
                         
                 })
-            }.padding(5)
+            }.padding(.vertical, 5)
+                .padding(.horizontal, 10)
                 .font(Font(Fonts.almarai()))
             
             ScrollViewReader { proxy in
                 ScrollView(.horizontal, showsIndicators: false) {
-                    LazyHStack() {
+                    LazyHStack(spacing: 10) {
                         ForEach(section.shows.indices, id: \.self) { index in
                             NavigationLink(destination: {
                                 VStack {
@@ -48,7 +49,8 @@ struct HomeSectionView: View {
                                 SmallPosterView(show: section.shows[index])
                             })
                         }
-                    }.id("RTL")
+                    }.padding(.leading)
+                    .id("RTL")
                         .onAppear {
                             if layoutDirection == .rightToLeft {
                                   proxy.scrollTo("RTL", anchor: .trailing)
@@ -58,17 +60,21 @@ struct HomeSectionView: View {
                                 proxy.scrollTo("RTL", anchor: .leading)
                             }
                         }
-                }.padding(.leading)
+                }
             }
         }
     }
     
     private func actionToFilter(action: ShoofAPI.Action?) -> ShoofAPI.Filter {
          return .init(
+            genreID: action?.genreId,
             categoryID: action?.categoryId,
             tagID: action?.tagId,
             rate: ShoofAPI.Filter.convertToString(from: action?.rate),
-            mediaType: action?.isMovie ?? .all)
+            year: action?.year != nil ? String("\(action?.year)") : nil,
+            mediaType: action?.isMovie ?? .all,
+            sortType: action?.sortType
+         )
     }
 }
 

@@ -393,3 +393,63 @@
 "noComments" = "لاتوجد تعليقات";
 "seasons" = "المواسم";
 
+"help and support" = "المساعدة والدعم";
+"enjoying the app?" = "هل تستمتع بالتطبيق؟";
+"tell your friends about it." = "أخبر أصدقائك عنه.";
+"share the app" = "شارك التطبيق";
+"user profile" = "ملف المستخدم";
+"user list" = "قائمة المستخدمين";
+"logout" = "تسجيل الخروج";
+"yes" = "نعم";
+"no" = "لا";
+"are you sure you want to logout" = "هل أنت متأكد أنك تريد تسجيل الخروج؟";
+"language" = "اللغة";
+"delete account" = "حذف الحساب";
+"deleteAccountConfirmMessage" = "سيتم حذف حسابك بشكل دائم وإزالة جميع بياناتك. لا يمكن التراجع عن هذا الإجراء. هل أنت متأكد أنك ترغب في المتابعة؟";
+"settings" = "الإعدادات";
+"downloads" = "التنزيلات";
+"have an account?" = "هل لديك حساب؟";
+"log in and get more." = "سجل الدخول واحصل على المزيد.";
+"login" = "تسجيل الدخول";
+
+"collections" = "مجموعات";
+"all" = "الكل";
+"season:" = "الموسم:";
+"episode:" = "الحلقة:";
+"episode" = "الحلقة";
+"delete confirmation" = "تأكيد الحذف";
+"delete" = "حذف";
+"are you sure you want to delete?" = "هل أنت متأكد أنك تريد الحذف؟";
+"cancel" = "إلغاء";
+"selected action" = "اختيار الإجراء";
+"resume" = "استئناف";
+"redownload" = "إعادة التنزيل";
+
+"watched" = "شُاهِدَ";
+"watch later" = "شاهِد لاحقًا";
+
+"subscripe" = "اشترك";
+"episodes" = "الحلقات";
+"select a resolution" = "اختر الدقة";
+"watch now" = "شاهد الآن";
+"please login" = "يرجى تسجيل الدخول";
+"see all" = "شاهد الكل";
+"season" = "الموسم";
+"cast & crew" = "طاقم العمل";
+"actors" = "الممثلون";
+
+"search" = "البحث";
+"whoops!" = "ووبس!";
+"sorry we couldn't find any matches" = "عذرًا، لم نتمكن من العثور على أي تطابقات";
+"tv show" = "برنامج تلفزيوني";
+"movies" = "أفلام";
+"filter results" = "تصفية النتائج";
+"clear all" = "مسح الكل";
+"year" = "سنة";
+"to" = "إلى";
+"category" = "فئة";
+"rating" = "تقييم";
+"show result" = "عرض النتيجة";
+"search for cast and crew..." = "البحث عن طاقم العمل...";
+
+

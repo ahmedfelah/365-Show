@@ -38,7 +38,7 @@ struct UserProfileView: View {
                         userListView
                         
                         HStack {
-                            Text("Help and Support")
+                            Text("help and support")
                             
                             Spacer()
                             
@@ -51,10 +51,10 @@ struct UserProfileView: View {
                             .frame(minHeight: 2)
                             .overlay(.black)
                         
-                        Text("Enjoying the app?")
+                        Text("enjoying the app?")
                             .padding()
                         
-                        Text("Tell your friends about it.")
+                        Text("tell your friends about it.")
                             .foregroundColor(.gray)
                             .font(.caption)
                             .padding(.bottom)
@@ -63,7 +63,7 @@ struct UserProfileView: View {
                             HStack {
                                 Image(systemName: "square.and.arrow.up")
                                 
-                                Text("Share the app")
+                                Text("share the app")
                                     .font(.callout)
                                 
                                 
@@ -78,9 +78,21 @@ struct UserProfileView: View {
                     }
                 }
                 
+                
+                
+                watchLaterView
+                
+                Divider()
+                    .frame(minHeight: 2)
+                    .overlay(.black)
+                
+                languageView
+                
                 logoutView
                 
                 deleteAccountView
+                
+                
                 
                 Text("version 1.0.1")
                     .foregroundColor(.gray)
@@ -90,7 +102,7 @@ struct UserProfileView: View {
             .background(Color.primaryBrand)
             .foregroundColor(.primaryText)
             .navigationBarTitleDisplayMode(.inline)
-            .navigationTitle("User Profile")
+            .navigationTitle("user profile")
             
         }.onAppear {
             viewModel.user = ShoofAPI.User.current
@@ -103,7 +115,7 @@ struct UserProfileView: View {
             UserListView()
         }, label: {
             HStack {
-                Text("User list")
+                Text("user list")
                 
                 Spacer()
                 
@@ -123,19 +135,43 @@ struct UserProfileView: View {
                 .overlay(.black)
             
             Button(action: {showingLogoutAlert.toggle()}, label: {
-                Text("Logout")
+                Text("logout")
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding()
                     .background(Color.primaryBrand)
             })
-            .alert("Logout", isPresented: $showingLogoutAlert) {
-                Button("Yes") {
+            .alert("logout", isPresented: $showingLogoutAlert) {
+                Button("yes") {
                     viewModel.loagout()
                 }
-                Button("No", role: .cancel) {}
+                Button("no", role: .cancel) {}
             } message: {
-                Text("Are you sure you want to logout")
+                Text("are you sure you want to logout")
             }
+        }
+    }
+    
+    @ViewBuilder private var languageView: some View {
+        Button(action: {languageHelper.changeLanguageForIOS13()}, label: {
+            Text("language")
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding()
+                .background(Color.primaryBrand)
+        })
+    }
+    
+    @ViewBuilder private var watchLaterView: some View {
+        if isOutsideDomain {
+            Divider()
+                .frame(minHeight: 2)
+                .overlay(.black)
+            
+            NavigationLink(destination: {
+                WatchLaterView()
+            }, label: {
+                Text("watch later")
+                    .frame(maxWidth: .infinity, alignment: .leading)
+            }).padding()
         }
     }
     
@@ -146,18 +182,18 @@ struct UserProfileView: View {
                 .overlay(.black)
             
             Button(action: {showingDeleteAccountAlert.toggle()}, label: {
-                Text("Delete account")
+                Text("delete account")
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding()
                     .background(Color.primaryBrand)
             })
-            .alert("Delete Account", isPresented: $showingDeleteAccountAlert) {
-                Button("Yes") {
+            .alert("delete Account", isPresented: $showingDeleteAccountAlert) {
+                Button("yes") {
                     viewModel.deleteAccount()
                 }
-                Button("No", role: .cancel) {}
+                Button("no", role: .cancel) {}
             } message: {
-                Text("Deleting your account will permanently remove all your data and cannot be undone. This action is irreversible. Are you sure you want to proceed?")
+                Text("deleteAccountConfirmMessage")
             }
             
             Divider()
@@ -173,7 +209,7 @@ struct UserProfileView: View {
             SettingsView()
         }, label: {
             HStack {
-                Text("Settings")
+                Text("settings")
                 
                 Spacer()
                 
@@ -194,7 +230,7 @@ struct UserProfileView: View {
             
             NavigationLink(destination: DownloadsView(), label: {
                 HStack {
-                    Text("Downloads")
+                    Text("downloads")
                     
                     Spacer()
                     
@@ -218,17 +254,17 @@ struct UserProfileView: View {
     
     @ViewBuilder private var loginView: some View {
         if viewModel.user == nil {
-            Text("Have an account?")
+            Text("have an account?")
                 .padding()
             
-            Text("Log in and get more.")
+            Text("log in and get more.")
                 .foregroundColor(.gray)
                 .font(.caption)
                 .padding(.bottom)
             
             Button(action: {isPresented.toggle()}) {
                 HStack {
-                    Text("Login")
+                    Text("login")
                         .font(.callout)
                     
                         .padding()

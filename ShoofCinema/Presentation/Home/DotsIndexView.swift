@@ -18,8 +18,8 @@ struct DotsIndexView: View {
     
     // MARK: - Drawing Constants
     
-    private let rectangleWidth: CGFloat = 12
-    private let rectangleHeight: CGFloat = 3
+    private let rectangleWidth: CGFloat = 8
+    private let rectangleHeight: CGFloat = 8
     
     
     
@@ -32,6 +32,7 @@ struct DotsIndexView: View {
                     Rectangle()
                         .fill(currentIndex == index ? Color.secondaryBrand : .gray)
                         .frame(width: currentIndex == index ? rectangleWidth * 2 : rectangleWidth, height: rectangleHeight)
+                        .cornerRadius(4)
                         .transition(AnyTransition.opacity.combined(with: .scale))
                         .id(index)
                 }

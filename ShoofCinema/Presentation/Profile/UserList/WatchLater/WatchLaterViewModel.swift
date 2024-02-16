@@ -27,12 +27,14 @@ class WatchLaterViewModel: ObservableObject {
         do {
             let response = try result.get()
             let shows = response.body.compactMap(\.show)
+            print(response.body)
             
             DispatchQueue.main.async { [self] in
                 self.shows = shows
                 self.status = .loaded
             }
         } catch let error as URLError {
+            print("watchlater", error)
             DispatchQueue.main.async { [self] in
                 //                if error.code == .userAuthenticationRequired {
                 //                    showsCollectionView.showCollectionNoContentView(title: .favoriteNoContentTitle, message: .favoriteNoContentNotLoggedInMessage, imageName: "ic-no-fav-icon", actionButtonTitle: .loginButtonTitle, action: segueToLogin)

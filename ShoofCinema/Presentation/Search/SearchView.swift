@@ -21,7 +21,7 @@ struct SearchView: View {
                     Button(action: {
                         viewModel.mediaType = .all
                     }, label: {
-                        Text("All")
+                        Text("all")
                             .font(.caption)
                             .foregroundColor(viewModel.mediaType == .all ? .secondaryBrand : .white)
                             .bold()
@@ -38,7 +38,7 @@ struct SearchView: View {
                     Button(action: {
                         viewModel.mediaType = .movies
                     }, label: {
-                        Text("Movies")
+                        Text("movies")
                             .font(.caption)
                             .foregroundColor(viewModel.mediaType == .movies ? .secondaryBrand : .white)
                             .bold()
@@ -57,7 +57,7 @@ struct SearchView: View {
                     Button(action: {
                         viewModel.mediaType = .series
                     }, label: {
-                        Text("TV Shows")
+                        Text("series")
                             .font(.caption)
                             .foregroundColor(viewModel.mediaType == .series ? .secondaryBrand : .white)
                             .bold()
@@ -99,7 +99,7 @@ struct SearchView: View {
                 
                 if viewModel.noData {
                     VStack {
-                        Text("Whoops!")
+                        Text("whoops!")
                             .foregroundColor(.primaryText)
                             .font(.title)
                         
@@ -122,7 +122,7 @@ struct SearchView: View {
                 })
             .background(Color.primaryBrand)
                 .buttonStyle(.plain)
-                .navigationTitle("Search")
+                .navigationTitle("search")
         }
         
         

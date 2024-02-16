@@ -24,6 +24,7 @@ struct EpisodeTVShowView: View {
     @StateObject var viewModel: SeasonsTVShowViewModel
     
     let downloadAction: () -> Void
+    let playAction: () -> Void
     
     
     var body: some View {
@@ -45,6 +46,8 @@ struct EpisodeTVShowView: View {
                     
                     Image(systemName: "play.fill")
                     
+                }.onTapGesture {
+                    playAction()
                 }
             }.frame(maxWidth: .infinity)
                 .overlay {
@@ -58,7 +61,7 @@ struct EpisodeTVShowView: View {
             
             HStack(alignment: .top) {
                 VStack(alignment: .leading) {
-                    Text("Episode \(episode.number)")
+                    Text("\(Text("episode")) \(episode.number)")
                         .padding(.top, 3)
                         .padding(.horizontal, 5)
                         .padding(.bottom)
@@ -73,7 +76,7 @@ struct EpisodeTVShowView: View {
                             .padding(.trailing, 5)
                         
                         
-                        Text("")
+                        Text("\(rating)")
                             
                             .font(.caption2)
                     }.padding(.horizontal, 5)

@@ -16,29 +16,50 @@ struct MainPosterView: View {
     let show: ShoofAPI.Show
     
     var body: some View {
-        ZStack(alignment: .bottom) {
-            KFImage.url(show.posterURL)
+        ZStack(alignment: .top) {
+            KFImage.url(show.coverURL)
                 .placeholder {
                     Color.black
                 }
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .frame(
-                    width: UIScreen.main.bounds.width,
-                    height: UIScreen.main.bounds.height * 0.6
-                ).clipped()
+                    maxWidth: UIScreen.main.bounds.width,
+                    maxHeight: .infinity,
+                    alignment: .top
+                )
+                .clipped()
+    
             
-            Rectangle().fill(LinearGradient(colors: [.clear, .primaryBrand], startPoint: .top, endPoint: .bottom))
-                .frame(height: UIScreen.main.bounds.height * 0.3)
-            
-            if show.titleImageURL != nil {
-                KFImage.url(show.titleImageURL)
-                    .placeholder {
-                        Color.clear
-                    }
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(maxHeight: 150).clipped()
+            VStack(alignment: .trailing) {
+                if show.titleImageURL != nil {
+                    KFImage.url(show.titleImageURL)
+                        .placeholder {
+                            Color.clear
+                        }
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(maxWidth: .infinity, alignment: .center)
+                        .clipped()
+                        .padding()
+                }
+                
+                else {
+                    Text(show.title)
+                        .font(.largeTitle)
+                        .multilineTextAlignment(.center)
+                        .frame(maxWidth: .infinity, alignment: .center)
+                        .bold()
+                        .padding()
+                }
+                
+                Spacer()
+                
+                WatchButtonView()
+                    .padding(.vertical, 10)
+                    .padding(.horizontal, 25)
+                    .background(Color.secondaryBrand)
+                    .clipShape(Capsule())
                     .padding()
             }
         }.foregroundColor(.white)

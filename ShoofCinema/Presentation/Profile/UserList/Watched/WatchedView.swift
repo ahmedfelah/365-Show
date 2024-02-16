@@ -17,7 +17,7 @@ struct WatchedView: View {
             LazyVStack(alignment: .leading) {
                 ForEach(viewModel.shows.indices , id: \.self) { index in
                     NavigationLink(destination: {
-                        Text("Text")
+                        ShowDetailsView(viewModel: ShowDetailsViewModel(show: viewModel.shows[index].asShoofShow()))
                     }, label: {
                         HorizontalPosterView(show: viewModel.shows[index].asShoofShow())
                     }).padding(.bottom)
@@ -25,7 +25,7 @@ struct WatchedView: View {
             }.padding()
         }.background(Color.primaryBrand)
             .navigationBarTitleDisplayMode(.inline)
-            .navigationTitle("Watched")
+            .navigationTitle("watched")
             .fontWeight(.bold)
     }
 

@@ -48,6 +48,10 @@ class RDownload:Object, Identifiable {
         get {
             return DownloadStatus(rawValue: status) ?? .unknown
         }
+        
+        set {
+            status = newValue.rawValue
+        }
     }
     
     var formattedFileSize:String {

@@ -8,6 +8,7 @@
 
 import SwiftUI
 import Kingfisher
+import Foundation
 
 struct ShowDetailsView: View {
     
@@ -27,13 +28,15 @@ struct ShowDetailsView: View {
                 
             }
             
+            alternativeTitleView
+            
             descriptionView
             
             castAndCrew
             
-            if viewModel.status == .loaded && !isOutsideDomain {
+            if viewModel.status == .loaded && !isOutsideDomain && !viewModel.show.isMovie {
                 HStack {
-                    Text("Episodes")
+                    Text("episodes")
                         .bold()
                     
                     Spacer()
@@ -42,7 +45,7 @@ struct ShowDetailsView: View {
                         HStack {
                             Image(systemName: "bell.fill")
                             
-                            Text("Subscripe")
+                            Text("subscripe")
                                 .font(.caption)
                                 .fontWeight(.bold)
                         }
@@ -55,8 +58,6 @@ struct ShowDetailsView: View {
                 if !viewModel.show.isMovie && !isOutsideDomain {
                     SeasonsTVShowView(viewModel: SeasonsTVShowViewModel(show: viewModel.show))
                 }
-                    
-                    
             }
             
         }.task {
@@ -72,7 +73,7 @@ struct ShowDetailsView: View {
                     }.frame(maxWidth: .infinity, maxHeight: .infinity)
                         .background(.black.opacity(0.2))
                 }
-            }.confirmationDialog("Select a resolution", isPresented: $showingResolutions) {
+            }.confirmationDialog("select a resolution", isPresented: $showingResolutions) {
                 ForEach(viewModel.sources, id: \.self) { source in
                     Button("\(source.title)") {
                         viewModel.download(source: source)
@@ -113,7 +114,7 @@ struct ShowDetailsView: View {
     }
     
     @ViewBuilder private var genresView: some View {
-        Text("2022 - Drama, Action - 1h 33 min")
+        Text("\(viewModel.show.year) \(viewModel.show.genres?.map({$0.name}).joined(separator: " ") ?? "" as String)")
             .font(.caption)
             .foregroundColor(.gray)
             .padding(.bottom)
@@ -126,7 +127,8 @@ struct ShowDetailsView: View {
                 viewModel.videoPlayerViewController.play(show: viewModel.show)
             }
             else {
-                if let url = viewModel.show.trailerURL {
+                if let youtubeID = viewModel.show.youtubeID, let url  = URL(string: "https://youtube.com/watch?v=\(youtubeID)") {
+                    print("url", url)
                     openURL(url)
                 }
             }
@@ -134,7 +136,7 @@ struct ShowDetailsView: View {
             HStack {
                 Image(systemName: "play.fill")
                 
-                Text("Watch Now")
+                Text("watch now")
                     .bold()
             }
                 .padding(.vertical, 10)
@@ -168,15 +170,17 @@ struct ShowDetailsView: View {
         HStack(alignment: .center) {
             watchButtonView
             
-            downloadButtonView
+            if !isOutsideDomain {
+                downloadButtonView
+            }
             
             watchLaterButtonView
-                .alert("Please login ", isPresented: $viewModel.showingLoginAlert) {
-                    Button("Ok", role: .none) {
+                .alert("please login ", isPresented: $viewModel.showingLoginAlert) {
+                    Button("okAlertButton", role: .none) {
                         viewModel.showingLogin.toggle()
                     }
                     
-                    Button("Cancel", role: .cancel) {}
+                    Button("cancel", role: .cancel) {}
                 }
             
         }.padding(.horizontal)
@@ -184,27 +188,35 @@ struct ShowDetailsView: View {
             .fontWeight(.semibold)
     }
     
+    
     @ViewBuilder private var downloadButtonView: some View {
-        if viewModel.downloadStatus == .downloading {
-            CircleProgress(progress: .constant(0))
-                .frame(width: 25, height: 25)
-                .environment(\.layoutDirection, .rightToLeft)
-        }
-        
-        else if viewModel.downloadStatus == .downloaded {
+        switch viewModel.downloadStatus {
+        case .downloaded:
             Image(systemName: "checkmark")
+                .imageScale(.small)
+                .foregroundColor(Color(uiColor: Theme.current.tintColor))
+            
+        case .loading, .downloading_sub:
+            ActivityIndicatorView(style: .white)
+            
+        case .downloading, .in_queue, .paused:
+            CircleProgress(progress: $viewModel.downloadingProgress)
+                .frame(width: 42, height: 42)
+            
+        case .failed:
+            Image(systemName: "exclamationmark.triangle.fill")
                 .imageScale(.large)
-                .foregroundColor(Color.secondaryBrand)
-        }
-        
-        else {
-            Button(action: {self.showingResolutions.toggle()}, label: {
-                Image(systemName: "arrowshape.turn.up.forward")
+            
+        case .unknown:
+            Button(action: {
+                self.showingResolutions.toggle()
+            }, label: {
+                Image(systemName: "arrow.down")
                     .imageScale(.large)
                     .padding(10)
                     .foregroundColor(.white)
             }).background(Color.tertiaryBrand)
-            .clipShape(Circle())
+                .clipShape(Circle())
         }
     }
     
@@ -214,14 +226,28 @@ struct ShowDetailsView: View {
                 .frame(height: 500)
             
             VStack {
+                titleView
+                
                 imdbRating
                 
                 genresView
                 
                 actionView
-                
             }
         }
+    }
+    
+    @ViewBuilder private var titleView: some View {
+        Text(viewModel.show.title)
+            .font(.title3)
+            .fontWeight(.bold)
+    }
+    
+    @ViewBuilder private var alternativeTitleView: some View {
+        Text(viewModel.show.alternativeTitle ?? "")
+            .fontWeight(.bold)
+            .padding(.horizontal)
+            .frame(maxWidth: .infinity, alignment: .leading)
     }
     
     @ViewBuilder private var sensitiveContentView: some View {
@@ -265,12 +291,12 @@ struct ShowDetailsView: View {
     }
     
     @ViewBuilder private var castAndCrew: some View {
-        Text("Cats & Crew")
-            .bold()
-            .padding()
-            .frame(maxWidth: .infinity, alignment: .leading)
-        
-        if let actors = viewModel.show.actors {
+        if let actors = viewModel.show.actors, !actors.isEmpty {
+            Text("cast & crew")
+                .bold()
+                .padding()
+                .frame(maxWidth: .infinity, alignment: .leading)
+            
             ActorsView(actors: actors)
                 .padding(.bottom)
         }

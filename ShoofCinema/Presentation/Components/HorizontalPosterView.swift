@@ -20,6 +20,7 @@ struct HorizontalPosterView: View {
                     Color.black
                 }
                 .resizable()
+                .fade(duration: 0.25)
                 .aspectRatio(contentMode: .fill)
                 .frame(width: 120, height: 180)
                 .clipped()
@@ -31,8 +32,13 @@ struct HorizontalPosterView: View {
                     .font(.caption)
                     .foregroundColor(.white)
                 
-                //show.genres?.compactMap({$0.name}).joined(separator: ",") ?? ""
-                Text("Darama, Action, Romance")
+                
+                Text("\(show.genres?.map({$0.name}).joined(separator: " ") ?? "" as String)")
+                    .lineLimit(1)
+                    .foregroundColor(.gray)
+                    .font(.caption)
+                
+                Text(show.year)
                     .lineLimit(1)
                     .foregroundColor(.gray)
                     .font(.caption)

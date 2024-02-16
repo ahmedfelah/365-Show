@@ -162,11 +162,10 @@ extension KolodaVC: KolodaViewDelegate {
     
     func koloda(_ koloda: KolodaView, didSelectCardAt index: Int) {
         if index == 0 {return}
-        if let detailsVC = UIStoryboard(name: "HomeSB", bundle: nil)
-            .instantiateViewController(withIdentifier: String(describing: DetailsVC.self)) as? DetailsVC {
-            detailsVC.show = shows[index-1]
-            navigationController?.pushViewController(detailsVC, animated: true)
-        }
+        let rootVC = DetailsSwiftUIViewController()
+        rootVC.show = shows[index-1]
+        
+        present(rootVC, animated: true)
     }
     
     func koloda(_ koloda: KolodaView, draggedCardWithPercentage finishPercentage: CGFloat, in direction: SwipeResultDirection) {

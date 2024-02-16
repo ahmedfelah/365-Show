@@ -237,3 +237,68 @@
 "download" = "Download";
 "watchlist" = "Watchlist";
 "noComments" = "No Comments";
+
+"help and support" = "Help and support";
+"enjoying the app?" = "Enjoying the app?";
+"tell your friends about it." = "Tell your friends about it.";
+"share the app" = "Share the app";
+"user profile" = "User Profile";
+"user list" = "User list";
+"logout" = "Logout";
+"yes" = "Yes";
+"no" = "No";
+"are you sure you want to logout" = "Are you sure you want to logout";
+"language" =  "Language";
+"delete account" = "Delete account";
+"deleteAccountConfirmMessage" = "Deleting your account will permanently remove all your data and cannot be undone. This action is irreversible. Are you sure you want to proceed?";
+"settings" = "Settings";
+"downloads" = "Downloads";
+"have an account?" = "Have an account?";
+"log in and get more." = "Log in and get more.";
+"login" = "Login";
+
+"season:" = "Season:";
+"epsiode:" = "Episode:";
+"epsiode" = "Episode:";
+"delete confirmation" = "Delete confirmation";
+"delete" = "Delete";
+"are you sure you want to delete?" = "Are you sure you want to delete?";
+"cancel" = "Cancel";
+"selected action" = "Selected Action";
+"resume" = "Resume";
+"redownload" = "Redownload";
+
+"watched" = "Watched";
+"watch later" = "Watch later";
+
+"subscripe" = "Subscripe";
+"episodes" = "Episodes";
+"select a resolution" = "Select a resolution";
+"Watch Now" = "Watch Now";
+"please login" = "Please login";
+"see all" = "SEE ALL";
+"season" = "Season";
+"cast & crew" = "Cast and Crew";
+"actors" = "Actors";
+
+"search" = "Search";
+"whoops!" = "Whoops!";
+"Sorry we couldn't find any matches" = "sorry we couldn't find any matches";
+"tv show" = "TV Show";
+"movies" = "Movies";
+"filter results" = "filter results";
+"clear all" = "Clear all";
+"year" = "Year";
+"to" = "To";
+"category" = "Category";
+"rating" = "rating";
+"show result" = "Show Result";
+"search for cast and crew..." = "Search for cast and crew...";
+
+
+
+
+
+
+
+

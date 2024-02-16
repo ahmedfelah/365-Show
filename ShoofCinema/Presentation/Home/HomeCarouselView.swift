@@ -21,21 +21,16 @@ struct HomeCarouselView: View {
     
     var body: some View {
         VStack {
-            ZStack(alignment: .bottom) {
-                TabView(selection: $index.animation()) {
-                    ForEach(shows.indices, id:\.self) { index in
-                        MainPosterView(show: shows[index])
-                    }
-                }.tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
-                    .frame(height: UIScreen.main.bounds.height * 0.6, alignment: .top)
-                    .clipped()
-                
-                VStack {
-                    DotsIndexView(numberOfPages: shows.count, currentIndex: index)
+            TabView(selection: $index.animation()) {
+                ForEach(shows.indices, id:\.self) { index in
+                    MainPosterView(show: shows[index])
                 }
-            }
+            }.tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
             
-            actionView
+            VStack(alignment: .trailing) {
+                DotsIndexView(numberOfPages: shows.count, currentIndex: index)
+                    .padding(.horizontal)
+            }.frame(maxWidth: .infinity, alignment: .trailing)
         }
     }
     

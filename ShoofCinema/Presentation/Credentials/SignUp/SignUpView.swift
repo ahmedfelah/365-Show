@@ -62,7 +62,6 @@ struct SignUpView: View {
                 }.padding(.top)
                     .navigationBarTitleDisplayMode(.inline)
                     .navigationTitle("Sign Up")
-                    .fontWeight(.bold)
                     .toolbar {
                         ToolbarItem(placement: .navigationBarTrailing) {
                             Button(action: {dismiss.toggle()}) {

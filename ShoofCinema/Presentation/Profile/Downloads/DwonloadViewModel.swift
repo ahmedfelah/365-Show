@@ -138,6 +138,16 @@ extension DownloadsViewModel: DownloadManagerDelegate {
     
     func downloadRequestDidChangedStatus(for item: RDownload, downloadModel: MZDownloadModel, index: Int) {
         
+        downloads[item.video_filename]?.status = item.statusEnum
+        print("gv", item.statusEnum)
+//        if let show =  realm.objects(RDownload.self).where({
+//            $0.video_filename == item.video_filename || $0.subtitle_filename == $0.subtitle_filename
+//        }).first {
+//            try! realm.write({
+//                show.statusEnum = item.statusEnum
+//                print("ksgjdjg",show.statusEnum)
+//            })
+//        }
     }
 }
 

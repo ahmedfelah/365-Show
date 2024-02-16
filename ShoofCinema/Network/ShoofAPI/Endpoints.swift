@@ -192,7 +192,7 @@ extension Endpoint where Self == ShoofAPI.NoValueEndpoint {
 
 extension Endpoint where Self == ShoofAPI.Endpoint<[ShoofAPI.WatchLaterShow]> {
     static func watchLaterShows(pageNumber: Int) -> Self {
-        ShoofAPI.Endpoint(path: "/api/Mobile/WatchLater") {
+        ShoofAPI.Endpoint(path: "/api/MobileV3/WatchLater/GetAll") {
             URLQueryItem(name: "pageNumber", value: "\(pageNumber)")
         }
     }

@@ -29,7 +29,7 @@ struct DownloadsView: View {
             VStack {
                 Picker("", selection: $downloadSectionSelection) {
                     ForEach(DownloadSection.allCases, id: \.self) { option in
-                        Text(option.rawValue)
+                        Text(NSLocalizedString("\(option.rawValue)", comment: ""))
                             .foregroundColor(.blue)
                     }
                 }.pickerStyle(SegmentedPickerStyle())
@@ -54,6 +54,6 @@ struct DownloadsView_Previews: PreviewProvider {
 
 
 enum DownloadSection : String, CaseIterable {
-    case collection = "Collection"
-    case all = "All"
+    case collection = "series"
+    case all = "all"
 }

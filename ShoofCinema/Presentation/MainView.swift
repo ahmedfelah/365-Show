@@ -37,19 +37,10 @@ struct MainView: View {
     
     var body: some View {
         TabView {
-            if isOutsideDomain {
-                NowInCinemaView()
-                    .tabItem {
-                        Label("", systemImage: "house.fill")
-                    }
-            }
-            
-            else {
-                HomeView()
-                    .tabItem {
-                        Label("", systemImage: "house.fill")
-                    }
-            }
+            HomeView()
+                .tabItem {
+                    Label("", systemImage: "house.fill")
+                }
             
             ExploreView()
                 .tabItem {
@@ -66,10 +57,22 @@ struct MainView: View {
                     Label("", systemImage: "person.circle.fill")
                 }
         }.accentColor(.secondaryBrand)
-            .toolbarBackground(Color.primaryBrand, for: .bottomBar)
+        //.toolbarBackground(Color.primaryBrand, for: .bottomBar)
             .task {
                 checkReseller()
             }
+    }
+    
+    
+    struct KolodaView: UIViewControllerRepresentable {
+        func makeUIViewController(context: Context) -> KolodaVC {
+            return KolodaVC()
+        }
+        
+        func updateUIViewController(_ uiViewController: KolodaVC, context: Context) {
+            
+        }
+        
     }
     
     

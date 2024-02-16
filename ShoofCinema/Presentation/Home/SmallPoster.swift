@@ -19,7 +19,7 @@ struct SmallPosterView: View {
     var body: some View {
         VStack(alignment: .leading) {
             ZStack(alignment: .center) {
-                KFImage.url(show.coverURL)
+                KFImage.url(show.posterURL)
                     .placeholder {
                         Color.black
                         
@@ -35,22 +35,23 @@ struct SmallPosterView: View {
                         }
                     }
                     .resizable()
+                    .fade(duration: 0.25)
                     .aspectRatio(contentMode: .fill)
             }.frame(width: 120, height: 170)
                 .clipped()
-                .cornerRadius(2)
+                .cornerRadius(5)
             
             HStack {
                 Text("IMDB")
                     .font(.system(size: 8))
                     .padding(3)
-                    .background(Color("imdb"))
+                    .background(.white)
                     .cornerRadius(5)
                     .foregroundColor(.black)
                     .padding(3)
                 
                 
-                Text("\(show.imdbID ?? "")")
+                Text("\(show.rating ?? "")")
                     .padding(3)
                     .font(.caption2)
             }
@@ -60,7 +61,7 @@ struct SmallPosterView: View {
                 .padding([.leading, .trailing], 3)
                 .font(.caption)
             
-            Text("Darama, Action, Romance")
+            Text("\(show.year)")
                 .lineLimit(1)
                 .padding([.leading, .trailing, .bottom], 3)
                 .foregroundColor(.gray)

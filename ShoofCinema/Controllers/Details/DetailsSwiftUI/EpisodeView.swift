@@ -91,6 +91,7 @@ fileprivate struct DownloadCircleProgress: View {
 
 struct CircleProgress: View {
     @Binding var progress: Float
+    
     var body: some View {
         ZStack {
             Circle()

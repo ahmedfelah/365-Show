@@ -28,11 +28,12 @@ struct AllEpisodesTVShowView: View {
                             status: viewModel.downloading[viewModel.episodes[index].id]?.Status ?? .unknown,
                             isSelected: viewModel.episodeIndexSelected == index,
                             viewModel: viewModel,
-                            downloadAction: {showResolutionsDialog(index: index)}
-                        ).onTapGesture {
-                            viewModel.playEpisode(index: index)
-                            isPresented.toggle()
-                        }
+                            downloadAction: {showResolutionsDialog(index: index)},
+                            playAction: {
+                                viewModel.playEpisode(index: index)
+                                isPresented.toggle()
+                            }
+                        )
                     }
 
                 }.confirmationDialog("Select a resolution", isPresented: $showingResolutions) {

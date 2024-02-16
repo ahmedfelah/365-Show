@@ -20,7 +20,7 @@ class SeasonsTVShowViewModel: ObservableObject {
     
     let videoPlayerViewController = VideoPlayerViewController()
     
-    private var currentEpisodePage: Int = 1
+    private var currentEpisodePage: Int = 0
     
     typealias EpisodeDownload = (EpisodeSeasonId: String, Progress: Float, Status: DownloadStatus)
     
@@ -92,7 +92,7 @@ class SeasonsTVShowViewModel: ObservableObject {
         self.isLoading = true
         self.episodes = Array(repeating: ShoofAPI.Media.Episode.mock, count: 10)
         
-        loadEpisodes(forSeasonWithID: seasons[seasonIndexSelected].id, pageNumber: 1) { [weak self] result in
+        loadEpisodes(forSeasonWithID: seasons[seasonIndexSelected].id, pageNumber: currentEpisodePage) { [weak self] result in
             guard let self = self else {return}
             
             DispatchQueue.main.async {

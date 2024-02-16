@@ -335,6 +335,7 @@
 		BD6553932B24CF6300B41231 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6553922B24CF6300B41231 /* News.swift */; };
 		BD88462F2B19C6E00035FF53 /* NowInCinemaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD88462E2B19C6E00035FF53 /* NowInCinemaView.swift */; };
 		BD994FFF2AD3452A000A0601 /* DotsIndexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD994FFE2AD3452A000A0601 /* DotsIndexView.swift */; };
+		BDECD0462B77526D00AE149D /* CinemaPosterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDECD0452B77526D00AE149D /* CinemaPosterView.swift */; };
 		BDFDCE232B094311007CE1A2 /* Reel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFDCE222B094311007CE1A2 /* Reel.swift */; };
 		BDFDCE262B0953CA007CE1A2 /* ReelsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFDCE252B0953CA007CE1A2 /* ReelsView.swift */; };
 		BDFDCE282B0953E8007CE1A2 /* ReelsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFDCE272B0953E7007CE1A2 /* ReelsViewModel.swift */; };
@@ -710,6 +711,7 @@
 		BD6553922B24CF6300B41231 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		BD88462E2B19C6E00035FF53 /* NowInCinemaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowInCinemaView.swift; sourceTree = "<group>"; };
 		BD994FFE2AD3452A000A0601 /* DotsIndexView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotsIndexView.swift; sourceTree = "<group>"; };
+		BDECD0452B77526D00AE149D /* CinemaPosterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CinemaPosterView.swift; sourceTree = "<group>"; };
 		BDFDCE222B094311007CE1A2 /* Reel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reel.swift; sourceTree = "<group>"; };
 		BDFDCE252B0953CA007CE1A2 /* ReelsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReelsView.swift; sourceTree = "<group>"; };
 		BDFDCE272B0953E7007CE1A2 /* ReelsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReelsViewModel.swift; sourceTree = "<group>"; };
@@ -1596,6 +1598,7 @@
 			isa = PBXGroup;
 			children = (
 				BD88462E2B19C6E00035FF53 /* NowInCinemaView.swift */,
+				BDECD0452B77526D00AE149D /* CinemaPosterView.swift */,
 			);
 			path = NowInCinema;
 			sourceTree = "<group>";
@@ -1832,6 +1835,7 @@
 				5D3A9C6722525CD20040C62F /* PreferencesManager.swift in Sources */,
 				18A2EECF28FFFB5500D42173 /* CVideoView.swift in Sources */,
 				5DED964523E1D704008F32C2 /* MZDownloadManager.swift in Sources */,
+				BDECD0462B77526D00AE149D /* CinemaPosterView.swift in Sources */,
 				96DF4B1E27ED1644004D22E9 /* Shoof-Notification.swift in Sources */,
 				105756462604B9DB0045C5FE /* UITableViewExtension.swift in Sources */,
 				10EE6C9125E2882300F31F83 /* MainButton.swift in Sources */,
@@ -2428,16 +2432,16 @@
 				CODE_SIGN_ENTITLEMENTS = ShoofCinema/ShoofCinema.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 14;
+				CURRENT_PROJECT_VERSION = 17;
 				DEVELOPMENT_TEAM = VS7BUZBC8W;
 				INFOPLIST_FILE = ShoofCinema/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "365 Show";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.4;
+				MARKETING_VERSION = 1.5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.365show.365Show;
 				PRODUCT_NAME = Shoof;
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -2459,16 +2463,16 @@
 				CODE_SIGN_ENTITLEMENTS = ShoofCinema/ShoofCinema.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 14;
+				CURRENT_PROJECT_VERSION = 17;
 				DEVELOPMENT_TEAM = VS7BUZBC8W;
 				INFOPLIST_FILE = ShoofCinema/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "365 Show";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.4;
+				MARKETING_VERSION = 1.5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.365show.365Show;
 				PRODUCT_NAME = Shoof;
 				PROVISIONING_PROFILE_SPECIFIER = "";

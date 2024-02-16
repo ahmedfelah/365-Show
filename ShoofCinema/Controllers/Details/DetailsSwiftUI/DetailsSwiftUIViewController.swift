@@ -17,20 +17,22 @@ class DetailsSwiftUIViewController: UIViewController {
         super.viewDidLoad()
         navigationController?.setNavigationBarHidden(false, animated: true)
         
-        let hostView = UIHostingController(rootView: DetailsView(show: show, tab: tabBar!, parentVC: self))
-        
-        hostView.view.translatesAutoresizingMaskIntoConstraints = false
-        
-        view.addSubview(hostView.view)
-        
-        let constraints = [
-            hostView.view.topAnchor.constraint(equalTo: view.topAnchor),
-            hostView.view.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            hostView.view.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            hostView.view.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-        ]
-        
-        self.view.addConstraints(constraints)
+        if let show = show  {
+            let hostView = UIHostingController(rootView: ShowDetailsView(viewModel: ShowDetailsViewModel(show: show)))
+            
+            hostView.view.translatesAutoresizingMaskIntoConstraints = false
+            
+            view.addSubview(hostView.view)
+            
+            let constraints = [
+                hostView.view.topAnchor.constraint(equalTo: view.topAnchor),
+                hostView.view.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+                hostView.view.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+                hostView.view.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            ]
+            
+            self.view.addConstraints(constraints)
+        }
         
     }
     

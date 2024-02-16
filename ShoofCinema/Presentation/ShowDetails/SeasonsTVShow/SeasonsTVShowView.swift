@@ -36,8 +36,7 @@ struct SeasonsTVShowView: View {
                     Button(action: {
                         fetchEpisodesBySeason(index: index)
                     }, label: {
-                        Text("Season \(viewModel.seasons[index].number)")
-                            .font(.caption)
+                        Text("\(Text("season")) \(viewModel.seasons[index].number)")
                             .foregroundColor(viewModel.seasonIndexSelected == index ? .secondaryBrand : .white)
                             .bold()
                             .padding()
@@ -75,20 +74,21 @@ struct SeasonsTVShowView: View {
                         status: .unknown,
                         isSelected: viewModel.episodeIndexSelected == index,
                         viewModel: viewModel,
-                        downloadAction: {showResolutionsDialog(index: index)}
-                    ).onTapGesture {
-                        viewModel.playEpisode(index: index)
-                        isPresented.toggle()
-                    }
+                        downloadAction: {showResolutionsDialog(index: index)},
+                        playAction: {
+                            viewModel.playEpisode(index: index)
+                            isPresented.toggle()
+                        }
+                    ).padding(.top)
                 }
                 
             }.redacted(reason: viewModel.isLoading ? .placeholder : [])
             
             NavigationLink(destination: AllEpisodesTVShowView(viewModel: viewModel), label: {
-                Text("SEE ALL")
+                Text("see all")
                     .frame(maxWidth: .infinity)
                     .padding()
-                    .bold()
+            
                     .background(.white)
                     .cornerRadius(10)
                     .padding(.horizontal)
@@ -96,7 +96,7 @@ struct SeasonsTVShowView: View {
                     .padding(.bottom)
             })
             
-        }.confirmationDialog("Select a resolution", isPresented: $showingResolutions) {
+        }.confirmationDialog("select a resolution", isPresented: $showingResolutions) {
             ForEach(viewModel.sources(episode: viewModel.episodes[downloadEpisodeIndex]), id: \.self) { source in
                 Button("\(source.title)") {
                     viewModel.download(episode: viewModel.episodes[downloadEpisodeIndex], source: source)

@@ -27,14 +27,14 @@ struct FilterSearchView: View {
                             .frame(maxWidth: .infinity, alignment: .leading)
                     })
                     
-                    Text("Filter Results")
+                    Text("filter results")
                         .bold()
                         .frame(maxWidth: .infinity)
    
                     Button(action: {
                         viewModel.clearAll()
                     }, label: {
-                        Text("Clear all")
+                        Text("clear all")
                             .font(.caption)
                             .frame(maxWidth: .infinity, alignment: .trailing)
                             .foregroundColor(.secondaryBrand)
@@ -43,7 +43,7 @@ struct FilterSearchView: View {
                     })
                 }.padding(.vertical)
                 
-                Text("Year")
+                Text("year")
                 
                 HStack {
                     Picker(selection: $viewModel.fromYearSelectedIndex,
@@ -58,7 +58,7 @@ struct FilterSearchView: View {
                     
                     
                     
-                    Text("To")
+                    Text("to")
                     
                     Picker(selection: $viewModel.toYearSelectedIndex,
                            label: EmptyView(),
@@ -71,7 +71,7 @@ struct FilterSearchView: View {
                 }.frame(height: 130)
                     .clipped()
                 
-                Text("Category")
+                Text("category")
                     .padding(.top)
                 Menu {
                     Picker(selection: $viewModel.genreSelectedIndex,
@@ -97,7 +97,7 @@ struct FilterSearchView: View {
                         .foregroundColor(.white)
                 }.padding(.bottom)
                 
-                Text("IMDB Rating - \(Int(viewModel.rate)) -")
+                Text("\(Text("rating")) - \(Int(viewModel.rate)) -")
                     .padding(.vertical)
                 
                 Slider(
@@ -110,11 +110,11 @@ struct FilterSearchView: View {
                     .accentColor(.white)
                     .padding(.bottom)
                 
-                Text("Staff")
+                Text("cast & crew")
                 
-                TextField("", text: $viewModel.actors, axis: .vertical)
+                TextField("search for cast and crew...", text: $viewModel.actors, axis: .vertical)
                     .padding()
-                    .background(Color.primaryBrand)
+                    .background(.black)
                     .foregroundColor(.white)
                     .cornerRadius(10)
                     .lineLimit(2)
@@ -125,7 +125,7 @@ struct FilterSearchView: View {
                     viewModel.updateShows()
                     dismiss()
                 }, label: {
-                    Text("Show Result")
+                    Text("show result")
                 }).font(.title3)
                     .frame(maxWidth: .infinity)
                     .padding(.leading)
