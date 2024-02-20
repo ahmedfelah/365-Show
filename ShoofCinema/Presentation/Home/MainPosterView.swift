@@ -49,18 +49,19 @@ struct MainPosterView: View {
                         .font(.largeTitle)
                         .multilineTextAlignment(.center)
                         .frame(maxWidth: .infinity, alignment: .center)
-                        .bold()
                         .padding()
                 }
                 
                 Spacer()
                 
-                WatchButtonView()
-                    .padding(.vertical, 10)
-                    .padding(.horizontal, 25)
-                    .background(Color.secondaryBrand)
-                    .clipShape(Capsule())
-                    .padding()
+                if !isOutsideDomain {
+                    WatchButtonView()
+                        .padding(.vertical, 10)
+                        .padding(.horizontal, 25)
+                        .background(Color.secondaryBrand)
+                        .clipShape(Capsule())
+                        .padding()
+                }
             }
         }.foregroundColor(.white)
             .buttonStyle(.plain)

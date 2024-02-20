@@ -47,6 +47,10 @@ class HomeViewModel: ObservableObject {
                 self.status = .loaded
             }
         } catch {
+            DispatchQueue.main.async {
+                self.status = .failed
+            }
+            
             print("ERROR!", error)
         }
     }

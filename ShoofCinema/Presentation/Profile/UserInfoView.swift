@@ -50,7 +50,6 @@ struct UserInfoView: View {
 //                })
             }.padding()
                 .font(.title2)
-                .bold()
         }.buttonStyle(.plain)
     }
     

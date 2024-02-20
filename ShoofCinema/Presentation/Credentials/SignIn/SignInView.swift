@@ -21,7 +21,7 @@ struct SignInView: View {
         ZStack {
             Color.white.edgesIgnoringSafeArea(.all)
             
-            NavigationStack {
+            NavView {
                 VStack(alignment: .center) {
                     Image("360-show")
                         .resizable()
@@ -69,7 +69,6 @@ struct SignInView: View {
                     
                     Text("or use")
                         .font(.caption)
-                        .bold(false)
                         .foregroundColor(.gray)
                     
                     
@@ -85,7 +84,6 @@ struct SignInView: View {
                     .background(Color.primaryBrand)
                     .navigationBarTitleDisplayMode(.inline)
                     .navigationTitle("Login")
-                    .fontWeight(.bold)
                     .toolbar {
                         ToolbarItem(placement: .navigationBarTrailing) {
                             Button(action: {dismiss.toggle()}) {

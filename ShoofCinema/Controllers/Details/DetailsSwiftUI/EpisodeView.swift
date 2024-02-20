@@ -67,7 +67,7 @@ fileprivate struct DownloadCircleProgress: View {
     var body: some View {
         ZStack {
             if status == .downloading {
-                CircleProgress(progress: $progress)
+                CircleProgress(progress: progress)
                     .environment(\.layoutDirection, .rightToLeft)
             }
             
@@ -90,23 +90,20 @@ fileprivate struct DownloadCircleProgress: View {
 
 
 struct CircleProgress: View {
-    @Binding var progress: Float
+    var progress: Float
     
     var body: some View {
         ZStack {
             Circle()
                 .stroke(lineWidth: 2)
-                .foregroundColor(Color.secondary)
+                .foregroundColor(.white)
             
             Circle()
                 .trim(from: CGFloat(progress), to: 1)
                 .stroke(style: StrokeStyle(lineWidth: 2, lineCap: .round, lineJoin: .round))
                 .foregroundColor(.gray)
                 .rotationEffect(Angle(degrees: 270.0))
-                .animation(.linear)
-            
-            Image(systemName: "pause.fill")
-                .imageScale(.small)
-        }
+                .animation(.linear, value: progress)
+        }.environment(\.layoutDirection, .leftToRight)
     }
 }

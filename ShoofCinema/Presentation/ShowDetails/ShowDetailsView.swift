@@ -20,68 +20,134 @@ struct ShowDetailsView: View {
     @Environment(\.openURL) var openURL
    
     var body: some View {
-        ScrollView(showsIndicators: false) {
-            ZStack(alignment: .bottom) {
-                imageView
-                
-                detailsView
-                
-            }
-            
-            alternativeTitleView
-            
-            descriptionView
-            
-            castAndCrew
-            
-            if viewModel.status == .loaded && !isOutsideDomain && !viewModel.show.isMovie {
-                HStack {
-                    Text("episodes")
-                        .bold()
+        if #available(iOS 16, *) {
+            ScrollView(showsIndicators: false) {
+                ZStack(alignment: .bottom) {
+                    imageView
                     
-                    Spacer()
+                    detailsView
                     
-                    Button(action: {viewModel.toggleSubscribe()}, label: {
-                        HStack {
-                            Image(systemName: "bell.fill")
-                            
-                            Text("subscripe")
-                                .font(.caption)
-                                .fontWeight(.bold)
-                        }
-                    }).foregroundColor(viewModel.show.isSubscribed ? .red : .white)
-                        .animation(Animation.linear(duration: 1.5), value: viewModel.show.isSubscribed)
-                    
-                    
-                }.padding()
-                
-                if !viewModel.show.isMovie && !isOutsideDomain {
-                    SeasonsTVShowView(viewModel: SeasonsTVShowViewModel(show: viewModel.show))
                 }
-            }
-            
-        }.task {
-            viewModel.loadDetails()
-        }.edgesIgnoringSafeArea(.top)
-            .background(Color("denim"))
-            .buttonStyle(.plain)
-            .toolbarBackground(.hidden, for: .navigationBar)
-            .overlay {
-                if viewModel.status == .loading {
-                    VStack {
-                        LoadingView()
-                    }.frame(maxWidth: .infinity, maxHeight: .infinity)
-                        .background(.black.opacity(0.2))
-                }
-            }.confirmationDialog("select a resolution", isPresented: $showingResolutions) {
-                ForEach(viewModel.sources, id: \.self) { source in
-                    Button("\(source.title)") {
-                        viewModel.download(source: source)
+                
+                alternativeTitleView
+                
+                descriptionView
+                
+                castAndCrew
+                
+                if viewModel.status == .loaded && !isOutsideDomain && !viewModel.show.isMovie {
+                    HStack {
+                        Text("episodes")
+                            .bold()
+                        
+                        Spacer()
+                        
+                        Button(action: {viewModel.toggleSubscribe()}, label: {
+                            HStack {
+                                Image(systemName: "bell.fill")
+                                
+                                Text("subscripe")
+                                    .font(.caption)
+                                    .fontWeight(.bold)
+                            }
+                        }).foregroundColor(viewModel.show.isSubscribed ? .red : .white)
+                            .animation(Animation.linear(duration: 1.5), value: viewModel.show.isSubscribed)
+                        
+                        
+                    }.padding()
+                    
+                    if !viewModel.show.isMovie && !isOutsideDomain {
+                        SeasonsTVShowView(viewModel: SeasonsTVShowViewModel(show: viewModel.show))
                     }
                 }
-            }.fullScreenCover(isPresented: $viewModel.showingLogin) {
-                SignInView(dismiss: $viewModel.showingLogin)
-            }
+                
+            }.task {
+                viewModel.loadDetails()
+            }.edgesIgnoringSafeArea(.top)
+                .background(Color("denim"))
+                .buttonStyle(.plain)
+                .toolbarBackground(.hidden, for: .navigationBar)
+                .overlay {
+                    if viewModel.status == .loading {
+                        VStack {
+                            LoadingView()
+                        }.frame(maxWidth: .infinity, maxHeight: .infinity)
+                            .background(.black.opacity(0.2))
+                    }
+                }.confirmationDialog("select a resolution", isPresented: $showingResolutions) {
+                    ForEach(viewModel.sources, id: \.self) { source in
+                        Button("\(source.title)") {
+                            viewModel.download(source: source)
+                        }
+                    }
+                }.fullScreenCover(isPresented: $viewModel.showingLogin) {
+                    SignInView(dismiss: $viewModel.showingLogin)
+                }
+        }
+        
+        else {
+            ScrollView(showsIndicators: false) {
+                ZStack(alignment: .bottom) {
+                    imageView
+                    
+                    detailsView
+                    
+                }
+                
+                alternativeTitleView
+                
+                descriptionView
+                
+                castAndCrew
+                
+                if viewModel.status == .loaded && !isOutsideDomain && !viewModel.show.isMovie {
+                    HStack {
+                        Text("episodes")
+                            .bold()
+                        
+                        Spacer()
+                        
+                        Button(action: {viewModel.toggleSubscribe()}, label: {
+                            HStack {
+                                Image(systemName: "bell.fill")
+                                
+                                Text("subscripe")
+                                    .font(.caption)
+                                    .fontWeight(.bold)
+                            }
+                        }).foregroundColor(viewModel.show.isSubscribed ? .red : .white)
+                            .animation(Animation.linear(duration: 1.5), value: viewModel.show.isSubscribed)
+                        
+                        
+                    }.padding()
+                    
+                    if !viewModel.show.isMovie && !isOutsideDomain {
+                        SeasonsTVShowView(viewModel: SeasonsTVShowViewModel(show: viewModel.show))
+                    }
+                }
+                
+            }.task {
+                viewModel.loadDetails()
+            }.edgesIgnoringSafeArea(.top)
+                .background(Color("denim"))
+                .buttonStyle(.plain)
+                .overlay {
+                    if viewModel.status == .loading {
+                        VStack {
+                            LoadingView()
+                        }.frame(maxWidth: .infinity, maxHeight: .infinity)
+                            .background(.black.opacity(0.2))
+                    }
+                }.confirmationDialog("select a resolution", isPresented: $showingResolutions) {
+                    ForEach(viewModel.sources, id: \.self) { source in
+                        Button("\(source.title)") {
+                            viewModel.download(source: source)
+                        }
+                    }
+                }.fullScreenCover(isPresented: $viewModel.showingLogin) {
+                    SignInView(dismiss: $viewModel.showingLogin)
+                }
+        }
     }
     
     @ViewBuilder private var imageView: some View {
@@ -122,16 +188,7 @@ struct ShowDetailsView: View {
     
     @ViewBuilder private var watchButtonView: some View {
         Button(action: {
-            if !isOutsideDomain {
-                isPresented.toggle()
-                viewModel.videoPlayerViewController.play(show: viewModel.show)
-            }
-            else {
-                if let youtubeID = viewModel.show.youtubeID, let url  = URL(string: "https://youtube.com/watch?v=\(youtubeID)") {
-                    print("url", url)
-                    openURL(url)
-                }
-            }
+           watch()
         }) {
             HStack {
                 Image(systemName: "play.fill")
@@ -185,7 +242,6 @@ struct ShowDetailsView: View {
             
         }.padding(.horizontal)
             .padding(.trailing)
-            .fontWeight(.semibold)
     }
     
     
@@ -200,7 +256,7 @@ struct ShowDetailsView: View {
             ActivityIndicatorView(style: .white)
             
         case .downloading, .in_queue, .paused:
-            CircleProgress(progress: $viewModel.downloadingProgress)
+            CircleProgress(progress: viewModel.downloadingProgress)
                 .frame(width: 42, height: 42)
             
         case .failed:
@@ -285,7 +341,6 @@ struct ShowDetailsView: View {
                 .imageScale(.large)
                 .padding(.leading)
         }.padding()
-            .fontWeight(.semibold)
             .font(.caption)
             .frame(maxWidth: .infinity, alignment: .leading)
     }
@@ -299,6 +354,18 @@ struct ShowDetailsView: View {
             
             ActorsView(actors: actors)
                 .padding(.bottom)
+        }
+    }
+    
+    private func watch() {
+        if !isOutsideDomain || viewModel.downloadedItem {
+            isPresented.toggle()
+            viewModel.watch()
+        }
+        else {
+            if let youtubeID = viewModel.show.youtubeID, let url  = URL(string: "https://youtube.com/watch?v=\(youtubeID)") {
+                openURL(url)
+            }
         }
     }
 }

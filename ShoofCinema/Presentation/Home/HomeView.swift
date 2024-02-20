@@ -17,14 +17,14 @@ struct HomeView: View {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     
     var body: some View {
-        NavigationStack {
+        NavView {
             ScrollView(showsIndicators: false) {
                 VStack {
                     Image("360-show")
-                       .resizable()
-                       .scaledToFit()
-                       .frame(width: 150, alignment: .leading)
-                       .padding([.bottom, .leading, .trailing])
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 150, alignment: .leading)
+                        .padding([.bottom, .leading, .trailing])
                 }.frame(maxWidth: .infinity, alignment: .leading)
                 
                 ForEach(viewModel.sections.indices, id: \.self) { index in
@@ -40,22 +40,30 @@ struct HomeView: View {
                 }
                 
             }
-                .statusBar(hidden: true)
-                .background(Color.primaryBrand)
-                .font(Font(Fonts.almarai()))
-                .task {
+            .statusBar(hidden: true)
+            .background(Color.primaryBrand)
+            .font(Font(Fonts.almarai()))
+            .task {
+                if viewModel.sections.isEmpty {
                     viewModel.loadSections()
                 }
-                .overlay {
-                    if viewModel.status == .loading {
-                        VStack {
-                            LoadingView()
-                        }.frame(maxWidth: .infinity, maxHeight: .infinity)
-                            .background(.black.opacity(0.2))
-                    }
+            }
+            .overlay {
+                if viewModel.status == .loading {
+                    VStack {
+                        LoadingView()
+                    }.frame(maxWidth: .infinity, maxHeight: .infinity)
+                        .background(.black.opacity(0.2))
                 }
+                else if viewModel.status == .failed {
+                    VStack {
+                        ErrorView(action: {Task{viewModel.loadSections()}})
+                    }.frame(maxWidth: .infinity, maxHeight: .infinity)
+                }
+            }
         }
     }
+    
 }
 
 

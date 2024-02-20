@@ -335,6 +335,9 @@
 		BD6553932B24CF6300B41231 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6553922B24CF6300B41231 /* News.swift */; };
 		BD88462F2B19C6E00035FF53 /* NowInCinemaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD88462E2B19C6E00035FF53 /* NowInCinemaView.swift */; };
 		BD994FFF2AD3452A000A0601 /* DotsIndexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD994FFE2AD3452A000A0601 /* DotsIndexView.swift */; };
+		BDC7D8A02B813268005F6FBF /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC7D89F2B813268005F6FBF /* ErrorView.swift */; };
+		BDD5AA6F2B809BBA005E23FD /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD5AA6E2B809BBA005E23FD /* CircularProgressView.swift */; };
+		BDD5AA712B809F86005E23FD /* NavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD5AA702B809F86005E23FD /* NavView.swift */; };
 		BDECD0462B77526D00AE149D /* CinemaPosterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDECD0452B77526D00AE149D /* CinemaPosterView.swift */; };
 		BDFDCE232B094311007CE1A2 /* Reel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFDCE222B094311007CE1A2 /* Reel.swift */; };
 		BDFDCE262B0953CA007CE1A2 /* ReelsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFDCE252B0953CA007CE1A2 /* ReelsView.swift */; };
@@ -711,6 +714,9 @@
 		BD6553922B24CF6300B41231 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		BD88462E2B19C6E00035FF53 /* NowInCinemaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowInCinemaView.swift; sourceTree = "<group>"; };
 		BD994FFE2AD3452A000A0601 /* DotsIndexView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotsIndexView.swift; sourceTree = "<group>"; };
+		BDC7D89F2B813268005F6FBF /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		BDD5AA6E2B809BBA005E23FD /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
+		BDD5AA702B809F86005E23FD /* NavView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavView.swift; sourceTree = "<group>"; };
 		BDECD0452B77526D00AE149D /* CinemaPosterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CinemaPosterView.swift; sourceTree = "<group>"; };
 		BDFDCE222B094311007CE1A2 /* Reel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reel.swift; sourceTree = "<group>"; };
 		BDFDCE252B0953CA007CE1A2 /* ReelsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReelsView.swift; sourceTree = "<group>"; };
@@ -954,6 +960,9 @@
 				044EE8872A5938B800FA862D /* SecureTextFieldView.swift */,
 				04900BC92A65C622007DB7AC /* HorizontalPosterView.swift */,
 				04AECECB2AAE3FB500F34E71 /* DownloadCardView.swift */,
+				BDD5AA6E2B809BBA005E23FD /* CircularProgressView.swift */,
+				BDD5AA702B809F86005E23FD /* NavView.swift */,
+				BDC7D89F2B813268005F6FBF /* ErrorView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -1845,6 +1854,7 @@
 				5D67713222DBDA2100DAA7D3 /* LoadingVC.swift in Sources */,
 				5D3A9C38225257BC0040C62F /* RepoErrors.swift in Sources */,
 				18A2EEEA28FFFBA000D42173 /* UPBResolutionButton.swift in Sources */,
+				BDD5AA712B809F86005E23FD /* NavView.swift in Sources */,
 				10E39FC6262EF59900807C51 /* CurvedTabbar.swift in Sources */,
 				049837F52A5033F300FF5CEB /* PosterView.swift in Sources */,
 				10066DB025FBE087008484FA /* FilterData.swift in Sources */,
@@ -1872,6 +1882,7 @@
 				044EE88A2A59439F00FA862D /* SettingsView.swift in Sources */,
 				1011D86625E957C40048034D /* HomeSections.swift in Sources */,
 				10D038E825E6E7570049A509 /* FavoriteVC.swift in Sources */,
+				BDD5AA6F2B809BBA005E23FD /* CircularProgressView.swift in Sources */,
 				04A74EEF29FC5C27008F5339 /* LastCommentView.swift in Sources */,
 				10057F76261DF944001776B1 /* SCDownloadButton.swift in Sources */,
 				969A5B7627CA449C00BA6A5A /* Comment.swift in Sources */,
@@ -1969,6 +1980,7 @@
 				5D3A9C6122525CD20040C62F /* Events and Logging.swift in Sources */,
 				BD01F1882AC7223300669949 /* CControlsSheetView.swift in Sources */,
 				BD34F5092AD5EB9000E14E9D /* AutoLogin.swift in Sources */,
+				BDC7D8A02B813268005F6FBF /* ErrorView.swift in Sources */,
 				9671BAB627D0CEC1000CAAF5 /* SubmitRequestViewController.swift in Sources */,
 				5D3A9C6A22525CD20040C62F /* Realm.swift in Sources */,
 				046B35A929FAF39E00C56C0F /* DetailsView.swift in Sources */,
@@ -2432,16 +2444,16 @@
 				CODE_SIGN_ENTITLEMENTS = ShoofCinema/ShoofCinema.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 17;
+				CURRENT_PROJECT_VERSION = 20;
 				DEVELOPMENT_TEAM = VS7BUZBC8W;
 				INFOPLIST_FILE = ShoofCinema/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "365 Show";
-				IPHONEOS_DEPLOYMENT_TARGET = 16;
+				IPHONEOS_DEPLOYMENT_TARGET = 15;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.5;
+				MARKETING_VERSION = 1.6;
 				PRODUCT_BUNDLE_IDENTIFIER = com.365show.365Show;
 				PRODUCT_NAME = Shoof;
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -2463,16 +2475,16 @@
 				CODE_SIGN_ENTITLEMENTS = ShoofCinema/ShoofCinema.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 17;
+				CURRENT_PROJECT_VERSION = 20;
 				DEVELOPMENT_TEAM = VS7BUZBC8W;
 				INFOPLIST_FILE = ShoofCinema/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "365 Show";
-				IPHONEOS_DEPLOYMENT_TARGET = 16;
+				IPHONEOS_DEPLOYMENT_TARGET = 15;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.5;
+				MARKETING_VERSION = 1.6;
 				PRODUCT_BUNDLE_IDENTIFIER = com.365show.365Show;
 				PRODUCT_NAME = Shoof;
 				PROVISIONING_PROFILE_SPECIFIER = "";

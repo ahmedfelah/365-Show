@@ -26,7 +26,6 @@ struct WatchedView: View {
         }.background(Color.primaryBrand)
             .navigationBarTitleDisplayMode(.inline)
             .navigationTitle("watched")
-            .fontWeight(.bold)
     }
 
 }

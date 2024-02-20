@@ -18,7 +18,7 @@ struct UserListView: View {
                             .font(.system(size: 50))
                             .foregroundColor(Color.primaryText)
                         
-                        Text("Watch later")
+                        Text("watch later")
                             .font(.title)
                             .fontWeight(.semibold)
                     }.frame(maxWidth: .infinity, maxHeight: 100)
@@ -37,7 +37,7 @@ struct UserListView: View {
                             .font(.system(size: 50))
                             
                         
-                        Text("Watched")
+                        Text("watched")
                             .font(.title)
                             .fontWeight(.semibold)
                     }.frame(maxWidth: .infinity, maxHeight: 100)

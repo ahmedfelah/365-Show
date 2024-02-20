@@ -37,6 +37,11 @@ struct ShowsView: View {
                     }.frame(maxWidth: .infinity, maxHeight: .infinity)
                         .background(.black.opacity(0.2))
                 }
+                else if viewModel.status == .failed {
+                    VStack {
+                        ErrorView(action: {Task{viewModel.loadShows()}})
+                    }.frame(maxWidth: .infinity, maxHeight: .infinity)
+                }
             }
             .task {
                 guard viewModel.shows.isEmpty else {return}

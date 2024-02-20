@@ -23,7 +23,9 @@ struct HomeCarouselView: View {
         VStack {
             TabView(selection: $index.animation()) {
                 ForEach(shows.indices, id:\.self) { index in
-                    MainPosterView(show: shows[index])
+                    NavigationLink(destination: ShowDetailsView(viewModel: ShowDetailsViewModel(show: shows[index]))) {
+                        MainPosterView(show: shows[index])
+                    }
                 }
             }.tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
             

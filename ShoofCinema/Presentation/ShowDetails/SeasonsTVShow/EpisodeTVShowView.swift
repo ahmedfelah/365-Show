@@ -86,7 +86,7 @@ struct EpisodeTVShowView: View {
                 
                 VStack {
                     if status == .downloading {
-                        CircleProgress(progress: $progress)
+                        CircleProgress(progress: progress)
                             .frame(width: 25, height: 25)
                             .environment(\.layoutDirection, .rightToLeft)
                     }

@@ -20,7 +20,7 @@ struct UserProfileView: View {
     
     
     var body: some View {
-        NavigationStack {
+        NavView {
             ScrollView {
                 userInfoView
                 
@@ -162,15 +162,14 @@ struct UserProfileView: View {
     
     @ViewBuilder private var watchLaterView: some View {
         if isOutsideDomain {
-            Divider()
-                .frame(minHeight: 2)
-                .overlay(.black)
-            
             NavigationLink(destination: {
                 WatchLaterView()
             }, label: {
                 Text("watch later")
-                    .frame(maxWidth: .infinity, alignment: .leading)
+                
+                Spacer()
+                
+                Image(systemName: "chevron.forward")
             }).padding()
         }
     }
@@ -223,7 +222,7 @@ struct UserProfileView: View {
     }
     
     @ViewBuilder private var downloadView: some View {
-        if !isOutsideDomain {
+        if !isOutsideDomain || appPublished {
             Divider()
                 .frame(minHeight: 2)
                 .overlay(.black)

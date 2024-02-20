@@ -20,6 +20,7 @@ class ShowDetailsViewModel: ObservableObject {
     
     
     let shoofAPI = ShoofAPI.shared
+    var downloadedItem: Bool
     
     let videoPlayerViewController = VideoPlayerViewController()
     
@@ -33,8 +34,9 @@ class ShowDetailsViewModel: ObservableObject {
         return resolutions
     }
     
-    init(show: ShoofAPI.Show) {
+    init(show: ShoofAPI.Show, downloadedItem: Bool = false) {
         self.show = show
+        self.downloadedItem = downloadedItem
         
         if !isOutsideDomain {
             DownloadManager.shared.observeAllDownloads(observer: self)
@@ -55,6 +57,7 @@ class ShowDetailsViewModel: ObservableObject {
                     self?.status = .loaded
                     HapticFeedback.lightImpact()
                 } catch {
+                    self?.status = .failed
                     //self?.tabbar?.alert.genericError()
                 }
             }
@@ -97,6 +100,17 @@ class ShowDetailsViewModel: ObservableObject {
             }
         }
     }
+    
+    func watch() {
+        guard ShoofAPI.shared.isInNetwork || downloadedItem else {
+            return
+        }
+        
+        videoPlayerViewController.play(show: show) {
+            
+        }
+    }
+
     
     func fakeShow() -> ShoofAPI.Show {
         var fakeShow = show

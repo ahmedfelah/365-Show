@@ -87,7 +87,6 @@ struct SettingsView: View {
                 
                 Text("App Settings")
                     .padding()
-                    .bold()
                 
                 HStack {
                     Text("Clear Search History")

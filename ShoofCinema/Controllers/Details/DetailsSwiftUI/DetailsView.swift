@@ -207,7 +207,7 @@ struct DetailsView: View {
             ActivityIndicatorView(style: .white)
             
         case .downloading, .in_queue, .paused:
-            CircleProgress(progress: $viewModel.downloadingProgress)
+            CircleProgress(progress: viewModel.downloadingProgress)
                 .frame(width: 20, height: 20)
             
         case .failed:

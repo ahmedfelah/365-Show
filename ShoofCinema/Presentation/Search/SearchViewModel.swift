@@ -21,6 +21,7 @@ class SearchViewModel: ObservableObject {
     @Published var actors = ""
     @Published var genreSelectedIndex = 0
     @Published var filterBadgeCount = 0
+    @Published var isMovie: Bool?
     @Published var status: ResponseStatus = .none
     @Published var noData: Bool = false
     @Published var isLastPage: Bool = false
@@ -58,6 +59,7 @@ class SearchViewModel: ObservableObject {
         shoofAPI.searchShows(
             withKeywords: searchKeyword,
             genreID: genreSelectedIndex == 0 ? nil : allGenres[genreSelectedIndex].id,
+            isMovie: isMovie,
             fromDate: allYears[fromYearSelectedIndex],
             toDate: allYearsReversed[toYearSelectedIndex],
             rate: Int(rate),
@@ -73,6 +75,7 @@ class SearchViewModel: ObservableObject {
         shoofAPI.searchShows(
             withKeywords: searchKeyword,
             genreID: genreSelectedIndex == 0 ? nil : allGenres[genreSelectedIndex].id,
+            isMovie: isMovie,
             fromDate: allYears[fromYearSelectedIndex],
             toDate: allYearsReversed[toYearSelectedIndex],
             rate: Int(rate),
@@ -94,6 +97,7 @@ class SearchViewModel: ObservableObject {
             }
         }  catch is URLError {
             DispatchQueue.main.async {
+                self.noData = true
                 //self.tabBar?.alert.genericError()
             }
         } catch {

@@ -19,7 +19,7 @@ struct ExploreView: View {
     ]
     
     var body: some View {
-        NavigationStack {
+        NavView {
             ScrollView(showsIndicators: false) {
                 LazyVGrid(columns: columns, spacing: 20) {
                     ForEach(viewModel.explore.indices, id: \.self) { index in
@@ -51,7 +51,6 @@ struct ExploreView: View {
             }.background(Color.primaryBrand)
                 .navigationBarTitleDisplayMode(.inline)
                 .navigationTitle("categories")
-                .fontWeight(.bold)
                 .overlay {
                     if viewModel.status == .loading {
                         VStack {
@@ -59,9 +58,16 @@ struct ExploreView: View {
                         }.frame(maxWidth: .infinity, maxHeight: .infinity)
                             .background(.black.opacity(0.2))
                     }
+                    else if viewModel.status == .failed {
+                        VStack {
+                            ErrorView(action: {Task{viewModel.loadExplore()}})
+                        }.frame(maxWidth: .infinity, maxHeight: .infinity)
+                    }
                 }
                 .task {
-                    viewModel.loadExplore()
+                    if viewModel.explore.isEmpty {
+                        viewModel.loadExplore()
+                    }
                 }
         }
     }

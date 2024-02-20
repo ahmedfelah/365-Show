@@ -96,7 +96,7 @@ struct DownloadCardView: View {
             })
             
         case .downloading, .downloading_sub, .paused :
-            downloadingProgressView
+            downloadCircleProgressView
             
         case .failed :
             Button(action: {showingOptions.toggle()}, label: {
@@ -113,6 +113,8 @@ struct DownloadCardView: View {
         }
     }
     
+    
+    @available(iOS 16.0, *)
     @ViewBuilder private var downloadingProgressView: some View {
         Gauge(value: viewModel.downloads[rDownload.video_filename]?.progress ?? rDownload.progress, in: 0...1) {
             switch rDownload.statusEnum {
@@ -133,6 +135,31 @@ struct DownloadCardView: View {
                 Button("delete", action: {viewModel.delete(rDownload)})
             }
     }
+    
+    @ViewBuilder private var downloadCircleProgressView: some View {
+        ZStack {
+            CircleProgress(progress: viewModel.downloads[rDownload.video_filename]?.progress ?? rDownload.progress)
+                .frame(width: 25, height: 25)
+                .environment(\.layoutDirection, .rightToLeft)
+                .confirmationDialog("selected action", isPresented: $showingOptions) {
+                    Button("resume", action: {viewModel.resume(rDownload)})
+                    
+                    Button("delete", action: {viewModel.delete(rDownload)})
+                }
+            
+            switch rDownload.statusEnum {
+            case .downloading:
+                self.actionButtonView(action: {viewModel.pause(rDownload)}, icon: "pause.fill")
+                
+            case .paused:
+                self.actionButtonView(action: {showingOptions.toggle()}, icon: "play.fill")
+                
+            default :
+                EmptyView()
+            }
+        }
+    }
+    
     
     @ViewBuilder private func actionButtonView(action: @escaping () -> Void, icon: String) -> some View {
         Button(

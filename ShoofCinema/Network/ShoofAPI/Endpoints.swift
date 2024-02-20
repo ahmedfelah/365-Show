@@ -60,11 +60,15 @@ extension Endpoint where Self == ShoofAPI.Endpoint<[ShoofAPI.Show]> {
         }
     }
     
-    static func shows(matching keywords: String, genreID: Int?, rate: Int?, fromDate: String?, toDate: String?, pageNumber: Int) -> Self {
+    static func shows(matching keywords: String, genreID: Int?, isMovie: Bool?, rate: Int?, fromDate: String?, toDate: String?, pageNumber: Int) -> Self {
         ShoofAPI.Endpoint(path: "/api/MobileV3/Show/SearchShows") {
             URLQueryItem(name: "showName", value: keywords)
             if let genreID = genreID {
                 URLQueryItem(name: "genreId", value: "\(genreID)")
+            }
+            
+            if let isMovie = isMovie {
+                URLQueryItem(name: "isMovie", value: "\(isMovie)")
             }
             
             if let fromDate = fromDate {
@@ -78,6 +82,7 @@ extension Endpoint where Self == ShoofAPI.Endpoint<[ShoofAPI.Show]> {
             if let rate = rate {
                 URLQueryItem(name: "rate", value: "\(rate)")
             }
+            
             URLQueryItem(name: "pageNumber", value: "\(pageNumber)")
         }
     }

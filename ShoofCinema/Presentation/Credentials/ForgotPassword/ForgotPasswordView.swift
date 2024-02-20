@@ -46,7 +46,6 @@ struct ForgotPasswordView: View {
             .background(Color("denim"))
             .navigationBarTitleDisplayMode(.inline)
             .navigationTitle("Forgot Password")
-            .fontWeight(.bold)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button(action: {dismiss()}) {

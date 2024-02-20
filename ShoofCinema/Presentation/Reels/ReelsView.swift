@@ -27,7 +27,7 @@ struct ReelsView: View {
 //                    }
 //                }
 //            }
-        }.scrollIndicators(.hidden)
+        }//.scrollIndicators(.hidden)
 //            .scrollTargetBehavior(.paging)
 //            .task {
 //                viewModel.loadSections()

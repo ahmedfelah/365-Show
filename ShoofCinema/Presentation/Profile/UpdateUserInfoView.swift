@@ -12,7 +12,7 @@ import Kingfisher
 
 struct UpdateUserInfoView: View {
     @State private var selectedAvatar: Image?
-    @State private var avatarItem: PhotosPickerItem?
+    //@State private var avatarItem: PhotosPickerItem?
     @StateObject var viewModel: ProfileViewModel
     var body: some View {
         ScrollView {
@@ -41,18 +41,18 @@ struct UpdateUserInfoView: View {
             .navigationTitle("User Profile")
             .background(Color.primaryBrand)
             .buttonStyle(.plain)
-            .onChange(of: avatarItem) { _ in
-                Task {
-                    if let data = try? await avatarItem?.loadTransferable(type: Data.self) {
-                        if let uiImage = UIImage(data: data) {
-                            self.viewModel.changeAvatar(avatar: uiImage)
-                            return
-                        }
-                    }
-                    
-                    print("Failed")
-                }
-            }
+//            .onChange(of: avatarItem) { _ in
+//                Task {
+//                    if let data = try? await avatarItem?.loadTransferable(type: Data.self) {
+//                        if let uiImage = UIImage(data: data) {
+//                            self.viewModel.changeAvatar(avatar: uiImage)
+//                            return
+//                        }
+//                    }
+//                    
+//                    print("Failed")
+//                }
+//            }
             .overlay {
                 if viewModel.status == .loading {
                     VStack {
@@ -91,10 +91,12 @@ struct UpdateUserInfoView: View {
     }
     
     @ViewBuilder private var updateImageView: some View {
-        PhotosPicker("Select avatar", selection: $avatarItem, matching: .images)
-            .font(.caption2)
-            .padding(5)
-            .background(Color.primaryBrand)
+        EmptyView()
+        
+//        PhotosPicker("Select avatar", selection: $avatarItem, matching: .images)
+//            .font(.caption2)
+//            .padding(5)
+//            .background(Color.primaryBrand)
     }
     
     @ViewBuilder private var genralView: some View {

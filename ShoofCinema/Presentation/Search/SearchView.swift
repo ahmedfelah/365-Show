@@ -15,11 +15,11 @@ struct SearchView: View {
     @State private var filterBadge = [String: String?]()
     
     var body: some View {
-        NavigationStack {
+        NavView {
             ScrollView {
                 HStack {
                     Button(action: {
-                        viewModel.mediaType = .all
+                        self.isMovieFilter(mediaType: .all)
                     }, label: {
                         Text("all")
                             .font(.caption)
@@ -36,7 +36,7 @@ struct SearchView: View {
                     })
                     
                     Button(action: {
-                        viewModel.mediaType = .movies
+                        self.isMovieFilter(mediaType: .movies)
                     }, label: {
                         Text("movies")
                             .font(.caption)
@@ -55,7 +55,7 @@ struct SearchView: View {
                     
                     
                     Button(action: {
-                        viewModel.mediaType = .series
+                        self.isMovieFilter(mediaType: .series)
                     }, label: {
                         Text("series")
                             .font(.caption)
@@ -109,7 +109,7 @@ struct SearchView: View {
                     }.frame(height: UIScreen.main.bounds.height / 2)
                 }
                 else {
-                    resultShowsView
+                    showsView
                         .padding(.horizontal)
                         
                 }
@@ -128,29 +128,27 @@ struct SearchView: View {
         
     }
     
-    private var movieShows: [ShoofAPI.Show] {
-        return viewModel.shows.filter({$0.isMovie})
-    }
     
-    private var tvShows: [ShoofAPI.Show] {
-        return viewModel.shows.filter({!$0.isMovie})
-    }
-    
-    @ViewBuilder private var resultShowsView: some View {
-        switch viewModel.mediaType {
+    private func isMovieFilter(mediaType: ShoofAPI.Filter.MediaType = .all) {
+        switch mediaType {
         case .all:
-            allShowsView
+            viewModel.isMovie = nil
+            viewModel.mediaType = .all
             
         case .movies:
-            movieShowsView
+            viewModel.isMovie = true
+            viewModel.mediaType = .movies
             
         case .series:
-            tvShowsView
+            viewModel.isMovie = false
+            viewModel.mediaType = .series
             
         }
+        
+        viewModel.loadShows()
     }
     
-    @ViewBuilder private var allShowsView: some View {
+    @ViewBuilder private var showsView: some View {
         LazyVStack(alignment: .leading) {
             ForEach(viewModel.shows.indices , id: \.self) { index in
                 NavigationLink(destination: {
@@ -167,40 +165,6 @@ struct SearchView: View {
         }
     }
     
-    @ViewBuilder private var tvShowsView: some View {
-        LazyVStack(alignment: .leading) {
-            ForEach(tvShows.indices , id: \.self) { index in
-                NavigationLink(destination: {
-                    ShowDetailsView(viewModel: ShowDetailsViewModel(show: viewModel.shows[index]))
-                }, label: {
-                    HorizontalPosterView(show: tvShows[index])
-                        .onAppear {
-                            if tvShows.last?.id == movieShows[index].id {
-                                viewModel.loadShowsMore()
-                            }
-                        }
-                    
-                }).padding(.bottom)
-            }
-        }
-    }
-    
-    @ViewBuilder private var movieShowsView: some View {
-        LazyVStack(alignment: .leading) {
-            ForEach(movieShows.indices , id: \.self) { index in
-                NavigationLink(destination: {
-                    ShowDetailsView(viewModel: ShowDetailsViewModel(show: viewModel.shows[index]))
-                }, label: {
-                    HorizontalPosterView(show: viewModel.shows[index])
-                        .onAppear {
-                            if movieShows.last?.id == movieShows[index].id {
-                                viewModel.loadShowsMore()
-                            }
-                        }
-                }).padding(.bottom)
-            }
-        }
-    }
 }
 
 struct SearchView_Previews: PreviewProvider {

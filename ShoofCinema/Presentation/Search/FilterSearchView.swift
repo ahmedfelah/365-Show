@@ -112,13 +112,25 @@ struct FilterSearchView: View {
                 
                 Text("cast & crew")
                 
-                TextField("search for cast and crew...", text: $viewModel.actors, axis: .vertical)
-                    .padding()
-                    .background(.black)
-                    .foregroundColor(.white)
-                    .cornerRadius(10)
-                    .lineLimit(2)
-                    .padding(.bottom)
+                if #available(iOS 16, *) {
+                    TextField("search for cast and crew...", text: $viewModel.actors, axis: .vertical)
+                        .padding()
+                        .background(.black)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                        .lineLimit(2)
+                        .padding(.bottom)
+                }
+                
+                else  {
+                    TextField("search for cast and crew...", text: $viewModel.actors)
+                        .padding()
+                        .background(.black)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                        .lineLimit(2)
+                        .padding(.bottom)
+                }
                     
                 
                 Button(action: {
@@ -129,7 +141,6 @@ struct FilterSearchView: View {
                 }).font(.title3)
                     .frame(maxWidth: .infinity)
                     .padding(.leading)
-                    .fontWeight(.semibold)
                     .frame(height: 55)
                     .background(Color.secondaryBrand)
                     .cornerRadius(10)

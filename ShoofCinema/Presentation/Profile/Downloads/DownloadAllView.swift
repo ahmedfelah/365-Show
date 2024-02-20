@@ -21,10 +21,19 @@ struct DownloadAllView: View {
     var body: some View {
         LazyVStack {
             ForEach(items, id: \.self) { item in
-                DownloadCardView(rDownload: item, viewModel: viewModel)
+                NavigationLink(destination: downloadCardView(item: item)) {
+                    DownloadCardView(rDownload: item, viewModel: viewModel)
+                }
                 
             }
         }
         .padding(.horizontal)
+    }
+    
+    
+    @ViewBuilder private func  downloadCardView(item: RDownload) -> some View {
+        if let show = item.asShoofShow() {
+            ShowDetailsView(viewModel: ShowDetailsViewModel(show: show, downloadedItem: item.statusEnum == .downloaded))
+        }
     }
 }

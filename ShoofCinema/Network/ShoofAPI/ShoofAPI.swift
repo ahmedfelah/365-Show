@@ -349,8 +349,8 @@ class ShoofAPI {
         session.load(.homeSections(numberOfShowsPerSection: numberOfShowsPerSection, pageNumber: pageNumber), completionHandler: completionHandler)
     }
     
-    func searchShows(withKeywords keywords: String, genreID: Int?, fromDate: String?, toDate: String?, rate: Int?, pageNumber: Int, completionHandler: @escaping (Result<ShoofAPI.Endpoint<[Show]>.Response, Swift.Error>) -> Void) {
-        session.load(.shows(matching: keywords, genreID: genreID, rate: rate, fromDate: fromDate, toDate: toDate, pageNumber: pageNumber), completionHandler: completionHandler)
+    func searchShows(withKeywords keywords: String, genreID: Int?, isMovie: Bool?, fromDate: String?, toDate: String?, rate: Int?, pageNumber: Int, completionHandler: @escaping (Result<ShoofAPI.Endpoint<[Show]>.Response, Swift.Error>) -> Void) {
+        session.load(.shows(matching: keywords, genreID: genreID, isMovie: isMovie, rate: rate, fromDate: fromDate, toDate: toDate, pageNumber: pageNumber), completionHandler: completionHandler)
     }
     
     func autocomplete(showName: String, completionHandler: @escaping (Result<ShoofAPI.Endpoint<[Autocomplete]>.Response, Swift.Error>) -> Void) {

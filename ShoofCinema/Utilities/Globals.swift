@@ -68,7 +68,7 @@ var isOutsideDomain: Bool {
 var appPublished : Bool {
     let df = DateFormatter()
     df.dateFormat = "yyyy/MM/dd"
-    let threshold = df.date(from: "2023/6/27")!
+    let threshold = df.date(from: "2024/2/21")!
     let appleReviewPassed = Date().timeIntervalSince(threshold) > 0
 
     return appleReviewPassed || !isOutsideDomain

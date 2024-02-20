@@ -37,6 +37,7 @@ class ExploreViewModel: ObservableObject {
                 self.status = .loaded
             }
         } catch {
+            self.status = .failed
             print("ERROR!", error)
         }
     }
