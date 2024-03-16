@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftUI
+import NaturalLanguage
 
 
 public extension String {
@@ -76,6 +77,18 @@ var appPublished : Bool {
 
 /// Holds the recommendation percents
 var matchValues: [String:String] = [:]
+
+
+func detectLanguage(for text: String) -> String? {
+    let languageRecognizer = NLLanguageRecognizer()
+    
+    // Set the text to be analyzed
+    languageRecognizer.processString(text)
+    
+    return languageRecognizer.dominantLanguage?.rawValue
+    
+}
+
 
 
 

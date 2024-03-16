@@ -449,7 +449,19 @@
 "to" = "إلى";
 "category" = "فئة";
 "rating" = "تقييم";
+"sort by" = "ترتيب حسب";
+"views" = "مشاهدات";
 "show result" = "عرض النتيجة";
 "search for cast and crew..." = "البحث عن طاقم العمل...";
 
+"favourite" = "المفضلة";
+"watch trailer" = "شاهد الاعلان";
 
+"your favourite list is" = "قائمة المفضلة الخاصة بك";
+"your watch list is" = "قائمة المشاهدة الخاصة بك";
+"empty" = "فارغة";
+
+"loading" = "تحميل";
+"downloaded" = "تم التنزيل";
+"downloading" = "جاري التنزيل";
+"faild" = "فشل";

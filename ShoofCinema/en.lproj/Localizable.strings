@@ -291,9 +291,21 @@
 "year" = "Year";
 "to" = "To";
 "category" = "Category";
-"rating" = "rating";
+"rating" = "Rating";
+"sort by" = "Sort by";
+"views" = "Views";
 "show result" = "Show Result";
 "search for cast and crew..." = "Search for cast and crew...";
+
+"favourite" = "Favourite";
+"watch trailer" = "Watch trailer";
+"your favourite list is" = "Your favourite list is";
+"your watch list is " = "Your watch list is";
+"empty" = "empty";
+"loading" = "Loading";
+"downloaded" = "Downloaded";
+"downloading" = "Downloading";
+"faild" = "Faild";
 
 
 

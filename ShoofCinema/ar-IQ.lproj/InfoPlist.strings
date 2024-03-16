@@ -1,8 +1,8 @@
 /* (No Comment) */
-"CFBundleDisplayName" = "شوف";
+"CFBundleDisplayName" = "365";
 
 /* Bundle name */
-"CFBundleName" = "شوف";
+"CFBundleName" = "365 Show";
 
 /* Privacy - Bluetooth Always Usage Description */
 "NSBluetoothAlwaysUsageDescription" = "قد يستخدم هذا التطبيق Bluetooth للاتصال بأجهزة Chromecast لمشغل الفيديو";
@@ -11,7 +11,7 @@
 "NSBluetoothPeripheralUsageDescription" = "قد يستخدم هذا التطبيق Bluetooth للاتصال بأجهزة Chromecast لمشغل الفيديو";
 
 /* Privacy - Local Network Usage Description */
-"NSLocalNetworkUsageDescription" = "يستخدم Shoof الشبكة المحلية لاكتشاف الأجهزة التي تدعم Cast على شبكة WiFi الخاصة بك.";
+"NSLocalNetworkUsageDescription" = "يستخدم 365 الشبكة المحلية لاكتشاف الأجهزة التي تدعم Cast على شبكة WiFi الخاصة بك.";
 
 /* Privacy - Location Always and When In Use Usage Description */
 "NSLocationAlwaysAndWhenInUseUsageDescription" = "يستخدم هذا التطبيق موقعك لمساعدتك في اكتشاف أقرب مزودي الخدمة";

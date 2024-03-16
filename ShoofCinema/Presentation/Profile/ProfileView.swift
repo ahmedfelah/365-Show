@@ -14,6 +14,11 @@ struct UserProfileView: View {
     @State private var showingLogoutAlert = false
     @State private var showingDeleteAccountAlert = false
     
+    let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
+    
+    var hasDownloads = realm.objects(RDownload.self)
+        .filter { $0.status == DownloadStatus.downloaded.rawValue }.count > 0
+    
     @StateObject var viewModel = ProfileViewModel()
     
     private var languageHelper = LanguageHelper()
@@ -26,6 +31,10 @@ struct UserProfileView: View {
                 
                 VStack {
                     loginView
+                    
+                    Divider()
+                        .frame(minHeight: 2)
+                        .overlay(.black)
                     
                     downloadView
                     
@@ -78,23 +87,24 @@ struct UserProfileView: View {
                     }
                 }
                 
-                
+                favouritaView
                 
                 watchLaterView
                 
-                Divider()
-                    .frame(minHeight: 2)
-                    .overlay(.black)
                 
+                
+                                
                 languageView
                 
                 logoutView
                 
                 deleteAccountView
                 
+                Divider()
+                    .frame(minHeight: 2)
+                    .overlay(.black)
                 
-                
-                Text("version 1.0.1")
+                Text("Version \(appVersion ?? "")")
                     .foregroundColor(.gray)
                     .font(.caption)
                     .frame(maxWidth: .infinity)
@@ -152,12 +162,18 @@ struct UserProfileView: View {
     }
     
     @ViewBuilder private var languageView: some View {
-        Button(action: {languageHelper.changeLanguageForIOS13()}, label: {
-            Text("language")
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .padding()
-                .background(Color.primaryBrand)
-        })
+        if !isOutsideDomain {
+            Divider()
+                .frame(minHeight: 2)
+                .overlay(.black)
+
+            Button(action: {languageHelper.changeLanguageForIOS13()}, label: {
+                Text("language")
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding()
+                    .background(Color.primaryBrand)
+            })
+        }
     }
     
     @ViewBuilder private var watchLaterView: some View {
@@ -171,6 +187,24 @@ struct UserProfileView: View {
                 
                 Image(systemName: "chevron.forward")
             }).padding()
+        }
+    }
+    
+    @ViewBuilder private var favouritaView: some View {
+        if isOutsideDomain {
+            NavigationLink(destination: {
+                FavouriteListView()
+            }, label: {
+                Text("favourite")
+                
+                Spacer()
+                
+                Image(systemName: "chevron.forward")
+            }).padding()
+            
+            Divider()
+                .frame(minHeight: 2)
+                .overlay(.black)
         }
     }
     
@@ -194,10 +228,6 @@ struct UserProfileView: View {
             } message: {
                 Text("deleteAccountConfirmMessage")
             }
-            
-            Divider()
-                .frame(minHeight: 2)
-                .overlay(.black)
         }
         
         
@@ -222,11 +252,7 @@ struct UserProfileView: View {
     }
     
     @ViewBuilder private var downloadView: some View {
-        if !isOutsideDomain || appPublished {
-            Divider()
-                .frame(minHeight: 2)
-                .overlay(.black)
-            
+        if !isOutsideDomain || self.hasDownloads {
             NavigationLink(destination: DownloadsView(), label: {
                 HStack {
                     Text("downloads")

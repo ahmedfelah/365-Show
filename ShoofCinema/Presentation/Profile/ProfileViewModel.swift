@@ -20,6 +20,9 @@ class ProfileViewModel: ObservableObject {
     @Published var phone = ""
     @Published var newPassword = ""
     
+    lazy var hasDownloads = realm.objects(RDownload.self)
+        .filter { $0.status != DownloadStatus.downloaded.rawValue }.count > 0
+    
     init() {
         self.fullName = user?.name ?? ""
         self.email = user?.email ?? ""

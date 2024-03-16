@@ -35,31 +35,64 @@ struct MainView: View {
         
     }
     
+    @State private var isPresentedWalkthrough = false
+    
     var body: some View {
         TabView {
-            HomeView()
-                .tabItem {
-                    Label("", systemImage: "house.fill")
-                }
+            if isOutsideDomain {
+                KolodaView()
+                    .tabItem {
+                        Label("", systemImage: "house.fill")
+                    }
+                
+                HomeView()
+                    .tabItem {
+                        Label("", systemImage: "rectangle.stack.fill")
+                    }
+                
+                SearchView()
+                    .tabItem {
+                        Label("", systemImage: "magnifyingglass")
+                    }
+                
+                UserProfileView()
+                    .tabItem {
+                        Label("", systemImage: "person.circle.fill")
+                    }
+            }
             
-            ExploreView()
-                .tabItem {
-                    Label("", systemImage: "rectangle.stack.fill")
-                }
-            
-            SearchView()
-                .tabItem {
-                    Label("", systemImage: "magnifyingglass")
-                }
-            
-            UserProfileView()
-                .tabItem {
-                    Label("", systemImage: "person.circle.fill")
-                }
+            else {
+                HomeView()
+                    .tabItem {
+                        Label("", systemImage: "house.fill")
+                    }
+                
+                ExploreView()
+                    .tabItem {
+                        Label("", systemImage: "rectangle.stack.fill")
+                    }
+                
+                SearchView()
+                    .tabItem {
+                        Label("", systemImage: "magnifyingglass")
+                    }
+                
+                UserProfileView()
+                    .tabItem {
+                        Label("", systemImage: "person.circle.fill")
+                    }
+            }
         }.accentColor(.secondaryBrand)
         //.toolbarBackground(Color.primaryBrand, for: .bottomBar)
             .task {
                 checkReseller()
+            }.fullScreenCover(isPresented: $isPresentedWalkthrough, content: {
+                WalkthroughView()
+            }).onAppear {
+                if isOutsideDomain, RPref.walkthroghSeen != true {
+                    self.isPresentedWalkthrough.toggle()
+                }
+               
             }
     }
     
@@ -74,6 +107,19 @@ struct MainView: View {
         }
         
     }
+    
+    
+    struct WalkthroughView: UIViewControllerRepresentable {
+        func makeUIViewController(context: Context) -> WalkthroghPagerVC {
+            return WalkthroghPagerVC()
+        }
+        
+        func updateUIViewController(_ uiViewController: WalkthroghPagerVC, context: Context) {
+            
+        }
+        
+    }
+    
     
     
     private func checkReseller() {

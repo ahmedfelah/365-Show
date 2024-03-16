@@ -50,10 +50,7 @@ struct SmallPosterView: View {
                     .foregroundColor(.black)
                     .padding(3)
                 
-                
-                Text("\(show.rating ?? "")")
-                    .padding(3)
-                    .font(.caption2)
+                ratingView
             }
             
             Text("\(show.title)")
@@ -71,6 +68,14 @@ struct SmallPosterView: View {
             .frame(width: 120)
             
         
+    }
+    
+    @ViewBuilder private var ratingView: some View {
+        if let rating = show.rating, rating.isNumber {
+            Text("\(rating)")
+                .padding(3)
+                .font(.caption2)
+        }
     }
 }
 

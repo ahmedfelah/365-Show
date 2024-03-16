@@ -331,11 +331,14 @@
 		BD31927B2B6A3043008C5FB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD3192772B6A2B26008C5FB3 /* Assets.xcassets */; };
 		BD31927D2B6A314E008C5FB3 /* PlayerAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD31927C2B6A314E008C5FB3 /* PlayerAssets.xcassets */; };
 		BD34F5092AD5EB9000E14E9D /* AutoLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD34F5082AD5EB9000E14E9D /* AutoLogin.swift */; };
+		BD3DC1EC2B87C0F900A5274D /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3DC1EB2B87C0F900A5274D /* ImageView.swift */; };
 		BD3E33322B493A9800C43E28 /* ResellerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3E33312B493A9800C43E28 /* ResellerAPI.swift */; };
 		BD6553932B24CF6300B41231 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6553922B24CF6300B41231 /* News.swift */; };
 		BD88462F2B19C6E00035FF53 /* NowInCinemaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD88462E2B19C6E00035FF53 /* NowInCinemaView.swift */; };
 		BD994FFF2AD3452A000A0601 /* DotsIndexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD994FFE2AD3452A000A0601 /* DotsIndexView.swift */; };
+		BDAD1E982B9C41BA00DD91CC /* SegmentControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAD1E972B9C41BA00DD91CC /* SegmentControlView.swift */; };
 		BDC7D8A02B813268005F6FBF /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC7D89F2B813268005F6FBF /* ErrorView.swift */; };
+		BDC868602B889756003D22B3 /* FavouriteListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC8685F2B889756003D22B3 /* FavouriteListView.swift */; };
 		BDD5AA6F2B809BBA005E23FD /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD5AA6E2B809BBA005E23FD /* CircularProgressView.swift */; };
 		BDD5AA712B809F86005E23FD /* NavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD5AA702B809F86005E23FD /* NavView.swift */; };
 		BDECD0462B77526D00AE149D /* CinemaPosterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDECD0452B77526D00AE149D /* CinemaPosterView.swift */; };
@@ -710,11 +713,14 @@
 		BD3192792B6A2DCD008C5FB3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BD31927C2B6A314E008C5FB3 /* PlayerAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = PlayerAssets.xcassets; sourceTree = "<group>"; };
 		BD34F5082AD5EB9000E14E9D /* AutoLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLogin.swift; sourceTree = "<group>"; };
+		BD3DC1EB2B87C0F900A5274D /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		BD3E33312B493A9800C43E28 /* ResellerAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResellerAPI.swift; sourceTree = "<group>"; };
 		BD6553922B24CF6300B41231 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		BD88462E2B19C6E00035FF53 /* NowInCinemaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowInCinemaView.swift; sourceTree = "<group>"; };
 		BD994FFE2AD3452A000A0601 /* DotsIndexView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotsIndexView.swift; sourceTree = "<group>"; };
+		BDAD1E972B9C41BA00DD91CC /* SegmentControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentControlView.swift; sourceTree = "<group>"; };
 		BDC7D89F2B813268005F6FBF /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		BDC8685F2B889756003D22B3 /* FavouriteListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteListView.swift; sourceTree = "<group>"; };
 		BDD5AA6E2B809BBA005E23FD /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
 		BDD5AA702B809F86005E23FD /* NavView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavView.swift; sourceTree = "<group>"; };
 		BDECD0452B77526D00AE149D /* CinemaPosterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CinemaPosterView.swift; sourceTree = "<group>"; };
@@ -743,6 +749,7 @@
 				04441F322A868A1E001DE173 /* Watched */,
 				04441F2D2A86898D001DE173 /* WatchLater */,
 				04441F2B2A86897D001DE173 /* UserListView.swift */,
+				BDC8685F2B889756003D22B3 /* FavouriteListView.swift */,
 			);
 			path = UserList;
 			sourceTree = "<group>";
@@ -868,6 +875,7 @@
 			children = (
 				0465FF912A968AF0002BE09D /* SeasonsTVShow */,
 				0455A8C72A5B39E80070B18D /* ShowDetailsView.swift */,
+				BD3DC1EB2B87C0F900A5274D /* ImageView.swift */,
 				04DED85B2A79A02C004EB131 /* ActorsView.swift */,
 				0455A8C92A5B3A010070B18D /* ShowDetailsViewModel.swift */,
 				047828732A913EED00EB5984 /* VideoPlayerViewController.swift */,
@@ -1217,6 +1225,7 @@
 				101F20A925EC01A8009E629B /* Formatters.swift */,
 				1024AA1B25F637A200FB9ED3 /* OpenURL.swift */,
 				10F6D8EC25FE52460019DE02 /* Navigator.swift */,
+				BDAD1E972B9C41BA00DD91CC /* SegmentControlView.swift */,
 				96B82B5427C4F385002D6C97 /* Codable+UserDefaults.swift */,
 				967356CB27FCDB830097F65E /* UserDefaults+propertyWrapper.swift */,
 				96431CE42802DC8400FDA9B2 /* NSLayoutConstraint+ArrayBuilder.swift */,
@@ -1936,6 +1945,7 @@
 				BD994FFF2AD3452A000A0601 /* DotsIndexView.swift in Sources */,
 				044E1E5F29BE1A66006466A0 /* DarkTheme.swift in Sources */,
 				18A2EED428FFFB5500D42173 /* CVideoView Progress Bar Delegate.swift in Sources */,
+				BDAD1E982B9C41BA00DD91CC /* SegmentControlView.swift in Sources */,
 				9641BF2127393D6B008F36F0 /* Endpoint.swift in Sources */,
 				5D7493372682281E00065933 /* RRecentShow.swift in Sources */,
 				1024AA2325F679F800FB9ED3 /* CommentsVC.swift in Sources */,
@@ -1949,6 +1959,7 @@
 				5DE54F7526C713B600DEA9EE /* SwipeRightToPopViewController.swift in Sources */,
 				044EE88C2A594E4B00FA862D /* ExploreViewModel.swift in Sources */,
 				0455A8C82A5B39E80070B18D /* ShowDetailsView.swift in Sources */,
+				BDC868602B889756003D22B3 /* FavouriteListView.swift in Sources */,
 				962899C52812D4F4006E4CB5 /* FamilyModeButton.swift in Sources */,
 				04AECECE2AAE426700F34E71 /* DownloadAllView.swift in Sources */,
 				04CB72102A572ACA009BD732 /* HomeViewModel.swift in Sources */,
@@ -2080,6 +2091,7 @@
 				10DFF9502647C07000BFEAEC /* LanguageHelper.swift in Sources */,
 				044E1E6129BE1A80006466A0 /* ThemeProtocol.swift in Sources */,
 				1086EFC125EE51EE00A261F8 /* ShowsCollectionView.swift in Sources */,
+				BD3DC1EC2B87C0F900A5274D /* ImageView.swift in Sources */,
 				5DEE34DF22B831AC00349DE0 /* MessageTableViewCell.swift in Sources */,
 				04BC939D2AADC446006E9CEE /* DownloadCollectionsView.swift in Sources */,
 				044E1E5B29BE1A28006466A0 /* Theme.swift in Sources */,
@@ -2444,7 +2456,7 @@
 				CODE_SIGN_ENTITLEMENTS = ShoofCinema/ShoofCinema.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 20;
+				CURRENT_PROJECT_VERSION = 27;
 				DEVELOPMENT_TEAM = VS7BUZBC8W;
 				INFOPLIST_FILE = ShoofCinema/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "365 Show";
@@ -2453,7 +2465,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.6;
+				MARKETING_VERSION = 1.7;
 				PRODUCT_BUNDLE_IDENTIFIER = com.365show.365Show;
 				PRODUCT_NAME = Shoof;
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -2462,7 +2474,7 @@
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_OBJC_BRIDGING_HEADER = "ShoofCinema/BridgingHeader-ShoofCinema.h";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -2475,7 +2487,7 @@
 				CODE_SIGN_ENTITLEMENTS = ShoofCinema/ShoofCinema.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 20;
+				CURRENT_PROJECT_VERSION = 27;
 				DEVELOPMENT_TEAM = VS7BUZBC8W;
 				INFOPLIST_FILE = ShoofCinema/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "365 Show";
@@ -2484,7 +2496,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.6;
+				MARKETING_VERSION = 1.7;
 				PRODUCT_BUNDLE_IDENTIFIER = com.365show.365Show;
 				PRODUCT_NAME = Shoof;
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -2494,7 +2506,7 @@
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OBJC_BRIDGING_HEADER = "ShoofCinema/BridgingHeader-ShoofCinema.h";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

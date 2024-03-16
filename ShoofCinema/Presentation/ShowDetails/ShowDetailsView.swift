@@ -14,19 +14,22 @@ struct ShowDetailsView: View {
     
     @StateObject var viewModel: ShowDetailsViewModel
     
-    @State var isPresented = false
-    @State private var showingResolutions = false
+    @State private var isPresentedPlayer = false
+    @State private var isPresentedImage = false
+    @State private var isPresenResolutions = false
     
     @Environment(\.openURL) var openURL
    
     var body: some View {
-        if #available(iOS 16, *) {
+        if #available(iOS 16.0, *) {
             ScrollView(showsIndicators: false) {
                 ZStack(alignment: .bottom) {
                     imageView
-                    
+    
                     detailsView
                     
+                }.onTapGesture {
+                    self.isPresentedImage.toggle()
                 }
                 
                 alternativeTitleView
@@ -74,15 +77,25 @@ struct ShowDetailsView: View {
                         }.frame(maxWidth: .infinity, maxHeight: .infinity)
                             .background(.black.opacity(0.2))
                     }
-                }.confirmationDialog("select a resolution", isPresented: $showingResolutions) {
+                }.confirmationDialog("select a resolution", isPresented: $isPresenResolutions) {
                     ForEach(viewModel.sources, id: \.self) { source in
                         Button("\(source.title)") {
                             viewModel.download(source: source)
                         }
                     }
+                    
                 }.fullScreenCover(isPresented: $viewModel.showingLogin) {
                     SignInView(dismiss: $viewModel.showingLogin)
-                }
+                    
+                }.sheet(isPresented: $isPresentedImage, content: {
+                    if #available(iOS 16.4, *) {
+                        ImageView(url: viewModel.show.coverURL)
+                            .presentationBackground(.clear)
+                    }
+                    else  {
+                        ImageView(url: viewModel.show.coverURL)
+                    }
+                })
         }
         
         else {
@@ -138,7 +151,7 @@ struct ShowDetailsView: View {
                         }.frame(maxWidth: .infinity, maxHeight: .infinity)
                             .background(.black.opacity(0.2))
                     }
-                }.confirmationDialog("select a resolution", isPresented: $showingResolutions) {
+                }.confirmationDialog("select a resolution", isPresented: $isPresentedPlayer) {
                     ForEach(viewModel.sources, id: \.self) { source in
                         Button("\(source.title)") {
                             viewModel.download(source: source)
@@ -163,25 +176,27 @@ struct ShowDetailsView: View {
     }
     
     @ViewBuilder private var imdbRating: some View {
-        HStack {
-            Text("IMDB")
-                .font(.system(size: 8))
-                .padding(3)
-                .background(Color("imdb"))
-                .cornerRadius(5)
-                .foregroundColor(.black)
-                .padding(3)
-            
-            
-            Text("\(viewModel.show.rating ?? "_")")
-                .padding(3)
-                .font(.caption2)
+        if let rating = viewModel.show.rating, rating.isNumber {
+            HStack {
+                Text("IMDB")
+                    .font(.system(size: 8))
+                    .padding(3)
+                    .background(Color("imdb"))
+                    .cornerRadius(5)
+                    .foregroundColor(.black)
+                    .padding(3)
+                
+                Text("\(rating)")
+                    .padding(3)
+                    .font(.callout)
+            }
         }
+        
     }
     
     @ViewBuilder private var genresView: some View {
         Text("\(viewModel.show.year) \(viewModel.show.genres?.map({$0.name}).joined(separator: " ") ?? "" as String)")
-            .font(.caption)
+            .font(.callout)
             .foregroundColor(.gray)
             .padding(.bottom)
     }
@@ -193,43 +208,71 @@ struct ShowDetailsView: View {
             HStack {
                 Image(systemName: "play.fill")
                 
-                Text("watch now")
+                Text(isOutsideDomain ? "watch trailer" : "watch now")
                     .bold()
-            }
-                .padding(.vertical, 10)
-                .frame(maxWidth: .infinity)
+            }.padding()
                 .background(Color.secondaryBrand)
-                .cornerRadius(40)
-                .frame(maxWidth: .infinity)
-                .padding()
                 .foregroundColor(.primaryBrand)
+                .clipShape(Capsule())
                 
         }.padding([.bottom])
-            .fullScreenCover(isPresented: $isPresented) {
+            .fullScreenCover(isPresented: $isPresentedPlayer) {
                 VideoPlayerView(videoPlayerViewController: viewModel.videoPlayerViewController, show: viewModel.show)
                     .edgesIgnoringSafeArea(.all)
                     
-            }
+            }.font(.caption)
     }
     
     @ViewBuilder private var watchLaterButtonView: some View {
         Button(action: {viewModel.toggleWatchLater()}) {
-            Image(systemName: viewModel.show.isInWatchLater ? "checkmark" : "plus")
-                .imageScale(.large)
-                .padding(10)
-                .foregroundColor(viewModel.show.isInWatchLater ? .secondaryBrand : .white)
-                .animation(Animation.linear(duration: 1.5), value: viewModel.show.isInWatchLater)
-        }.background(Color.tertiaryBrand)
-            .clipShape(Circle())
+            VStack {
+                Image(systemName: viewModel.show.isInWatchLater ? "checkmark" : "plus")
+                    .imageScale(.large)
+                    .foregroundColor(viewModel.show.isInWatchLater ? .secondaryBrand : .white)
+                    
+                
+                Text("watch later")
+                    .foregroundColor(.white)
+                    
+            }.foregroundColor(viewModel.show.isInWatchLater ? .red : .white)
+                .animation(Animation.linear(duration: 1), value: viewModel.show.isInWatchLater)
+        }.padding()
+            .font(.caption)
+    }
+    
+    @ViewBuilder private var favouriteButtonView: some View {
+        Button(action: {viewModel.toggleFavourite()}) {
+            VStack {
+                Image(systemName: viewModel.isFavourite ? "heart.fill" : "heart")
+                    .imageScale(.large)
+                    .foregroundColor(viewModel.isFavourite ? .secondaryBrand : .white)
+                    
+                
+                Text("favourite")
+                    .foregroundColor(.white)
+                    
+            }
+                .animation(Animation.linear(duration: 1), value: viewModel.isFavourite)
+        }.padding()
+            .font(.caption)
     }
     
     @ViewBuilder private var actionView: some View {
-        HStack(alignment: .center) {
-            watchButtonView
+        HStack(alignment: .center, spacing: 10) {
+            
             
             if !isOutsideDomain {
                 downloadButtonView
             }
+            
+            else {
+                favouriteButtonView
+                    .onAppear {
+                        viewModel.checkIsFavourite()
+                    }
+            }
+            
+            watchButtonView
             
             watchLaterButtonView
                 .alert("please login ", isPresented: $viewModel.showingLoginAlert) {
@@ -241,38 +284,82 @@ struct ShowDetailsView: View {
                 }
             
         }.padding(.horizontal)
-            .padding(.trailing)
     }
     
     
     @ViewBuilder private var downloadButtonView: some View {
         switch viewModel.downloadStatus {
         case .downloaded:
-            Image(systemName: "checkmark")
-                .imageScale(.small)
-                .foregroundColor(Color(uiColor: Theme.current.tintColor))
+            VStack {
+                Image(systemName: "checkmark")
+                    .imageScale(.small)
+                    .foregroundColor(Color(uiColor: Theme.current.tintColor))
+                
+                Text("downloaded")
+            }
             
         case .loading, .downloading_sub:
-            ActivityIndicatorView(style: .white)
+            VStack {
+                ActivityIndicatorView(style: .white)
+                
+                Text("loading")
+            }.padding()
+                .foregroundColor(.white)
+                .font(.caption)
             
         case .downloading, .in_queue, .paused:
-            CircleProgress(progress: viewModel.downloadingProgress)
-                .frame(width: 42, height: 42)
+            VStack {
+                downloadProgressView
+                
+                Text("downloading")
+            }.padding()
+                .foregroundColor(.white)
+                .font(.caption)
             
         case .failed:
-            Image(systemName: "exclamationmark.triangle.fill")
-                .imageScale(.large)
+            VStack {
+                Image(systemName: "exclamationmark.triangle.fill")
+                    .imageScale(.small)
+                
+                Text("faild")
+            }.padding()
+                .font(.caption)
+                .foregroundColor(.white)
             
         case .unknown:
             Button(action: {
-                self.showingResolutions.toggle()
+                self.isPresenResolutions.toggle()
             }, label: {
-                Image(systemName: "arrow.down")
-                    .imageScale(.large)
-                    .padding(10)
-                    .foregroundColor(.white)
-            }).background(Color.tertiaryBrand)
-                .clipShape(Circle())
+                VStack {
+                    Image(systemName: "arrow.down.to.line")
+                    
+                    Text("download")
+                }
+                .foregroundColor(.white)
+            }).padding()
+                .font(.caption)
+        }
+    }
+    
+    @ViewBuilder private var downloadProgressView: some View {
+        ZStack {
+            CircleProgress(progress: viewModel.downloadingProgress)
+                .frame(width: 25, height: 25)
+                .environment(\.layoutDirection, .rightToLeft)
+            
+            switch viewModel.downloadStatus {
+            case .downloading:
+                Image(systemName: "pause")
+                    .imageScale(.small)
+                
+                
+            case .paused:
+                Image(systemName: "play.fill")
+                    .imageScale(.small)
+                
+            default :
+                EmptyView()
+            }
         }
     }
     
@@ -303,7 +390,13 @@ struct ShowDetailsView: View {
         Text(viewModel.show.alternativeTitle ?? "")
             .fontWeight(.bold)
             .padding(.horizontal)
-            .frame(maxWidth: .infinity, alignment: .leading)
+            .frame(
+                maxWidth: .infinity,
+                alignment: detectLanguage(
+                    for: viewModel.show.alternativeTitle ?? ""
+                ) == "en" ? .leading : .trailing
+            ).environment(\.layoutDirection, .leftToRight)
+            
     }
     
     @ViewBuilder private var sensitiveContentView: some View {
@@ -322,6 +415,11 @@ struct ShowDetailsView: View {
         Text("\(viewModel.show.description ?? "")")
             .padding(.horizontal)
             .foregroundColor(.gray)
+            .multilineTextAlignment(
+                detectLanguage(
+                    for: viewModel.show.description ?? ""
+                ) == "en" ? .leading : .trailing)
+            .environment(\.layoutDirection, .leftToRight)
     }
     
     @ViewBuilder private var reactionView: some View {
@@ -359,7 +457,7 @@ struct ShowDetailsView: View {
     
     private func watch() {
         if !isOutsideDomain || viewModel.downloadedItem {
-            isPresented.toggle()
+            isPresentedPlayer.toggle()
             viewModel.watch()
         }
         else {
@@ -382,6 +480,15 @@ struct VideoPlayerView: UIViewControllerRepresentable {
     
     func updateUIViewController(_ uiViewController: VideoPlayerViewController, context: Context) {
         // Updates the state of the specified view controller with new information from SwiftUI.
+    }
+}
+
+
+extension String {
+    var isNumber: Bool {
+        return self.range(
+            of: "^[0-9]+(?:[.,][0-9]+)*$", // 1
+            options: .regularExpression) != nil
     }
 }
 

@@ -11,6 +11,7 @@ import SwiftUI
 struct ShowsView: View {
     
     @StateObject var viewModel: ShowViewModel
+    @State var isPresentedFilter = false
     
     var body: some View {
         ScrollView(showsIndicators: false) {
@@ -42,7 +43,29 @@ struct ShowsView: View {
                         ErrorView(action: {Task{viewModel.loadShows()}})
                     }.frame(maxWidth: .infinity, maxHeight: .infinity)
                 }
-            }
+            }.toolbar(content: {
+                if let type = viewModel.type {
+                    switch viewModel.type {
+                    case .filter:
+                        Button(action: {isPresentedFilter.toggle()}, label: {
+                            Image(systemName: "line.3.horizontal.decrease.circle.fill")
+                                .foregroundColor(.white)
+                        })
+                    default:
+                        EmptyView()
+                    }
+                }
+            }).sheet(isPresented: $isPresentedFilter, content: {
+                if #available(iOS 16, *) {
+                    ShowsFilterView(viewModel: viewModel)
+                        .presentationDetents([.medium])
+                }
+                
+                else {
+                    ShowsFilterView(viewModel: viewModel)
+                        
+                }
+            })
             .task {
                 guard viewModel.shows.isEmpty else {return}
                 viewModel.loadShows()

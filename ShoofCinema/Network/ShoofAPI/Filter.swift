@@ -30,8 +30,23 @@ extension ShoofAPI {
 }
 
 extension ShoofAPI.Filter : Codable {
-    enum MediaType : Int, Codable, CaseIterable {
+    enum MediaType : Int, Identifiable, Codable, CaseIterable {
         case movies, series, all
+        
+        var id: String {
+            title
+        }
+        
+        var title: String {
+            switch self {
+            case .all:
+                return "all"
+            case .movies:
+                return "movies"
+            case .series:
+                return "series"
+            }
+        }
         
         private enum CodingKeys : String, CodingKey {
             case isMovie

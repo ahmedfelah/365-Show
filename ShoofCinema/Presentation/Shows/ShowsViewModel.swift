@@ -31,9 +31,15 @@ class ShowViewModel: ObservableObject {
     @Published var errorsMessage: String = ""
     @Published var currentPage: Int = 0
     @Published var isLastPage: Bool = false
+    @Published var filter: ShoofAPI.Filter?
+    
     
     init(type: `Type`?) {
         self.type = type
+        
+        if case .filter(let filter) = type {
+            self.filter = filter
+        }
     }
     
     

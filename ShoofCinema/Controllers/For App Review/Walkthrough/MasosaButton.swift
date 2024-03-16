@@ -42,7 +42,7 @@ class MasosaButton: UIButton {
             //Add gradient
             if withGradient {
                 setTitleColor(.white, for: .normal)
-                let colors = [Theme.current.tintColor, Theme.current.bright_tintColor]
+                let colors = [UIColor(named: "secondary-brand") ?? .red]
                 setGradientBackgroundColors(colors, direction: .toBottomRight, for: .normal)
             }
         }

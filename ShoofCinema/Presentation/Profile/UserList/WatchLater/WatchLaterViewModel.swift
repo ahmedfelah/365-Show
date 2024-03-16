@@ -13,7 +13,7 @@ class WatchLaterViewModel: ObservableObject {
     @Published var status: ResponseStatus = .none
     @Published var shows: [ShoofAPI.Show] = []
     
-    var pageNumber = 1
+    var pageNumber = 0
     
     
     func load() {

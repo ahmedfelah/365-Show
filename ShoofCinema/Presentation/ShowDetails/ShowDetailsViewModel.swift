@@ -8,6 +8,7 @@
 
 import Foundation
 import SwiftUI
+import RealmSwift
 
 class ShowDetailsViewModel: ObservableObject {
     
@@ -17,12 +18,14 @@ class ShowDetailsViewModel: ObservableObject {
     @Published var downloadingProgress: Float = 0.0
     @Published var showingLoginAlert = false
     @Published var showingLogin = false
+    @Published var isFavourite = false
     
-    
+    let realm = try! Realm()
     let shoofAPI = ShoofAPI.shared
+    let videoPlayerViewController = VideoPlayerViewController()
+    
     var downloadedItem: Bool
     
-    let videoPlayerViewController = VideoPlayerViewController()
     
     var sources: [CPlayerResolutionSource] {
         guard let media = show.media, case .movie(let movie) = media else {
@@ -99,6 +102,36 @@ class ShowDetailsViewModel: ObservableObject {
                 self?.handleWatchLaterAPIResponse(result: result)
             }
         }
+    }
+    
+    func checkIsFavourite() {
+        if let _ = realm.objects(RShow.self).filter("id = %@", show.id).first {
+            self.isFavourite = true
+            return
+        }
+        self.isFavourite = false
+    }
+    
+    func toggleFavourite () {
+        
+        do {
+            if let rmShow = self.realm.objects(RShow.self).filter("id = %@",self.show.id).first {
+                try! realm.write {
+                    self.realm.delete(rmShow)
+                }
+                self.isFavourite.toggle()
+            }
+            
+            else {
+                let rShow = RShow(from: self.show)
+                try! realm.write {
+                    self.realm.add(rShow)
+                }
+                self.isFavourite.toggle()
+            }
+            
+        }
+        
     }
     
     func watch() {

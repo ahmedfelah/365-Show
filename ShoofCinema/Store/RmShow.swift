@@ -61,7 +61,7 @@ class RActor : Object {
     
 }
 
-class RShow : Object {
+class RShow : Object, Identifiable {
     @Persisted(primaryKey: true) var id: String
     @Persisted var title: String
     @Persisted var story: String? // ShoofAPI.Show.description

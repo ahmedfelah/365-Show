@@ -32,6 +32,29 @@ struct WatchLaterView: View {
                     }.frame(maxWidth: .infinity, maxHeight: .infinity)
                         .background(.black.opacity(0.2))
                 }
+                else if viewModel.shows.isEmpty {
+                    VStack {
+                        HStack {
+                            Text("your watch list is")
+                                .foregroundColor(.secondary)
+                            
+                            Text("empty")
+                                .foregroundColor(.secondaryBrand)
+                                .fontWeight(.semibold)
+                        }
+                        
+                    }.frame(maxWidth: .infinity, maxHeight: .infinity)
+                        .background(Color.primaryBrand)
+                }
+                
+                else if viewModel.status == .failed {
+                    VStack {
+                        ErrorView(action: {
+                            viewModel.load()
+                        })
+                    }.frame(maxWidth: .infinity, maxHeight: .infinity)
+                        .background(Color.primaryBrand)
+                }
             }
             .task {
                 viewModel.load()
